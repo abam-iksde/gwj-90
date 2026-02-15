@@ -14,6 +14,10 @@ config/name="gwj-90"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gwj_countdown/plugin.cfg", "res://addons/material_generator/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
