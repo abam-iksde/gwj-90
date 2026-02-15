@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cf14e3q2s42vu"]
+
+[ext_resource type="Script" uid="uid://8yjvaynaeq3u" path="res://assets/prefabs/plow/plow.gd" id="1_g5xdi"]
+[ext_resource type="PackedScene" uid="uid://waag536qasuc" path="res://assets/meshes/snowplow/snow-plow-01.glb" id="2_il2fi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rlwr1"]
+size = Vector3(2, 1, 4)
+
+[node name="plow" type="CharacterBody3D" unique_id=85693202]
+script = ExtResource("1_g5xdi")
+
+[node name="collision-shape-3d" type="CollisionShape3D" parent="." unique_id=1848423304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_rlwr1")
+
+[node name="camera-target" type="Node3D" parent="." unique_id=747968884]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 1, 0)
+
+[node name="camera-3d" type="Camera3D" parent="camera-target" unique_id=1746441689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="snow-plow-01" parent="." unique_id=1161364040 instance=ExtResource("2_il2fi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 1)

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bu223yf4n3mbe"]
+
+[ext_resource type="Material" uid="uid://b6eh2q818jies" path="res://assets/map/heightmap_material.tres" id="1_me04n"]
+[ext_resource type="Script" uid="uid://daqkjhaqnxnoq" path="res://assets/scene/snow-layer.gd" id="2_g2noc"]
+[ext_resource type="MultiMesh" uid="uid://csjdfbxlcm2cq" path="res://assets/map/multimesh.res" id="2_me04n"]
+[ext_resource type="Texture2D" uid="uid://bbid7yk6gy2is" path="res://assets/map/ground.png" id="5_me04n"]
+[ext_resource type="ArrayMesh" uid="uid://6ope5px5yftj" path="res://assets/map/heightmap.obj" id="6_if4k1"]
+[ext_resource type="PackedScene" uid="uid://cf14e3q2s42vu" path="res://assets/prefabs/plow/plow.tscn" id="7_45682"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_psfyt"]
+sky_top_color = Color(0.21800351, 0.26721764, 0.33278427, 1)
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_16bn7"]
+sky_material = SubResource("ProceduralSkyMaterial_psfyt")
+
+[sub_resource type="Environment" id="Environment_b1aju"]
+background_mode = 2
+sky = SubResource("Sky_16bn7")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4k1"]
+albedo_texture = ExtResource("5_me04n")
+uv1_scale = Vector3(512, 512, 512)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m6igg"]
+material = SubResource("StandardMaterial3D_if4k1")
+size = Vector2(1024, 1024)
+center_offset = Vector3(512, 0, 512)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6igg"]
+size = Vector3(1024, 1, 1024)
+
+[sub_resource type="GDScript" id="GDScript_45682"]
+script/source = "extends TextureRect
+
+
+func _ready() -> void:
+	texture = GameState.cleared_texture
+"
+
+[node name="main-scene" type="Node3D" unique_id=988449166]
+
+[node name="sun" type="DirectionalLight3D" parent="." unique_id=187478611]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.6
+shadow_enabled = true
+
+[node name="world-environment" type="WorldEnvironment" parent="." unique_id=125094680]
+environment = SubResource("Environment_b1aju")
+
+[node name="snow-layer" type="MultiMeshInstance3D" parent="." unique_id=1479544490]
+material_override = ExtResource("1_me04n")
+multimesh = ExtResource("2_me04n")
+script = ExtResource("2_g2noc")
+
+[node name="ground-layer" type="MeshInstance3D" parent="." unique_id=1010206981]
+mesh = SubResource("PlaneMesh_m6igg")
+
+[node name="plow" parent="." unique_id=85693202 instance=ExtResource("7_45682")]
+transform = Transform3D(5.9604645e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 5.9604645e-08, 827.75305, 4.7683716e-07, 3.7808547)
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=1154189234]
+
+[node name="collision-shape-3d" type="CollisionShape3D" parent="ground" unique_id=2002656989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 512, -0.5, 512)
+shape = SubResource("BoxShape3D_m6igg")
+
+[node name="texture-rect" type="TextureRect" parent="." unique_id=612748835]
+visible = false
+modulate = Color(1, 1, 1, 0.6392157)
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_45682")
+
+[node name="heightmap" type="MeshInstance3D" parent="." unique_id=110094760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -22)
+mesh = ExtResource("6_if4k1")

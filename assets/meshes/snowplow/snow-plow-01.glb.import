@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://waag536qasuc"
-path="res://.godot/imported/snow-plow-01.glb-e5a336e986e87aa326f3f3d9904c891e.scn"
+path="res://.godot/imported/snow-plow-01.glb-4392a8c67c73b1eb62ff7c201d7e83ce.scn"
 
 [deps]
 
-source_file="res://meshes/snowplow/snow-plow-01.glb"
-dest_files=["res://.godot/imported/snow-plow-01.glb-e5a336e986e87aa326f3f3d9904c891e.scn"]
+source_file="res://assets/meshes/snowplow/snow-plow-01.glb"
+dest_files=["res://.godot/imported/snow-plow-01.glb-4392a8c67c73b1eb62ff7c201d7e83ce.scn"]
 
 [params]
 
