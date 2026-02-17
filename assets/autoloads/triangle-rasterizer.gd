@@ -9,8 +9,9 @@ static func draw_triangle(
 	c: Vector2i,
 	color: Color,
 	left: bool,
-	top: bool
-):
+	top: bool,
+	pixel_predicate: Callable
+) -> bool:
 	var edges = [
 		sort_edge([a, b]),
 		sort_edge([b, c]),
@@ -29,11 +30,13 @@ static func draw_triangle(
 	var short_edge1 := (long_edge + 1) % 3
 	var short_edge2 := (long_edge + 2) % 3
 	
-	draw_spans_between_edges(image, edges[long_edge], edges[short_edge1], color, left, top)
-	draw_spans_between_edges(image, edges[long_edge], edges[short_edge2], color, left, top)
+	return (
+		draw_spans_between_edges(image, edges[long_edge], edges[short_edge1], color, left, top, pixel_predicate)
+		and draw_spans_between_edges(image, edges[long_edge], edges[short_edge2], color, left, top, pixel_predicate)
+	)
 
 
-static func draw_spans_between_edges(image: Image, edge1, edge2, color: Color, left: bool, top: bool):
+static func draw_spans_between_edges(image: Image, edge1, edge2, color: Color, left: bool, top: bool, pixel_predicate: Callable) -> bool:
 	var e1ydiff := float(edge1[1].y - edge1[0].y)
 	if e1ydiff == 0.0:
 		e1ydiff = 1.0
@@ -58,19 +61,24 @@ static func draw_spans_between_edges(image: Image, edge1, edge2, color: Color, l
 	var factor2 := 0.0
 	var factor_step2 := 1.0 / e2ydiff
 	
+	var succeeded := true
+	
 	var y := edge2[0].y as int
 	while y < edge2[1].y:
-		draw_span(
-			image,
-			y,
-			edge1[0].x + int(e1xdiff * factor1),
-			edge2[0].x + int(e2xdiff * factor2),
-			color,
-			left
-		)
+		if not draw_span(
+				image,
+				y,
+				edge1[0].x + int(e1xdiff * factor1),
+				edge2[0].x + int(e2xdiff * factor2),
+				color,
+				left,
+				pixel_predicate
+			):
+				succeeded = false
 		factor1 += factor_step1
 		factor2 += factor_step2
 		y += 1
+	return succeeded
 
 
 static func sort_edge(edge):
@@ -85,8 +93,9 @@ static func draw_span(
 	x1: int,
 	x2: int,
 	color: Color,
-	left: bool
-):
+	left: bool,
+	pixel_predicate: Callable
+) -> bool:
 	if x1 > x2:
 		var temp = x1
 		x1 = x2
@@ -99,7 +108,12 @@ static func draw_span(
 		else:
 			x2 += 1
 	var x := x1
+	var succeeded := true
 	while x < x2:
 		if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height():
-			image.set_pixel(x, y, color)
+			if pixel_predicate.call(x, y):
+				image.set_pixel(x, y, color)
+			else:
+				succeeded = false
 		x += 1
+	return succeeded

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bu85phpcrg5rv"]
+
+[ext_resource type="Script" uid="uid://fh7vcwxqb1uh" path="res://assets/prefabs/player/player.gd" id="1_75pvj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ofhi8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_75pvj"]
+
+[node name="player" type="CharacterBody3D" unique_id=1483526067]
+script = ExtResource("1_75pvj")
+
+[node name="collision-shape-3d" type="CollisionShape3D" parent="." unique_id=797575821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ofhi8")
+
+[node name="mesh-instance-3d" type="MeshInstance3D" parent="." unique_id=220363125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_75pvj")
+
+[node name="camera" type="Camera3D" parent="." unique_id=1664584821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)

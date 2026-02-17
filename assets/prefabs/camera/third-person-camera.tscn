@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xynnpml34lh"]
+
+[ext_resource type="Script" uid="uid://dkdwc6aiciqeu" path="res://assets/prefabs/camera/third-person-camera.gd" id="1_0m6v3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wcdgf"]
+
+[node name="third-person-camera" type="Node3D" unique_id=963379529]
+script = ExtResource("1_0m6v3")
+
+[node name="shape-cast" type="ShapeCast3D" parent="." unique_id=1658896156]
+shape = SubResource("SphereShape3D_wcdgf")
+target_position = Vector3(0, 0, 5)
+
+[node name="camera" type="Camera3D" parent="." unique_id=310072280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)

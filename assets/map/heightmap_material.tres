@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://d1owly4tx80vo" path="res://assets/map/heightmap.gdshader" id="1_eqdf5"]
 [ext_resource type="Texture2D" uid="uid://cmgly7aygyf4f" path="res://assets/map/snow-surface.png" id="2_cfiuq"]
-[ext_resource type="Texture2D" uid="uid://dqk6w7l6s78ut" path="res://assets/map/dig-test.png" id="2_gvfjx"]
+[ext_resource type="Texture2D" uid="uid://cvqsvgf64x20t" path="res://assets/map/dig-default.png" id="2_gvfjx"]
 [ext_resource type="Texture2D" uid="uid://bgyyes1ajuwke" path="res://assets/map/heightmap2.png" id="4_cfiuq"]
 [ext_resource type="Texture2D" uid="uid://b2ntst5c58r6e" path="res://assets/map/snow-roughness.png" id="4_vdmvd"]
 

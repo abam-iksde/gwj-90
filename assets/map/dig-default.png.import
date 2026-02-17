@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyyes1ajuwke"
-path="res://.godot/imported/heightmap2.png-c51c85949cc325209b1674d5883a6ad5.ctex"
+uid="uid://cvqsvgf64x20t"
+path.s3tc="res://.godot/imported/dig-default.png-84cf0e66991b94d9e8057d1ce233b9e8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/map/heightmap2.png"
-dest_files=["res://.godot/imported/heightmap2.png-c51c85949cc325209b1674d5883a6ad5.ctex"]
+source_file="res://assets/map/dig-default.png"
+dest_files=["res://.godot/imported/dig-default.png-84cf0e66991b94d9e8057d1ce233b9e8.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
