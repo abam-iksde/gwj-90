@@ -1,14 +1,15 @@
+class_name Plow
 extends CharacterBody3D
 
 
 const DIRECTION_SPECIFIC_SNOW_MASK_SIZE = [ # starts with 0, every positive 45 degrees
 	Vector3(1.55, 1.55, 2.68), # 0
-	Vector3(1.35, 2.0, 2.76), # 45
-	Vector3(1.65, 2.3, 2.68), # 90
-	Vector3(1.55, 2.3, 2.55), # 135
+	Vector3(1.5, 2.0, 2.76), # 45
+	Vector3(1.5, 2.3, 2.68), # 90
+	Vector3(1.8, 1.8, 2.55), # 135
 	Vector3(1.48, 2.5, 2.55), # 180
-	Vector3(1.9, 1.8, 2.55), # 225
-	Vector3(1.9, 1.9, 2.8), # 270
+	Vector3(1.8, 1.8, 2.55), # 225
+	Vector3(1.8, 1.9, 2.8), # 270
 	Vector3(1.7, 1.7, 2.75), # 315
 ]
 
@@ -22,6 +23,9 @@ const MAX_SNOW_HEIGHT_BACK = 0.7 # <- makes it easy to get stuck in the snow, no
 const DRIVE_SPEED = 4.0
 const DRIVE_SPEED_BACK = 2.5
 const TURN_SPEED = 2.0
+
+const CAMERA_MIN_ANGLE = -90.0
+const CAMERA_MAX_ANGLE = 30.0
 
 
 @onready var camera_target: Node3D = get_node('third-person-camera')
@@ -42,7 +46,7 @@ func _input(event: InputEvent) -> void:
 	if  mouse_motion_event:
 		camera_target.rotation_degrees.x = clampf(
 			camera_target.rotation_degrees.x - mouse_motion_event.relative.y * GameSettings.MOUSE_SENSITIVITY,
-			-90.0, 90.0
+			CAMERA_MIN_ANGLE, CAMERA_MAX_ANGLE
 		)
 		camera_target.rotation_degrees.y -= mouse_motion_event.relative.x * GameSettings.MOUSE_SENSITIVITY
 
@@ -94,7 +98,7 @@ func _physics_process(delta: float) -> void:
 		global_position.z + velocity_2d.y * delta
 	)
 	
-	var new_integer_position := round_vector2(next_position)
+	var new_integer_position := round_vector2(next_position - Vector2(0.25, 0.25))
 	if (
 		new_integer_position != last_integer_position
 		or rotation_retrigger
@@ -113,7 +117,9 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 		rotation.y -= 2 * PI
 	
 	var first_index := 0
-	var rot := rotation.y
+	var rot := rotation.y + (0.0 if front else PI)
+	while rot > 2 * PI:
+		rot -= 2 * PI
 	while rot > _45_DEGREES:
 		first_index += 1
 		rot -= _45_DEGREES
@@ -176,7 +182,7 @@ func _on_get_in_area_body_exited(body: Node):
 	var player := body as Player
 	if not player:
 		return
-	player_in_area = player
+	player_in_area = null
 
 
 func dig_pixel_predicate(x: int, y: int) -> bool:

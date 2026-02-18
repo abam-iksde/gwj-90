@@ -13,3 +13,19 @@ func _input(event: InputEvent) -> void:
 		if key_event.pressed and key_event.keycode == KEY_ESCAPE:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			return
+
+
+func unfocus_mouse():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+func focus_mouse():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _enter_tree() -> void:
+	get_node('/root/GameState').mouse_capture = self
+
+
+func _exit_tree() -> void:
+	get_node('/root/GameState').mouse_capture = null

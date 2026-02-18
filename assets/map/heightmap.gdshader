@@ -26,14 +26,19 @@ uniform int height = 1024;
 
 uniform vec4 color_bottom : source_color;
 uniform vec4 color_top : source_color;
+uniform vec4 color_cutoff_bottom : source_color;
+uniform vec4 color_cutoff_top : source_color;
 
+uniform float color_cutoff_height_bottom = 1.9;
+uniform float color_cutoff_height_top = 2.0;
 uniform float max_vertical_height = 5.0;
 uniform sampler2D dig_texture : source_color, filter_linear, repeat_enable;
 
 varying float vertex_height;
+varying vec3 vertex_color;
 
 float lower_ratio(float position_x, float position_z, vec2 uv) {
-	if (mod(position_x, 1.0) < 0.1) {
+	if (mod(position_x, 1.0) < 0.1 && mod(position_z, 1.0) < 0.1) {
 		return texture(dig_texture, uv).r;
 	}
 	return (
@@ -87,7 +92,16 @@ void vertex() {
 	
 	vertex_height = vertex_position.y;
 	
-	VERTEX.y = vertex_height * max_vertical_height;
+	float vertex_physical_height = vertex_height * max_vertical_height;
+	VERTEX.y = vertex_physical_height;
+
+	if (vertex_physical_height < color_cutoff_height_bottom) {
+		vertex_color = color_bottom.rgb + (color_cutoff_bottom.rgb - color_bottom.rgb) * (vertex_physical_height / color_cutoff_height_bottom);
+	} else if (vertex_physical_height < color_cutoff_height_top) {
+		vertex_color = color_cutoff_bottom.rgb + (color_cutoff_top.rgb - color_cutoff_bottom.rgb) * ((vertex_physical_height - color_cutoff_height_bottom) / (color_cutoff_height_top - color_cutoff_height_bottom));
+	} else {
+		vertex_color = color_cutoff_top.rgb + (color_top.rgb - color_cutoff_top.rgb) * ((vertex_physical_height - color_cutoff_height_top) / (max_vertical_height - color_cutoff_height_top));
+	}
 	
 	NORMAL = calculate_normal(vertex_position);
 	
@@ -97,10 +111,8 @@ void vertex() {
 void fragment() {
 	vec2 base_uv = UV;
 
-	vec3 color = color_bottom.rgb + (color_top.rgb - color_bottom.rgb) * vertex_height;
-
 	vec4 albedo_tex = texture(texture_albedo, base_uv);
-	ALBEDO = color * albedo_tex.rgb;
+	ALBEDO = vertex_color * albedo_tex.rgb;
 
 	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;

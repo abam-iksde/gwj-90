@@ -18,3 +18,7 @@ func setup_game() -> void:
 	cleared_image.copy_from(start_image)
 	
 	cleared_texture = ImageTexture.create_from_image(cleared_image)
+
+
+var ui: UiContainer
+var mouse_capture: MouseCapture

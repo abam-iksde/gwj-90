@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b3mif1kwp16q"]
+
+[ext_resource type="Script" uid="uid://d1pxv828xjrsu" path="res://assets/prefabs/ui/ui-container.gd" id="1_dicjr"]
+[ext_resource type="PackedScene" uid="uid://d0qmbuguvnpaf" path="res://assets/prefabs/ui/win-screen/win-screen.tscn" id="2_1080m"]
+
+[node name="ui-container" type="Control" unique_id=1969353579]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dicjr")
+
+[node name="win-screen" parent="." unique_id=1450497098 instance=ExtResource("2_1080m")]
+layout_mode = 0
