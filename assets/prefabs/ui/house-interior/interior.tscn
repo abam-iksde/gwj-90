@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dbt4kky81uo"]
+
+[ext_resource type="Texture2D" uid="uid://bclk04h1pisd7" path="res://assets/prefabs/ui/house-interior/interior-background.png" id="1_ha0va"]
+[ext_resource type="Script" uid="uid://58dtgmf1ssvp" path="res://assets/prefabs/ui/house-interior/interior.gd" id="2_kq4qf"]
+
+[node name="interior" type="TextureRect" unique_id=1895528602]
+texture = ExtResource("1_ha0va")
+script = ExtResource("2_kq4qf")
+
+[node name="button-exit" type="Button" parent="." unique_id=2140411709]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 689.0
+offset_right = 658.0
+offset_bottom = 773.0
+text = "exit"
+
+[node name="button-sleep" type="Button" parent="." unique_id=765779186]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 624.0
+offset_right = 623.0
+offset_bottom = 674.0
+text = "sleep"
+
+[node name="label-sleep" type="Label" parent="." unique_id=1256770623]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 568.0
+offset_right = 637.0
+offset_bottom = 591.0
+text = "sleep how long?"
+
+[node name="sleep-slider" type="HSlider" parent="." unique_id=1380169193]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 591.0
+offset_right = 816.0
+offset_bottom = 630.0
+min_value = 1.0
+max_value = 24.0
+value = 1.0
+
+[node name="supply-slider" type="HSlider" parent="." unique_id=648620275]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 485.48
+offset_right = 816.0
+offset_bottom = 524.47986
+max_value = 10.0
+value = 5.0
+
+[node name="label-fuel" type="Label" parent="." unique_id=1434048960]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 508.0
+offset_right = 884.0
+offset_bottom = 531.0
+text = "10L gas"
+
+[node name="label-food" type="Label" parent="." unique_id=121223434]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 511.0
+offset_right = 350.0
+offset_bottom = 534.0
+text = "10 meals"
+horizontal_alignment = 2

@@ -30,4 +30,4 @@ func _ready() -> void:
 
 	ResourceSaver.save(multimesh, 'user://multimesh.res')
 
-	material.set_shader_parameter(&'dig_texture', GameState.cleared_texture)
+	material.set_shader_parameter(&'dig_texture', GameState.game_data.cleared_texture)

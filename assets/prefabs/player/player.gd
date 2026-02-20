@@ -9,6 +9,7 @@ const GRAVITY = -20.0
 
 
 @onready var camera: Camera3D = get_node('camera')
+@onready var interact_raycast: RayCast3D = get_node('camera/ray-cast')
 
 
 func _input(event: InputEvent) -> void:
@@ -26,9 +27,13 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	camera.fov = GameSettings.ON_FOOT_FOV
 	camera.make_current()
+	interact_raycast.add_exception(self)
+	
+	GameState.player_died.connect(queue_free)
 
 
 func _physics_process(delta: float) -> void:
+	handle_interact()
 	if Input.is_action_just_pressed(&'jump') and is_on_ground():
 		_is_on_snow = false
 		velocity.y = JUMP_FORCE
@@ -39,3 +44,13 @@ func _physics_process(delta: float) -> void:
 	velocity.z = input.y * move_speed
 	
 	move_and_slide_with_snow()
+
+
+func handle_interact():
+	if not interact_raycast.is_colliding():
+		return
+	var interactable := interact_raycast.get_collider() as Interactable
+	if not interactable:
+		return
+	if Input.is_action_just_pressed(&'interact'):
+		interactable.interact()

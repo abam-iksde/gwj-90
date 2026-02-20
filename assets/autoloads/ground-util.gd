@@ -2,8 +2,6 @@ class_name GroundUtil
 extends Object
 
 
-static var height_map_image = preload('res://assets/map/heightmap2.png').get_image()
-
 static func get_ground_height_at_position(global_position: Vector3, ignore_dig := false) -> float:
 	return get_ground_height_and_elevation_at_position(global_position, ignore_dig).x
 
@@ -39,11 +37,11 @@ static func get_ground_height_and_elevation_at_position(global_position: Vector3
 
 
 static func _get_height_map_point_height(x: int, y: int, ignore_dig: bool) -> float:
-	var height_map_height := height_map_image.get_pixel(x, y).r * Constants.HEIGHT_MAP_SCALE
+	var height_map_height := GameState.height_map_image.get_pixel(x, y).r * Constants.HEIGHT_MAP_SCALE
 	if ignore_dig:
 		return height_map_height
 	return (
 		height_map_height
-		if GameState.cleared_image.get_pixel(x, y).r < 0.5 else
+		if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else
 		0.0
 	)

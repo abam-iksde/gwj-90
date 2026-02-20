@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://0p7pgsbqp1ea"]
+
+[ext_resource type="Texture2D" uid="uid://bclk04h1pisd7" path="res://assets/prefabs/ui/house-interior/interior-background.png" id="1_4ukn5"]
+[ext_resource type="Script" uid="uid://bqiayxbb33856" path="res://assets/prefabs/ui/map/map.gd" id="2_amyam"]
+[ext_resource type="Texture2D" uid="uid://b37iwnul8yqc6" path="res://assets/prefabs/ui/map/map.png" id="2_uv4k6"]
+[ext_resource type="Script" uid="uid://c61rucbvvalql" path="res://assets/prefabs/ui/map/icon-container.gd" id="3_uv4k6"]
+[ext_resource type="Script" uid="uid://dy1gbro3cso46" path="res://assets/prefabs/ui/map/input-handler.gd" id="5_hf3yc"]
+
+[node name="map" type="TextureRect" unique_id=595115752]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4ukn5")
+script = ExtResource("2_amyam")
+
+[node name="visual" type="TextureRect" parent="." unique_id=1467459292]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -375.0
+offset_right = 258.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uv4k6")
+
+[node name="icons" type="Control" parent="." unique_id=1595892065]
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 50.0
+offset_right = 818.0
+offset_bottom = 800.0
+script = ExtResource("3_uv4k6")
+
+[node name="button-close" type="Button" parent="." unique_id=916308809]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 702.0
+offset_right = 1033.0
+offset_bottom = 783.0
+text = "CLOSE"
+
+[node name="button-respawn" type="Button" parent="." unique_id=56999067]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 702.0
+offset_right = 1033.0
+offset_bottom = 783.0
+text = "DISPATCH"
+
+[node name="input-handler" type="Node" parent="." unique_id=1921312900]
+process_mode = 3
+script = ExtResource("5_hf3yc")

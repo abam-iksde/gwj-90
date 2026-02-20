@@ -38,12 +38,14 @@ var rotation_diff := 0.0
 var player_in := false
 var player_in_area = null
 
+var fuel := Constants.START_FUEL_IN_PLOW
+
 
 func _input(event: InputEvent) -> void:
 	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED or not player_in:
 		return
 	var mouse_motion_event := event as InputEventMouseMotion
-	if  mouse_motion_event:
+	if mouse_motion_event:
 		camera_target.rotation_degrees.x = clampf(
 			camera_target.rotation_degrees.x - mouse_motion_event.relative.y * GameSettings.MOUSE_SENSITIVITY,
 			CAMERA_MIN_ANGLE, CAMERA_MAX_ANGLE
@@ -55,6 +57,9 @@ func _ready() -> void:
 	camera.fov = GameSettings.PLOW_FOV
 	get_in_area.body_entered.connect(_on_get_in_area_body_entered)
 	get_in_area.body_exited.connect(_on_get_in_area_body_exited)
+	
+	GameState.plow = self
+	GameState.player_died.connect(func(): player_in = false)
 
 
 func _physics_process(delta: float) -> void:
@@ -73,6 +78,11 @@ func _physics_process(delta: float) -> void:
 		player.camera.rotation = camera_target.global_rotation
 		player_in = false
 	
+	if fuel <= 0.0:
+		return
+	
+	fuel -= delta * Constants.PLOW_IDLE_FUEL_COST
+	
 	var input := Input.get_vector(
 		&'drive_turn_left',
 		&'drive_turn_right',
@@ -81,7 +91,15 @@ func _physics_process(delta: float) -> void:
 	)
 	
 	if input.y == 0.0:
+		update_fuel_bounds()
 		return
+	
+	if input.y < 0.0:
+		fuel -= Constants.PLOW_DRIVE_FUEL_COST * delta * absf(input.y)
+	else:
+		fuel -= Constants.PLOW_DRIVE_FUEL_COST * delta * absf(input.y) * (DRIVE_SPEED_BACK / DRIVE_SPEED)
+	
+	update_fuel_bounds()
 	
 	rotation_diff += -input.x * delta * TURN_SPEED
 	rotate(Vector3.UP, -input.x * delta * TURN_SPEED)
@@ -140,7 +158,7 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 	]
 	var succeeded := (
 		TriangleRasterizer.draw_triangle(
-			GameState.cleared_image,
+			GameState.game_data.cleared_image,
 			vertices[0],
 			vertices[1],
 			vertices[2],
@@ -150,7 +168,7 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 			dig_pixel_predicate if front else dig_pixel_back_predicate
 		)
 		and TriangleRasterizer.draw_triangle(
-			GameState.cleared_image,
+			GameState.game_data.cleared_image,
 			vertices[0],
 			vertices[1],
 			vertices[3],
@@ -160,7 +178,7 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 			dig_pixel_predicate if front else dig_pixel_back_predicate
 		)
 	)
-	GameState.cleared_texture.update(GameState.cleared_image)
+	GameState.game_data.cleared_texture.update(GameState.game_data.cleared_image)
 	return succeeded
 
 
@@ -186,10 +204,18 @@ func _on_get_in_area_body_exited(body: Node):
 
 
 func dig_pixel_predicate(x: int, y: int) -> bool:
-	var height := GroundUtil.height_map_image.get_pixel(x, y).r if GameState.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
+	var height := GameState.height_map_image.get_pixel(x, y).r if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
 	return height * Constants.HEIGHT_MAP_SCALE <= MAX_SNOW_HEIGHT
 
 
 func dig_pixel_back_predicate(x: int, y: int) -> bool:
-	var height := GroundUtil.height_map_image.get_pixel(x, y).r if GameState.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
+	var height := GameState.height_map_image.get_pixel(x, y).r if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
 	return height * Constants.HEIGHT_MAP_SCALE <= MAX_SNOW_HEIGHT
+
+
+func update_fuel_bounds():
+	fuel = maxf(fuel, 0.0)
+	if GameState.game_data.player_fuel > 0.0:
+		fuel += GameState.game_data.player_fuel
+		GameState.game_data.player_fuel = maxf(fuel - 100.0, 0.0)
+		fuel = minf(fuel, 100.0)

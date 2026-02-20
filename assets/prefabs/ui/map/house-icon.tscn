@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://1otd6wddv7d2"]
+
+[ext_resource type="Texture2D" uid="uid://bgdlfr675bfjw" path="res://assets/prefabs/ui/map/house-inactive.png" id="1_re12q"]
+[ext_resource type="Texture2D" uid="uid://mlr2wc7vvm3b" path="res://assets/prefabs/ui/map/house-selected.png" id="2_rotsh"]
+[ext_resource type="Texture2D" uid="uid://ccspdogul5t15" path="res://assets/prefabs/ui/map/house-active.png" id="3_tcn3h"]
+[ext_resource type="Script" uid="uid://bgnu4kbb01loj" path="res://assets/prefabs/ui/map/house-icon.gd" id="4_rotsh"]
+
+[node name="house-icon" type="TextureButton" unique_id=921704498]
+texture_normal = ExtResource("1_re12q")
+texture_pressed = ExtResource("2_rotsh")
+texture_hover = ExtResource("3_tcn3h")
+texture_disabled = ExtResource("1_re12q")
+texture_focused = ExtResource("3_tcn3h")
+script = ExtResource("4_rotsh")

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d1pxv828xjrsu" path="res://assets/prefabs/ui/ui-container.gd" id="1_dicjr"]
 [ext_resource type="PackedScene" uid="uid://d0qmbuguvnpaf" path="res://assets/prefabs/ui/win-screen/win-screen.tscn" id="2_1080m"]
+[ext_resource type="Script" uid="uid://68mtsqkbefi8" path="res://assets/prefabs/ui/health-label.gd" id="3_n5fnd"]
+[ext_resource type="PackedScene" uid="uid://dbt4kky81uo" path="res://assets/prefabs/ui/house-interior/interior.tscn" id="4_4wij6"]
+[ext_resource type="PackedScene" uid="uid://0p7pgsbqp1ea" path="res://assets/prefabs/ui/map/map.tscn" id="5_lji3o"]
 
 [node name="ui-container" type="Control" unique_id=1969353579]
 layout_mode = 3
@@ -12,5 +15,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dicjr")
 
+[node name="health-label" type="Label" parent="." unique_id=710765627]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("3_n5fnd")
+
 [node name="win-screen" parent="." unique_id=1450497098 instance=ExtResource("2_1080m")]
+layout_mode = 0
+
+[node name="interior" parent="." unique_id=1895528602 instance=ExtResource("4_4wij6")]
+layout_mode = 0
+
+[node name="map" parent="." unique_id=595115752 instance=ExtResource("5_lji3o")]
 layout_mode = 0

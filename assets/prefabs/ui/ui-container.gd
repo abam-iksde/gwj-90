@@ -10,12 +10,16 @@ const FIXED_MODAL_SIZE = Vector2(1120.0, 850.0)
 
 
 enum Modal {
-	WIN_SCREEN
+	WIN_SCREEN,
+	INTERIOR,
+	MAP
 }
 
 
 @onready var modals = {
-	Modal.WIN_SCREEN: get_node('win-screen')
+	Modal.WIN_SCREEN: get_node('win-screen'),
+	Modal.INTERIOR: get_node('interior'),
+	Modal.MAP: get_node('map')
 }
 
 var visible_modal: Control = null
@@ -38,6 +42,7 @@ func show_modal(modal_id: Modal, payload = null) -> void:
 func hide_modal() -> void:
 	if not visible_modal:
 		return
+	sliding = true
 	visible_modal.on_hide()
 	visible_modal.process_mode = Node.PROCESS_MODE_DISABLED
 	var move_tween = create_tween()
@@ -60,6 +65,7 @@ func _exit_tree() -> void:
 func _ready() -> void:
 	for modal in modals.values():
 		modal.visible = false
+		modal.process_mode = Node.PROCESS_MODE_DISABLED
 	get_viewport().size_changed.connect(_on_window_resized)
 
 
