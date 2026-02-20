@@ -5,7 +5,7 @@ signal player_died
 
 
 var start_image := preload('res://assets/map/dig-default.png').get_image()
-var height_map_image := preload('res://assets/map/heightmap2.png').get_image()
+var height_map_image := preload('res://assets/map/target.png').get_image()
 
 
 var game_data: GameData

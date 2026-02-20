@@ -1,7 +1,7 @@
 extends MultiMeshInstance3D
 
 
-const MAP_SIZE = 1024
+const MAP_SIZE = 512
 const INSTANCE_SIZE = Constants.CHUNK_SIZE - 1
 
 var material: ShaderMaterial

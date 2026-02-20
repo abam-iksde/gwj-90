@@ -2,9 +2,11 @@ class_name Constants
 extends Object
 
 
-const MAP_SIZE = 1024
+const MAP_SIZE = 512
 const CHUNK_SIZE = 8
-const HEIGHT_MAP_SCALE = 5.0
+const HEIGHT_MAP_DATA_BOTTOM_THRESHOLD = 0.0
+const HEIGHT_MAP_DATA_TOP_THRESHOLD = 1.0
+const HEIGHT_MAP_SCALE = 55.0
 
 const PLAYER_MAX_HEALTH = 100.0
 

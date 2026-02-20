@@ -11,7 +11,8 @@ uniform sampler2D texture_metallic : hint_default_white, filter_nearest, repeat_
 uniform vec4 metallic_texture_channel;
 uniform sampler2D texture_roughness : hint_roughness_r, filter_nearest_mipmap, repeat_enable;
 
-uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_enable;
+uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_disable;
+uniform sampler2D texture_ground : source_color, filter_nearest, repeat_disable;
 
 uniform float specular : hint_range(0.0, 1.0, 0.01);
 uniform float metallic : hint_range(0.0, 1.0, 0.01);
@@ -21,8 +22,8 @@ uniform vec3 uv1_offset;
 uniform vec3 uv2_scale;
 uniform vec3 uv2_offset;
 
-uniform int width = 1024;
-uniform int height = 1024;
+uniform int width = 512;
+uniform int height = 512;
 
 uniform vec4 color_bottom : source_color;
 uniform vec4 color_top : source_color;
@@ -33,9 +34,17 @@ uniform float color_cutoff_height_bottom = 1.9;
 uniform float color_cutoff_height_top = 2.0;
 uniform float max_vertical_height = 5.0;
 uniform sampler2D dig_texture : source_color, filter_linear, repeat_enable;
+uniform float data_bottom_threshold : hint_range(0.0, 1.0) = 0.0;
+uniform float data_top_threshold : hint_range(0.0, 1.0) = 1.0;
 
 varying float vertex_height;
 varying vec3 vertex_color;
+
+float sample_heightmap(sampler2D tex, vec2 uv) {
+	float pixel_size = 0.5 / float(width);
+	vec4 color = texture(tex, uv);
+	return (color.r + color.g + color.b + color.a) / 4.0;
+}
 
 float lower_ratio(float position_x, float position_z, vec2 uv) {
 	if (mod(position_x, 1.0) < 0.1 && mod(position_z, 1.0) < 0.1) {
@@ -54,11 +63,16 @@ float lerp(float a, float b, float ratio) {
 	return a + (diff * clamp(ratio, 0.0, 1.0));
 }
 
+float remap_data_height(float data_height) {
+	data_height -= data_bottom_threshold;
+	return clamp(data_height / (data_top_threshold - data_bottom_threshold), 0.0, 1.0);
+}
+
 vec3 get_vertex_position(float position_x, float position_z) {
 	float v_height;
 	vec2 uv = vec2(position_x / float(width), position_z / float(height));
 	
-	v_height = lerp(texture(texture_heightmap, uv).r + 0.02, -0.15 / max_vertical_height, lower_ratio(position_x, position_z, uv) * 1.15);
+	v_height = lerp(remap_data_height(sample_heightmap(texture_heightmap, uv)), 0.0, lower_ratio(position_x, position_z, uv));
 	
 	return vec3(position_x, v_height, position_z);
 }
@@ -113,6 +127,8 @@ void fragment() {
 
 	vec4 albedo_tex = texture(texture_albedo, base_uv);
 	ALBEDO = vertex_color * albedo_tex.rgb;
+	
+	ALBEDO = mix(texture(texture_ground, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, ALBEDO, clamp(vertex_height, 0.0, 0.002) * 500.0);
 
 	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;

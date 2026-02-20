@@ -204,12 +204,18 @@ func _on_get_in_area_body_exited(body: Node):
 
 
 func dig_pixel_predicate(x: int, y: int) -> bool:
-	var height := GameState.height_map_image.get_pixel(x, y).r if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
+	var map_height := GroundUtil.color_to_height(GameState.height_map_image.get_pixel(x, y))
+	var height := map_height if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
 	return height * Constants.HEIGHT_MAP_SCALE <= MAX_SNOW_HEIGHT
 
 
 func dig_pixel_back_predicate(x: int, y: int) -> bool:
-	var height := GameState.height_map_image.get_pixel(x, y).r if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
+	var map_height := GroundUtil.color_to_height(GameState.height_map_image.get_pixel(x, y))
+	var height := (
+		map_height
+		if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else
+		0.0
+	)
 	return height * Constants.HEIGHT_MAP_SCALE <= MAX_SNOW_HEIGHT
 
 

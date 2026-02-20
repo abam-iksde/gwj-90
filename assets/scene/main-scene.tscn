@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://daqkjhaqnxnoq" path="res://assets/scene/snow-layer.gd" id="2_g2noc"]
 [ext_resource type="Environment" uid="uid://bwgv1joh0e51u" path="res://assets/map/world-environment.tres" id="2_il5a6"]
 [ext_resource type="Script" uid="uid://beulo8yhiavap" path="res://assets/prefabs/environment/world-environment.gd" id="3_og6qx"]
-[ext_resource type="MultiMesh" uid="uid://csjdfbxlcm2cq" path="res://assets/map/multimesh.res" id="4_il5a6"]
+[ext_resource type="MultiMesh" uid="uid://da8sh8kgh303n" path="res://assets/map/multimesh.res" id="4_il5a6"]
 [ext_resource type="Texture2D" uid="uid://bbid7yk6gy2is" path="res://assets/map/ground.png" id="5_me04n"]
 [ext_resource type="PackedScene" uid="uid://cf14e3q2s42vu" path="res://assets/prefabs/plow/plow.tscn" id="7_45682"]
 [ext_resource type="PackedScene" uid="uid://bu85phpcrg5rv" path="res://assets/prefabs/player/player.tscn" id="7_m6igg"]
@@ -66,14 +66,16 @@ shadow_enabled = true
 [node name="snow-layer" type="MultiMeshInstance3D" parent="." unique_id=1479544490]
 material_override = ExtResource("1_me04n")
 cast_shadow = 0
+custom_aabb = AABB(-20000, -20000, -20000, 40000, 40000, 40000)
 multimesh = ExtResource("4_il5a6")
 script = ExtResource("2_g2noc")
 
 [node name="ground-layer" type="MeshInstance3D" parent="." unique_id=1010206981]
+visible = false
 mesh = SubResource("PlaneMesh_m6igg")
 
 [node name="plow" parent="." unique_id=85693202 instance=ExtResource("7_45682")]
-transform = Transform3D(-0.70710605, 0, 0.70710653, 0, 1, 0, -0.70710653, 0, -0.70710605, 898.0377, 4.7683716e-07, 131.62572)
+transform = Transform3D(-0.70710605, 0, 0.70710653, 0, 1, 0, -0.70710653, 0, -0.70710605, 447.04633, 4.7683716e-07, 65.11723)
 
 [node name="ground" type="StaticBody3D" parent="." unique_id=1154189234]
 
@@ -89,7 +91,7 @@ offset_bottom = 40.0
 script = SubResource("GDScript_45682")
 
 [node name="player" parent="." unique_id=1483526067 instance=ExtResource("7_m6igg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 902.31384, -2.3841858e-07, 129.60962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 451.32245, -2.3841858e-07, 63.101135)
 
 [node name="win-trigger" type="Area3D" parent="." unique_id=1917973811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 905.0587, 0, 257.1965)
@@ -107,7 +109,7 @@ script = ExtResource("11_67fty")
 metadata/_custom_type_script = "uid://twiavfjpee5a"
 
 [node name="test-house" type="StaticBody3D" parent="." unique_id=1481734030]
-transform = Transform3D(-0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, -0.86602545, 970.7513, 2.600461, 176.137)
+transform = Transform3D(0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660254, 377.15933, 13.360197, 13.03278)
 
 [node name="test-house" type="MeshInstance3D" parent="test-house" unique_id=541630297]
 mesh = ExtResource("12_e1l3o")

@@ -2,9 +2,12 @@
 
 [ext_resource type="Shader" uid="uid://d1owly4tx80vo" path="res://assets/map/heightmap.gdshader" id="1_eqdf5"]
 [ext_resource type="Texture2D" uid="uid://cmgly7aygyf4f" path="res://assets/map/snow-surface.png" id="2_cfiuq"]
-[ext_resource type="Texture2D" uid="uid://cvqsvgf64x20t" path="res://assets/map/dig-default.png" id="2_gvfjx"]
-[ext_resource type="Texture2D" uid="uid://bgyyes1ajuwke" path="res://assets/map/heightmap2.png" id="4_cfiuq"]
+[ext_resource type="Texture2D" uid="uid://bbid7yk6gy2is" path="res://assets/map/ground.png" id="4_gvfjx"]
 [ext_resource type="Texture2D" uid="uid://b2ntst5c58r6e" path="res://assets/map/snow-roughness.png" id="4_vdmvd"]
+[ext_resource type="Texture2D" uid="uid://ceie46uk8n6r4" path="res://assets/map/target.png" id="5_gvfjx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfiuq"]
+load_path = "res://.godot/imported/dig-default.png-84cf0e66991b94d9e8057d1ce233b9e8.s3tc.ctex"
 
 [resource]
 render_priority = 0
@@ -14,20 +17,23 @@ shader_parameter/point_size = 0.0
 shader_parameter/roughness = 1.0
 shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
 shader_parameter/texture_roughness = ExtResource("4_vdmvd")
-shader_parameter/texture_heightmap = ExtResource("4_cfiuq")
+shader_parameter/texture_heightmap = ExtResource("5_gvfjx")
+shader_parameter/texture_ground = ExtResource("4_gvfjx")
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_scale = Vector3(0.25, 0.25, 0.5)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(0, 0, 0)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/width = 1024
-shader_parameter/height = 1024
-shader_parameter/color_bottom = Color(0.3640627, 0.49479848, 0.83758557, 1)
+shader_parameter/width = 512
+shader_parameter/height = 512
+shader_parameter/color_bottom = Color(0.39613703, 0.52432346, 0.8599712, 1)
 shader_parameter/color_top = Color(0.5984, 0.69226676, 0.88, 1)
-shader_parameter/color_cutoff_bottom = Color(0.39607844, 0.5254902, 0.85882354, 1)
+shader_parameter/color_cutoff_bottom = Color(0.45674133, 0.58218956, 0.8891583, 1)
 shader_parameter/color_cutoff_top = Color(0.48759282, 0.6004615, 0.8252138, 1)
 shader_parameter/color_cutoff_height_bottom = 1.9
 shader_parameter/color_cutoff_height_top = 2.0
-shader_parameter/max_vertical_height = 5.0
-shader_parameter/dig_texture = ExtResource("2_gvfjx")
+shader_parameter/max_vertical_height = 55.0
+shader_parameter/dig_texture = SubResource("CompressedTexture2D_cfiuq")
+shader_parameter/data_bottom_threshold = 0.0
+shader_parameter/data_top_threshold = 1.0

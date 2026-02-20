@@ -37,11 +37,20 @@ static func get_ground_height_and_elevation_at_position(global_position: Vector3
 
 
 static func _get_height_map_point_height(x: int, y: int, ignore_dig: bool) -> float:
-	var height_map_height := GameState.height_map_image.get_pixel(x, y).r * Constants.HEIGHT_MAP_SCALE
+	var height_map_height := color_to_height(
+		GameState.height_map_image.get_pixel(x, y)
+	) * Constants.HEIGHT_MAP_SCALE
 	if ignore_dig:
 		return height_map_height
 	return (
 		height_map_height
 		if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else
 		0.0
+	)
+
+
+static func color_to_height(color: Color) -> float:
+	return (
+		((color.r + color.g + color.b + color.a) / 4.0 - Constants.HEIGHT_MAP_DATA_BOTTOM_THRESHOLD)
+		/ (Constants.HEIGHT_MAP_DATA_TOP_THRESHOLD - Constants.HEIGHT_MAP_DATA_BOTTOM_THRESHOLD)
 	)
