@@ -5,3 +5,14 @@ extends Object
 const MAP_SIZE = 1024
 const CHUNK_SIZE = 8
 const HEIGHT_MAP_SCALE = 5.0
+
+const MAX_FUEL_IN_PLOW = 100.0
+const START_FUEL_IN_PLOW = 50.0
+
+const PLOW_IDLE_FUEL_COST = 0.2
+const PLOW_DRIVE_FUEL_COST = 0.7
+
+const FOOD_HEALTH_BONUS = 10.0
+
+const MAX_FOOD_IN_INVENTORY = 10
+const MAX_FUEL_IN_INVENTORY = 100.0
