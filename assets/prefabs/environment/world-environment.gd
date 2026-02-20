@@ -31,7 +31,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if not get_tree().paused:
-		GameState.game_data.time += delta
+		GameState.game_data.time += delta / Constants.HOUR
 	GameState.game_data.time = fposmod(GameState.game_data.time, 24.0)
 	_update()
 
