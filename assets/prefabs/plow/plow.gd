@@ -217,5 +217,5 @@ func update_fuel_bounds():
 	fuel = maxf(fuel, 0.0)
 	if GameState.game_data.player_fuel > 0.0:
 		fuel += GameState.game_data.player_fuel
-		GameState.game_data.player_fuel = maxf(fuel - 100.0, 0.0)
-		fuel = minf(fuel, 100.0)
+		GameState.game_data.player_fuel = maxf(fuel - Constants.MAX_FUEL_IN_PLOW, 0.0)
+		fuel = minf(fuel, Constants.MAX_FUEL_IN_PLOW)

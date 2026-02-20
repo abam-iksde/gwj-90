@@ -29,7 +29,7 @@ func _ready() -> void:
 	camera.make_current()
 	interact_raycast.add_exception(self)
 	
-	GameState.player_died.connect(queue_free)
+	GameState.player_died.connect(_on_death)
 
 
 func _physics_process(delta: float) -> void:
@@ -54,3 +54,10 @@ func handle_interact():
 		return
 	if Input.is_action_just_pressed(&'interact'):
 		interactable.interact()
+
+
+func _on_death():
+	var body := preload('res://assets/prefabs/dead-operator/dead_operator.tscn').instantiate()
+	get_parent().add_child(body)
+	body.global_position = global_position - Vector3(0.0, 1.0, 0.0)
+	queue_free()

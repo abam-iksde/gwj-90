@@ -53,5 +53,5 @@ func _on_player_spawn_clicked():
 	player.global_position = icon_container.selected_house.spawn_position
 	player.camera.global_rotation.y = icon_container.selected_house.spawn_rotation
 	GameState.game_data.player_dead = false
-	GameState.game_data.player_health = 10.0
+	GameState.game_data.player_health = Constants.PLAYER_MAX_HEALTH
 	GameState.ui.hide_modal()

@@ -37,7 +37,7 @@ func _on_exit_clicked():
 
 func _on_sleep_clicked():
 	GameState.game_data.time += slider_sleep_time.value
-	GameState.game_data.player_health = 100.0
+	GameState.game_data.player_health = Constants.PLAYER_MAX_HEALTH
 
 
 func _process(_delta: float) -> void:

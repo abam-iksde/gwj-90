@@ -5,7 +5,7 @@ extends RefCounted
 var cleared_image: Image
 var cleared_texture: ImageTexture
 
-var player_health := 100.0
+var player_health := Constants.PLAYER_MAX_HEALTH
 var time := 7.0
 
 var houses := []

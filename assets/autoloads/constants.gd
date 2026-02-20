@@ -6,6 +6,8 @@ const MAP_SIZE = 1024
 const CHUNK_SIZE = 8
 const HEIGHT_MAP_SCALE = 5.0
 
+const PLAYER_MAX_HEALTH = 100.0
+
 const MAX_FUEL_IN_PLOW = 100.0
 const START_FUEL_IN_PLOW = 50.0
 
