@@ -13,6 +13,7 @@ uniform sampler2D texture_roughness : hint_roughness_r, filter_nearest_mipmap, r
 
 uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_disable;
 uniform sampler2D texture_ground : source_color, filter_nearest, repeat_disable;
+uniform sampler2D texture_rock : source_color, filter_nearest, repeat_disable;
 
 uniform float specular : hint_range(0.0, 1.0, 0.01);
 uniform float metallic : hint_range(0.0, 1.0, 0.01);
@@ -34,11 +35,20 @@ uniform float color_cutoff_height_bottom = 1.9;
 uniform float color_cutoff_height_top = 2.0;
 uniform float max_vertical_height = 5.0;
 uniform sampler2D dig_texture : source_color, filter_linear, repeat_enable;
-uniform float data_bottom_threshold : hint_range(0.0, 1.0) = 0.0;
+uniform float data_bottom_threshold : hint_range(-1.0, 1.0) = 0.0;
 uniform float data_top_threshold : hint_range(0.0, 1.0) = 1.0;
 
 varying float vertex_height;
 varying vec3 vertex_color;
+uniform bool grow;
+varying float rock_ratio;
+varying float rock_threshold;
+
+
+float random (vec2 uv) {
+    return fract(sin(dot(uv,
+        vec2(12.9898,78.233))) * 43758.5453123);
+}
 
 float sample_heightmap(sampler2D tex, vec2 uv) {
 	float pixel_size = 0.5 / float(width);
@@ -72,32 +82,34 @@ vec3 get_vertex_position(float position_x, float position_z) {
 	float v_height;
 	vec2 uv = vec2(position_x / float(width), position_z / float(height));
 	
-	v_height = lerp(remap_data_height(sample_heightmap(texture_heightmap, uv)), 0.0, lower_ratio(position_x, position_z, uv));
+	v_height = lerp(remap_data_height(sample_heightmap(texture_heightmap, uv)) + random(vec2(position_x, position_z)) * 0.002, 0.0, lower_ratio(position_x, position_z, uv));
 	
 	return vec3(position_x, v_height, position_z);
 }
 
 vec3 triangle_normal(vec3 a, vec3 b, vec3 c) {
-	return vec3(
+	vec3 normal = vec3(
 		a.y * b.z - a.z * b.y,
 		a.z * b.x - a.x * b.z,
 		a.x * b.y - a.y * b.x
 	);
+	return normal / sqrt(normal.x * normal.x + normal.y * normal.y + normal.z * normal.z);
 }
 
 vec3 calculate_normal(vec3 position) {
-	return (
-		-triangle_normal(
-			get_vertex_position(position.x - 1.0, position.z - 1.0),
-			get_vertex_position(position.x + 1.0, position.z - 1.0),
-			get_vertex_position(position.x - 1.0, position.z + 1.0)
-		)
+	vec3 normal = (
+		//triangle_normal(
+			//get_vertex_position(position.x - 1.0, position.z - 1.0) * vec3(1.0, max_vertical_height, 1.0),
+			//get_vertex_position(position.x + 1.0, position.z - 1.0) * vec3(1.0, max_vertical_height, 1.0),
+			//get_vertex_position(position.x - 1.0, position.z + 1.0) * vec3(1.0, max_vertical_height, 1.0)
+		//)
 		- triangle_normal(
-			get_vertex_position(position.x + 1.0, position.z - 1.0),
-			get_vertex_position(position.x - 1.0, position.z + 1.0),
-			get_vertex_position(position.x + 1.0, position.z + 1.0)
+			get_vertex_position(position.x + 1.5, position.z - 1.5) * vec3(1.0, max_vertical_height, 1.0),
+			get_vertex_position(position.x - 1.5, position.z + 1.5) * vec3(1.0, max_vertical_height, 1.0),
+			get_vertex_position(position.x + 1.5, position.z + 1.5) * vec3(1.0, max_vertical_height, 1.0)
 		)
-	) / 2.0;
+	);
+	return normal / sqrt(normal.x * normal.x + normal.y * normal.y + normal.z * normal.z);
 }
 
 void vertex() {
@@ -117,9 +129,20 @@ void vertex() {
 		vertex_color = color_cutoff_top.rgb + (color_top.rgb - color_cutoff_top.rgb) * ((vertex_physical_height - color_cutoff_height_top) / (max_vertical_height - color_cutoff_height_top));
 	}
 	
-	NORMAL = calculate_normal(vertex_position);
+	NORMAL = calculate_normal(vertex_world_position);
 	
 	UV = VERTEX.xz * uv1_scale.xy + uv1_offset.xy;
+	rock_threshold = 0.15 + sin((vertex_world_position.x + vertex_world_position.z) * 0.6) * 0.01;
+	
+	if (NORMAL.y > 0.7) {
+		rock_ratio = 0.0;
+	} else {
+		rock_ratio = 1.0;
+	}
+	
+	if (grow) {
+		VERTEX += NORMAL;
+	}
 }
 
 void fragment() {
@@ -128,7 +151,11 @@ void fragment() {
 	vec4 albedo_tex = texture(texture_albedo, base_uv);
 	ALBEDO = vertex_color * albedo_tex.rgb;
 	
-	ALBEDO = mix(texture(texture_ground, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, ALBEDO, clamp(vertex_height, 0.0, 0.002) * 500.0);
+	if (vertex_height < 0.002) {
+		ALBEDO = mix(texture(texture_ground, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, ALBEDO, clamp(vertex_height, 0.0, 0.002) * 500.0);
+	} else if (vertex_height > rock_threshold) {
+		ALBEDO = mix(ALBEDO, texture(texture_rock, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, lerp(0.0, rock_ratio, clamp((vertex_height - rock_threshold) * 50.0, 0.0, 1.0)));
+	}
 
 	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b7h0431tnb7g1"]
+
+[ext_resource type="Texture2D" uid="uid://exrod4ft5ory" path="res://assets/prefabs/ui/hud/thermometer/thermometer_decoration.png" id="1_rjyrb"]
+[ext_resource type="Texture2D" uid="uid://chlby7sgophlk" path="res://assets/prefabs/ui/hud/thermometer/thermometer_progress.png" id="2_uh7qs"]
+[ext_resource type="Script" uid="uid://j11ornynafmk" path="res://assets/prefabs/ui/hud/thermometer/thermometer.gd" id="3_lbu26"]
+
+[node name="thermometer" type="TextureProgressBar" unique_id=734850608]
+step = 0.1
+value = 28.0
+fill_mode = 3
+texture_over = ExtResource("1_rjyrb")
+texture_progress = ExtResource("2_uh7qs")
+script = ExtResource("3_lbu26")

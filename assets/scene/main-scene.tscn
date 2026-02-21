@@ -109,7 +109,7 @@ script = ExtResource("11_67fty")
 metadata/_custom_type_script = "uid://twiavfjpee5a"
 
 [node name="test-house" type="StaticBody3D" parent="." unique_id=1481734030]
-transform = Transform3D(0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660254, 377.15933, 13.360197, 13.03278)
+transform = Transform3D(0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660254, 451.56036, -0.022673488, 45.51461)
 
 [node name="test-house" type="MeshInstance3D" parent="test-house" unique_id=541630297]
 mesh = ExtResource("12_e1l3o")

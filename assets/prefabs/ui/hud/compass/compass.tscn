@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b47bu8mqwo5n7"]
+
+[ext_resource type="Texture2D" uid="uid://cvqolsxyixorp" path="res://assets/prefabs/ui/hud/compass/compass_background.png" id="1_62xrh"]
+[ext_resource type="Texture2D" uid="uid://b87r5p3e83md" path="res://assets/prefabs/ui/hud/compass/compass_foreground.png" id="2_k1sip"]
+[ext_resource type="Script" uid="uid://bp360p7r70vyu" path="res://assets/prefabs/ui/hud/compass/compass.gd" id="2_mw0ow"]
+
+[node name="compass" type="Sprite2D" unique_id=1382539961]
+texture = ExtResource("1_62xrh")
+script = ExtResource("2_mw0ow")
+
+[node name="foreground" type="Sprite2D" parent="." unique_id=594753716]
+texture = ExtResource("2_k1sip")

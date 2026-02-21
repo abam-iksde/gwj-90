@@ -4,6 +4,7 @@ extends TextureRect
 @onready var button_close: Button = get_node('button-close')
 @onready var button_respawn: Button = get_node('button-respawn')
 @onready var icon_container: MapIconContainer = get_node('icons')
+@onready var death_info_label: Label = get_node('death-info-label')
 
 
 func _ready() -> void:
@@ -19,9 +20,11 @@ func on_show(payload):
 	if show_respawn_options:
 		button_close.visible = false
 		button_respawn.visible = true
+		death_info_label.visible = true
 	else:
 		button_close.visible = true
 		button_respawn.visible = false
+		death_info_label.visible = false
 	for child in icon_container.get_children():
 		child.queue_free()
 	for house in GameState.game_data.houses:
@@ -56,3 +59,5 @@ func _on_player_spawn_clicked():
 	GameState.game_data.player_health = Constants.PLAYER_MAX_HEALTH
 	GameState.notify_player_spawned()
 	GameState.ui.hide_modal()
+	GameState.ui.show_modal(UiContainer.Modal.INTERIOR)
+	get_tree().paused = true

@@ -54,3 +54,15 @@ text = "DISPATCH"
 [node name="input-handler" type="Node" parent="." unique_id=1921312900]
 process_mode = 3
 script = ExtResource("5_hf3yc")
+
+[node name="death-info-label" type="Label" parent="." unique_id=170545517]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 532.0
+offset_right = 1072.0
+offset_bottom = 633.0
+text = "The operator froze to death.
+
+Select a starting location for
+his successor."
+horizontal_alignment = 1

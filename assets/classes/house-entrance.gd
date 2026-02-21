@@ -7,7 +7,6 @@ func get_action_name() -> String:
 
 func interact() -> void:
 	GameState.ui.show_modal(UiContainer.Modal.INTERIOR)
-	get_tree().paused = true
 
 
 func _ready() -> void:

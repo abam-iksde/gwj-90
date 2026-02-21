@@ -17,7 +17,7 @@ const _45_DEGREES = deg_to_rad(45.0)
 
 const RETRIGGER_ROTATION_STEP = deg_to_rad(7.0)
 
-const MAX_SNOW_HEIGHT = 2.0
+const MAX_SNOW_HEIGHT = 2.1
 const MAX_SNOW_HEIGHT_BACK = 0.7 # <- makes it easy to get stuck in the snow, not sure how to address that for now
 
 const DRIVE_SPEED = 4.0
@@ -30,13 +30,11 @@ const CAMERA_MAX_ANGLE = 30.0
 
 @onready var camera_target: Node3D = get_node('third-person-camera')
 @onready var camera: Camera3D = get_node('third-person-camera/camera')
-@onready var get_in_area: Area3D = get_node('get_in_area')
 
 var last_integer_position := Vector2i.ZERO
 var rotation_diff := 0.0
 
 var player_in := false
-var player_in_area = null
 
 var fuel := Constants.START_FUEL_IN_PLOW
 
@@ -55,20 +53,13 @@ func _input(event: InputEvent) -> void:
 
 func _ready() -> void:
 	camera.fov = GameSettings.PLOW_FOV
-	get_in_area.body_entered.connect(_on_get_in_area_body_entered)
-	get_in_area.body_exited.connect(_on_get_in_area_body_exited)
 	
 	GameState.plow = self
-	GameState.player_died.connect(func(): player_in = false)
+	GameState.player_died.connect(_on_death)
 
 
 func _physics_process(delta: float) -> void:
 	if not player_in:
-		if player_in_area and Input.is_action_just_pressed(&'plow_enter_exit'):
-			camera_target.global_rotation = player_in_area.camera.rotation
-			player_in_area.queue_free()
-			player_in = true
-			camera.make_current()
 		return
 	
 	if Input.is_action_just_pressed(&'plow_enter_exit'):
@@ -127,6 +118,7 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = Vector3(velocity_2d.x, 0.0, velocity_2d.y)
 	move_and_slide()
+
 
 func clear_snow(front: bool, new_position: Vector2i) -> bool:
 	while rotation.y < 0.0:
@@ -189,20 +181,6 @@ func round_vector2(v: Vector2) -> Vector2i:
 	)
 
 
-func _on_get_in_area_body_entered(body: Node):
-	var player := body as Player
-	if not player:
-		return
-	player_in_area = player
-
-
-func _on_get_in_area_body_exited(body: Node):
-	var player := body as Player
-	if not player:
-		return
-	player_in_area = null
-
-
 func dig_pixel_predicate(x: int, y: int) -> bool:
 	var map_height := GroundUtil.color_to_height(GameState.height_map_image.get_pixel(x, y))
 	var height := map_height if GameState.game_data.cleared_image.get_pixel(x, y).r < 0.5 else 0.0
@@ -225,3 +203,14 @@ func update_fuel_bounds():
 		fuel += GameState.game_data.player_fuel
 		GameState.game_data.player_fuel = maxf(fuel - Constants.MAX_FUEL_IN_PLOW, 0.0)
 		fuel = minf(fuel, Constants.MAX_FUEL_IN_PLOW)
+
+
+func _on_death():
+	if not player_in:
+		return
+	player_in = false
+	var tween := create_tween()
+	tween.tween_interval(3.0)
+	tween.tween_callback(func():
+		GameState.ui.show_modal(UiContainer.Modal.MAP, { &'show_respawn_options': true })
+	)

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://s74nbtnycdpr"]
+
+[ext_resource type="Script" uid="uid://b6m7b2fj5jito" path="res://assets/prefabs/ui/hud/gas-tank/gas-tank-bar.gd" id="1_4ksbn"]
+[ext_resource type="Texture2D" uid="uid://c6278h2sjsl3j" path="res://assets/prefabs/ui/hud/gas-tank/icon.png" id="1_wdt72"]
+[ext_resource type="Texture2D" uid="uid://cycnn58vclhx4" path="res://assets/prefabs/ui/hud/bar-fill.png" id="2_4ksbn"]
+[ext_resource type="Texture2D" uid="uid://dh4lxbd074brl" path="res://assets/prefabs/ui/hud/bar-foreground.png" id="3_kv0w2"]
+
+[node name="gas-tank-bar" type="Control" unique_id=1513862080]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4ksbn")
+
+[node name="sprite-2d" type="Sprite2D" parent="." unique_id=412118683]
+position = Vector2(665, 95)
+texture = ExtResource("1_wdt72")
+
+[node name="texture-progress-bar" type="TextureProgressBar" parent="." unique_id=1515558146]
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 190.0
+step = 0.1
+value = 68.5
+fill_mode = 1
+texture_under = ExtResource("2_4ksbn")
+texture_over = ExtResource("3_kv0w2")
+texture_progress = ExtResource("2_4ksbn")
+tint_under = Color(0.23589408, 0.16238114, 2.4065375e-08, 1)
+tint_progress = Color(0.8599382, 0.7184584, 0, 1)

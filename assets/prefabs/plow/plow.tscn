@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://8yjvaynaeq3u" path="res://assets/prefabs/plow/plow.gd" id="1_g5xdi"]
 [ext_resource type="PackedScene" uid="uid://waag536qasuc" path="res://assets/meshes/snowplow/snow-plow-01.glb" id="2_il2fi"]
 [ext_resource type="PackedScene" uid="uid://xynnpml34lh" path="res://assets/prefabs/camera/third-person-camera.tscn" id="3_p6dha"]
+[ext_resource type="Script" uid="uid://ckvud5d86vusw" path="res://assets/prefabs/plow/get-in-trigger.gd" id="4_oarl2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rlwr1"]
 size = Vector3(2, 2.3260498, 3.8528519)
@@ -17,7 +18,7 @@ size = Vector3(0.04875487, 1.4442139, 1.271)
 size = Vector3(2.7001953, 1.2139893, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_il2fi"]
-size = Vector3(2.75, 3.37, 5.075)
+size = Vector3(2.1865234, 2.9165673, 2.4208984)
 
 [node name="plow" type="CharacterBody3D" unique_id=85693202]
 axis_lock_linear_y = true
@@ -48,12 +49,15 @@ shape = SubResource("BoxShape3D_demj8")
 [node name="snow-plow-01" parent="." unique_id=1161364040 instance=ExtResource("2_il2fi")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.05689025, 0, 1)
 
-[node name="get_in_area" type="Area3D" parent="." unique_id=643314168]
-
-[node name="collision-shape-3d" type="CollisionShape3D" parent="get_in_area" unique_id=301724863]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1851807, 0.5374298)
-shape = SubResource("BoxShape3D_il2fi")
-
 [node name="third-person-camera" parent="." unique_id=963379529 instance=ExtResource("3_p6dha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 distance = 6.5
+
+[node name="get-in-trigger" type="CharacterBody3D" parent="." unique_id=1080100573]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_oarl2")
+
+[node name="collision-shape-3d" type="CollisionShape3D" parent="get-in-trigger" unique_id=499912605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9584644, 0.5374298)
+shape = SubResource("BoxShape3D_il2fi")

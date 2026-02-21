@@ -5,6 +5,15 @@
 [ext_resource type="Script" uid="uid://68mtsqkbefi8" path="res://assets/prefabs/ui/health-label.gd" id="3_n5fnd"]
 [ext_resource type="PackedScene" uid="uid://dbt4kky81uo" path="res://assets/prefabs/ui/house-interior/interior.tscn" id="4_4wij6"]
 [ext_resource type="PackedScene" uid="uid://0p7pgsbqp1ea" path="res://assets/prefabs/ui/map/map.tscn" id="5_lji3o"]
+[ext_resource type="PackedScene" uid="uid://b47bu8mqwo5n7" path="res://assets/prefabs/ui/hud/compass/compass.tscn" id="6_83o3a"]
+[ext_resource type="Script" uid="uid://bo1xc7n120tkj" path="res://assets/prefabs/ui/hud-section.gd" id="6_c4xkt"]
+[ext_resource type="PackedScene" uid="uid://cn3mdi73rny2v" path="res://assets/prefabs/ui/hud/healthbar/health-bar.tscn" id="7_24qhq"]
+[ext_resource type="PackedScene" uid="uid://dey1wc1l18vi6" path="res://assets/prefabs/ui/hud/plow-compass/plow-compass.tscn" id="8_brb2r"]
+[ext_resource type="PackedScene" uid="uid://cptjj7vgd1ti4" path="res://assets/prefabs/ui/hud/fuel/fuel-bar.tscn" id="8_t852v"]
+[ext_resource type="PackedScene" uid="uid://b7h0431tnb7g1" path="res://assets/prefabs/ui/hud/thermometer/thermometer.tscn" id="9_1i7r0"]
+[ext_resource type="PackedScene" uid="uid://s74nbtnycdpr" path="res://assets/prefabs/ui/hud/gas-tank/gas-tank-bar.tscn" id="9_jd2ct"]
+[ext_resource type="PackedScene" uid="uid://kdsii1kg63gl" path="res://assets/prefabs/ui/hud/food/food-number.tscn" id="9_ufjas"]
+[ext_resource type="Script" uid="uid://dov6guqk7soh" path="res://assets/prefabs/ui/interaction-label.gd" id="11_be6lj"]
 
 [node name="ui-container" type="Control" unique_id=1969353579]
 layout_mode = 3
@@ -16,16 +25,111 @@ grow_vertical = 2
 script = ExtResource("1_dicjr")
 
 [node name="health-label" type="Label" parent="." unique_id=710765627]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("3_n5fnd")
 
+[node name="hud_bottom_left" type="Control" parent="." unique_id=1026154357]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("6_c4xkt")
+scale_factor = 0.55
+
+[node name="compass" parent="hud_bottom_left" unique_id=1382539961 instance=ExtResource("6_83o3a")]
+position = Vector2(100, -100)
+
+[node name="plow-compass" parent="hud_bottom_left" unique_id=1373376222 instance=ExtResource("8_brb2r")]
+position = Vector2(300, -100)
+
+[node name="thermometer" parent="hud_bottom_left" unique_id=734850608 instance=ExtResource("9_1i7r0")]
+layout_mode = 0
+offset_top = -395.0
+offset_right = 190.0
+offset_bottom = -205.0
+
+[node name="hud-top-left" type="Control" parent="." unique_id=182116068]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_c4xkt")
+scale_factor = 0.55
+
+[node name="health-bar" parent="hud-top-left" unique_id=1227568305 instance=ExtResource("7_24qhq")]
+layout_mode = 0
+
+[node name="fuel-bar" parent="hud-top-left" unique_id=545237264 instance=ExtResource("8_t852v")]
+layout_mode = 0
+offset_top = 177.0
+offset_bottom = 177.0
+
+[node name="food-number" parent="hud-top-left" unique_id=115170565 instance=ExtResource("9_ufjas")]
+layout_mode = 0
+offset_top = 354.0
+offset_bottom = 354.0
+
+[node name="hud-to-right" type="Control" parent="." unique_id=2057303010]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("6_c4xkt")
+scale_factor = 0.55
+
+[node name="gas-tank-bar" parent="hud-to-right" unique_id=1513862080 instance=ExtResource("9_jd2ct")]
+layout_mode = 0
+offset_left = -757.0
+offset_right = -757.0
+
+[node name="hud-center" type="Control" parent="." unique_id=150808487]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_c4xkt")
+
+[node name="interaction-label" type="Label" parent="hud-center" unique_id=780603703]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_right = 47.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "[F] - Interact"
+script = ExtResource("11_be6lj")
+
+[node name="dim" type="ColorRect" parent="." unique_id=1913903507]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
 [node name="win-screen" parent="." unique_id=1450497098 instance=ExtResource("2_1080m")]
+visible = false
 layout_mode = 0
 
 [node name="interior" parent="." unique_id=1895528602 instance=ExtResource("4_4wij6")]
+visible = false
 layout_mode = 0
 
 [node name="map" parent="." unique_id=595115752 instance=ExtResource("5_lji3o")]
+visible = false
 layout_mode = 0

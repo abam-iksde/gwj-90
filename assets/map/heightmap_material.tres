@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbid7yk6gy2is" path="res://assets/map/ground.png" id="4_gvfjx"]
 [ext_resource type="Texture2D" uid="uid://b2ntst5c58r6e" path="res://assets/map/snow-roughness.png" id="4_vdmvd"]
 [ext_resource type="Texture2D" uid="uid://ceie46uk8n6r4" path="res://assets/map/target.png" id="5_gvfjx"]
+[ext_resource type="Texture2D" uid="uid://dk0bbojflxn65" path="res://assets/map/rock.png" id="5_vdmvd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfiuq"]
 load_path = "res://.godot/imported/dig-default.png-84cf0e66991b94d9e8057d1ce233b9e8.s3tc.ctex"
@@ -19,6 +20,7 @@ shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
 shader_parameter/texture_roughness = ExtResource("4_vdmvd")
 shader_parameter/texture_heightmap = ExtResource("5_gvfjx")
 shader_parameter/texture_ground = ExtResource("4_gvfjx")
+shader_parameter/texture_rock = ExtResource("5_vdmvd")
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_scale = Vector3(0.25, 0.25, 0.5)
@@ -35,5 +37,6 @@ shader_parameter/color_cutoff_height_bottom = 1.9
 shader_parameter/color_cutoff_height_top = 2.0
 shader_parameter/max_vertical_height = 55.0
 shader_parameter/dig_texture = SubResource("CompressedTexture2D_cfiuq")
-shader_parameter/data_bottom_threshold = 0.0
+shader_parameter/data_bottom_threshold = -0.02999995392499999
 shader_parameter/data_top_threshold = 1.0
+shader_parameter/grow = false

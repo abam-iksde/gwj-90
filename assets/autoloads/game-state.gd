@@ -38,3 +38,5 @@ var ui: UiContainer
 var mouse_capture: MouseCapture
 var plow: Plow
 var environment: GameWorldEnvironment
+var player: Player
+var interaction_label: InteractionLabel

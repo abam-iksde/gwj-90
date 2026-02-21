@@ -22,11 +22,17 @@ enum Modal {
 	Modal.MAP: get_node('map')
 }
 
+@onready var dim: ColorRect = get_node('dim')
+
 var visible_modal: Control = null
 var sliding := false
 
+signal modal_hidden
+
 
 func show_modal(modal_id: Modal, payload = null) -> void:
+	if visible_modal:
+		await modal_hidden
 	var modal = modals[modal_id]
 	modal.on_show(payload)
 	modal.visible = true
@@ -37,6 +43,7 @@ func show_modal(modal_id: Modal, payload = null) -> void:
 	update_modal_size(modal)
 	var move_tween = create_tween()
 	move_tween.tween_method(slide_update.bind(modal, slide_in_ease), 0.0, 1.0, SLIDE_TIME)
+	move_tween.parallel().tween_property(dim, 'color', Color(0.0, 0.0, 0.0, 0.5), SLIDE_TIME)
 	move_tween.tween_callback(func(): sliding = false)
 
 
@@ -48,10 +55,12 @@ func hide_modal() -> void:
 	visible_modal.process_mode = Node.PROCESS_MODE_DISABLED
 	var move_tween = create_tween()
 	move_tween.tween_method(slide_update.bind(visible_modal, slide_out_ease), 0.0, 1.0, SLIDE_TIME)
+	move_tween.parallel().tween_property(dim, 'color', Color(0.0, 0.0, 0.0, 0.0), SLIDE_TIME)
 	move_tween.tween_callback(
 		func():
 			sliding = false
 			visible_modal = null
+			modal_hidden.emit()
 	)
 
 
@@ -68,6 +77,7 @@ func _ready() -> void:
 		modal.visible = false
 		modal.process_mode = Node.PROCESS_MODE_DISABLED
 	get_viewport().size_changed.connect(_on_window_resized)
+	dim.color.a = 0.0
 
 
 func slide_update(progress_flat: float, modal: Control, easing: Callable):

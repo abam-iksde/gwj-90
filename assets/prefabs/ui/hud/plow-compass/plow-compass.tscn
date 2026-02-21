@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dey1wc1l18vi6"]
+
+[ext_resource type="Texture2D" uid="uid://duhnssvtauo8a" path="res://assets/prefabs/ui/hud/plow-compass/compass_background.png" id="1_7yrbx"]
+[ext_resource type="Script" uid="uid://crwoqs8su80ct" path="res://assets/prefabs/ui/hud/plow-compass/plow-compass.gd" id="2_a1n2k"]
+[ext_resource type="Texture2D" uid="uid://ch8dqiivlljps" path="res://assets/prefabs/ui/hud/plow-compass/compass_foreground.png" id="2_auvi6"]
+
+[node name="plow-compass" type="Sprite2D" unique_id=1373376222]
+texture = ExtResource("1_7yrbx")
+script = ExtResource("2_a1n2k")
+
+[node name="foreground" type="Sprite2D" parent="." unique_id=1779894279]
+texture = ExtResource("2_auvi6")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://kdsii1kg63gl"]
+
+[ext_resource type="Script" uid="uid://cr8s33c781o8m" path="res://assets/prefabs/ui/hud/food/food-number.gd" id="1_4t3un"]
+[ext_resource type="Texture2D" uid="uid://nq1vnig8mdv1" path="res://assets/prefabs/ui/hud/food/icon.png" id="2_js3v1"]
+
+[node name="food-number" type="Control" unique_id=115170565]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4t3un")
+
+[node name="sprite-2d" type="Sprite2D" parent="." unique_id=447666548]
+position = Vector2(95, 95)
+texture = ExtResource("2_js3v1")
+
+[node name="label" type="Label" parent="." unique_id=1309999583]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 21.0
+offset_right = 372.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 110
+text = "X 5"

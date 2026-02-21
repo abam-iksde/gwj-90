@@ -14,6 +14,7 @@ var supply_slider_dragging := false
 
 
 func on_show(_payload):
+	get_tree().paused = true
 	GameState.mouse_capture.unfocus_mouse()
 	update_values()
 
