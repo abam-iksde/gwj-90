@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://b7h0431tnb7g1"]
 
-[ext_resource type="Texture2D" uid="uid://exrod4ft5ory" path="res://assets/prefabs/ui/hud/thermometer/thermometer_decoration.png" id="1_rjyrb"]
-[ext_resource type="Texture2D" uid="uid://chlby7sgophlk" path="res://assets/prefabs/ui/hud/thermometer/thermometer_progress.png" id="2_uh7qs"]
+[ext_resource type="Texture2D" uid="uid://dhatnnr4ofj1s" path="res://assets/prefabs/ui/hud/thermometer/thermometer_fill.PNG" id="1_uh7qs"]
+[ext_resource type="Texture2D" uid="uid://d3jxvqdefaomd" path="res://assets/prefabs/ui/hud/thermometer/thermometer_outline.PNG" id="2_lbu26"]
 [ext_resource type="Script" uid="uid://j11ornynafmk" path="res://assets/prefabs/ui/hud/thermometer/thermometer.gd" id="3_lbu26"]
+[ext_resource type="Texture2D" uid="uid://dbp2fe2rk8e4s" path="res://assets/prefabs/ui/hud/thermometer/thermometer_progress.PNG" id="3_qg7kn"]
 
 [node name="thermometer" type="TextureProgressBar" unique_id=734850608]
 step = 0.1
 value = 28.0
 fill_mode = 3
-texture_over = ExtResource("1_rjyrb")
-texture_progress = ExtResource("2_uh7qs")
+texture_under = ExtResource("1_uh7qs")
+texture_over = ExtResource("2_lbu26")
+texture_progress = ExtResource("3_qg7kn")
 script = ExtResource("3_lbu26")

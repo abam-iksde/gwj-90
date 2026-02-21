@@ -1,10 +1,15 @@
 extends Node
 
 
+@onready var parent = get_parent()
+
+
 func _input(event: InputEvent) -> void:
 	if GameState.game_data.player_dead:
 		return
 	if not event.is_action(&'open_map'):
+		return
+	if parent.settings_visible:
 		return
 	if event.is_pressed():
 		try_toggle_map()

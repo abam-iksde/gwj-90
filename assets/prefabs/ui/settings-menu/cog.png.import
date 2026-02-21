@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6278h2sjsl3j"
-path="res://.godot/imported/icon.png-cfe7c72569316c2e8892bed5df70292f.ctex"
+uid="uid://dcrhx5al7qsbx"
+path="res://.godot/imported/cog.png-4d3b11e6ec0b40aeb2dc9e46b76851ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/gas-tank/icon.png"
-dest_files=["res://.godot/imported/icon.png-cfe7c72569316c2e8892bed5df70292f.ctex"]
+source_file="res://assets/prefabs/ui/settings-menu/cog.png"
+dest_files=["res://.godot/imported/cog.png-4d3b11e6ec0b40aeb2dc9e46b76851ad.ctex"]
 
 [params]
 

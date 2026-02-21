@@ -12,8 +12,8 @@ uniform vec4 metallic_texture_channel;
 uniform sampler2D texture_roughness : hint_roughness_r, filter_nearest_mipmap, repeat_enable;
 
 uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_disable;
-uniform sampler2D texture_ground : source_color, filter_nearest, repeat_disable;
-uniform sampler2D texture_rock : source_color, filter_nearest, repeat_disable;
+uniform sampler2D texture_ground : source_color, filter_nearest_mipmap, repeat_disable;
+uniform sampler2D texture_rock : source_color, filter_nearest_mipmap, repeat_disable;
 
 uniform float specular : hint_range(0.0, 1.0, 0.01);
 uniform float metallic : hint_range(0.0, 1.0, 0.01);

@@ -6,10 +6,18 @@ extends TextureRect
 @onready var icon_container: MapIconContainer = get_node('icons')
 @onready var death_info_label: Label = get_node('death-info-label')
 
+@onready var settings_screen: SettingsScreen = get_node('../settings')
+@onready var button_settings: TextureButton = get_node('button-settings')
+
+var settings_visible := false
+
 
 func _ready() -> void:
 	button_close.pressed.connect(_on_exit_clicked)
 	button_respawn.pressed.connect(_on_player_spawn_clicked)
+	
+	button_settings.pressed.connect(_on_settings_enter)
+	settings_screen.back_requested.connect(_on_settings_exit)
 
 
 func on_show(payload):
@@ -61,3 +69,15 @@ func _on_player_spawn_clicked():
 	GameState.ui.hide_modal()
 	GameState.ui.show_modal(UiContainer.Modal.INTERIOR)
 	get_tree().paused = true
+
+
+func _on_settings_enter():
+	visible = false
+	settings_screen.visible = true
+	settings_visible = true
+
+
+func _on_settings_exit():
+	visible = true
+	settings_screen.visible = false
+	settings_visible = false

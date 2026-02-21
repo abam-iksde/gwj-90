@@ -4,8 +4,8 @@ extends TextureProgressBar
 const MIN_PROGRESS = 28.0
 const MAX_PROGRESS = 81.0
 
-const WARM_COLOR = Color(1.0, 0.444, 0.375, 1.0)
-const COLD_COLOR = Color(0.379, 0.573, 1.0, 1.0)
+const WARM_COLOR = Color('991C05')
+const COLD_COLOR = Color('0777A5')
 
 
 var max_temperature: float = INF

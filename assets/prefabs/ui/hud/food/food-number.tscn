@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kdsii1kg63gl"]
 
 [ext_resource type="Script" uid="uid://cr8s33c781o8m" path="res://assets/prefabs/ui/hud/food/food-number.gd" id="1_4t3un"]
-[ext_resource type="Texture2D" uid="uid://nq1vnig8mdv1" path="res://assets/prefabs/ui/hud/food/icon.png" id="2_js3v1"]
+[ext_resource type="Texture2D" uid="uid://ididkqljyp60" path="res://assets/prefabs/ui/hud/food/beans.PNG" id="2_4t3un"]
 
 [node name="food-number" type="Control" unique_id=115170565]
 layout_mode = 3
@@ -10,7 +10,8 @@ script = ExtResource("1_4t3un")
 
 [node name="sprite-2d" type="Sprite2D" parent="." unique_id=447666548]
 position = Vector2(95, 95)
-texture = ExtResource("2_js3v1")
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_4t3un")
 
 [node name="label" type="Label" parent="." unique_id=1309999583]
 layout_mode = 0

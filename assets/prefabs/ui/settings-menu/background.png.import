@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nq1vnig8mdv1"
-path="res://.godot/imported/icon.png-8e980d15e4d46ca9ba8d6a6f02e3580c.ctex"
+uid="uid://24oobllqo364"
+path="res://.godot/imported/background.png-5385e2272c3ff203c97768f406900f44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/food/icon.png"
-dest_files=["res://.godot/imported/icon.png-8e980d15e4d46ca9ba8d6a6f02e3580c.ctex"]
+source_file="res://assets/prefabs/ui/settings-menu/background.png"
+dest_files=["res://.godot/imported/background.png-5385e2272c3ff203c97768f406900f44.ctex"]
 
 [params]
 

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://s74nbtnycdpr" path="res://assets/prefabs/ui/hud/gas-tank/gas-tank-bar.tscn" id="9_jd2ct"]
 [ext_resource type="PackedScene" uid="uid://kdsii1kg63gl" path="res://assets/prefabs/ui/hud/food/food-number.tscn" id="9_ufjas"]
 [ext_resource type="Script" uid="uid://dov6guqk7soh" path="res://assets/prefabs/ui/interaction-label.gd" id="11_be6lj"]
+[ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="15_qdye4"]
 
 [node name="ui-container" type="Control" unique_id=1969353579]
 layout_mode = 3
@@ -49,9 +50,9 @@ position = Vector2(300, -100)
 
 [node name="thermometer" parent="hud_bottom_left" unique_id=734850608 instance=ExtResource("9_1i7r0")]
 layout_mode = 0
-offset_top = -395.0
-offset_right = 190.0
-offset_bottom = -205.0
+offset_top = -721.38
+offset_right = 256.0
+offset_bottom = -209.38
 
 [node name="hud-top-left" type="Control" parent="." unique_id=182116068]
 anchors_preset = 0
@@ -73,7 +74,7 @@ layout_mode = 0
 offset_top = 354.0
 offset_bottom = 354.0
 
-[node name="hud-to-right" type="Control" parent="." unique_id=2057303010]
+[node name="hud-top-right" type="Control" parent="." unique_id=2057303010]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -83,10 +84,12 @@ grow_horizontal = 0
 script = ExtResource("6_c4xkt")
 scale_factor = 0.55
 
-[node name="gas-tank-bar" parent="hud-to-right" unique_id=1513862080 instance=ExtResource("9_jd2ct")]
+[node name="gas-tank-bar" parent="hud-top-right" unique_id=1513862080 instance=ExtResource("9_jd2ct")]
 layout_mode = 0
-offset_left = -757.0
-offset_right = -757.0
+offset_left = -736.935
+offset_top = 40.695
+offset_right = -736.935
+offset_bottom = 40.695
 
 [node name="hud-center" type="Control" parent="." unique_id=150808487]
 layout_mode = 1
@@ -133,3 +136,8 @@ layout_mode = 0
 [node name="map" parent="." unique_id=595115752 instance=ExtResource("5_lji3o")]
 visible = false
 layout_mode = 0
+
+[node name="settings" parent="." unique_id=855291482 instance=ExtResource("15_qdye4")]
+visible = false
+layout_mode = 1
+with_quit = true

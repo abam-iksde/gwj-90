@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://c56u2q82b8est"]
+
+[ext_resource type="Script" uid="uid://5s6s38fktufa" path="res://assets/prefabs/ui/settings-menu/settings.gd" id="1_xmg4a"]
+[ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="1_yr2q1"]
+[ext_resource type="Texture2D" uid="uid://bsyj2vnuogh2" path="res://assets/prefabs/ui/settings-menu/quit.png" id="3_756o3"]
+
+[node name="settings" type="Control" unique_id=855291482]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmg4a")
+
+[node name="texture-rect" type="TextureRect" parent="." unique_id=1025663492]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yr2q1")
+
+[node name="slider-sensitivity" type="HSlider" parent="texture-rect" unique_id=381407008]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.5
+offset_top = -133.0
+offset_right = 255.5
+offset_bottom = -116.99997
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 10.0
+step = 0.1
+value = 10.0
+
+[node name="label" type="Label" parent="texture-rect/slider-sensitivity" unique_id=1653684357]
+layout_mode = 0
+offset_top = -37.0
+offset_right = 203.0
+offset_bottom = -3.0
+theme_override_font_sizes/font_size = 24
+text = "Mouse Sensitivity"
+
+[node name="slider-fov-player" type="HSlider" parent="texture-rect" unique_id=382621098]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.5
+offset_top = -43.0
+offset_right = 255.5
+offset_bottom = -26.999954
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 45.0
+max_value = 120.0
+value = 45.0
+
+[node name="label" type="Label" parent="texture-rect/slider-fov-player" unique_id=2061950146]
+layout_mode = 0
+offset_top = -37.0
+offset_right = 203.0
+offset_bottom = -3.0
+theme_override_font_sizes/font_size = 24
+text = "FOV - first person (walk): 90.0"
+
+[node name="slider-fov-plow" type="HSlider" parent="texture-rect" unique_id=441359462]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.5
+offset_top = 47.0
+offset_right = 255.5
+offset_bottom = 63.00006
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 45.0
+max_value = 120.0
+value = 45.0
+
+[node name="label" type="Label" parent="texture-rect/slider-fov-plow" unique_id=1123680110]
+layout_mode = 0
+offset_top = -37.0
+offset_right = 203.0
+offset_bottom = -3.0
+theme_override_font_sizes/font_size = 24
+text = "FOV - third person (drive): 90.0"
+
+[node name="button-back" type="Button" parent="texture-rect" unique_id=1403717328]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = -121.0
+offset_right = 77.5
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "BACK"
+
+[node name="button-quit" type="TextureButton" parent="texture-rect" unique_id=1839234260]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 9.0
+offset_right = 656.0
+offset_bottom = 89.0
+texture_normal = ExtResource("3_756o3")
+
+[node name="quit-confirmation" type="TextureRect" parent="texture-rect" unique_id=497206153]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yr2q1")
+
+[node name="label" type="Label" parent="texture-rect/quit-confirmation" unique_id=696341831]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -82.175
+offset_right = 265.0
+offset_bottom = -32.175003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Are you sure you want to quit
+to main menu?"
+horizontal_alignment = 1
+
+[node name="button-yes" type="Button" parent="texture-rect/quit-confirmation" unique_id=154138094]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 15.795013
+offset_right = -5.0
+offset_bottom = 75.79501
+grow_horizontal = 2
+grow_vertical = 2
+text = "Yes"
+
+[node name="button-no" type="Button" parent="texture-rect/quit-confirmation" unique_id=1667392982]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = 15.795013
+offset_right = 115.0
+offset_bottom = 75.79501
+grow_horizontal = 2
+grow_vertical = 2
+text = "No"

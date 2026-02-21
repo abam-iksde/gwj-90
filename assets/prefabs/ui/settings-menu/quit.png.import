@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chlby7sgophlk"
-path="res://.godot/imported/thermometer_progress.png-e3e17e4de6dbcf2bf4f4134cecc64a3d.ctex"
+uid="uid://bsyj2vnuogh2"
+path="res://.godot/imported/quit.png-50179b2a93c07e431e42c85a3a59bc9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/thermometer/thermometer_progress.png"
-dest_files=["res://.godot/imported/thermometer_progress.png-e3e17e4de6dbcf2bf4f4134cecc64a3d.ctex"]
+source_file="res://assets/prefabs/ui/settings-menu/quit.png"
+dest_files=["res://.godot/imported/quit.png-50179b2a93c07e431e42c85a3a59bc9a.ctex"]
 
 [params]
 

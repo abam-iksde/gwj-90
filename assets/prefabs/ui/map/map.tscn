@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b37iwnul8yqc6" path="res://assets/prefabs/ui/map/map.png" id="2_uv4k6"]
 [ext_resource type="Script" uid="uid://c61rucbvvalql" path="res://assets/prefabs/ui/map/icon-container.gd" id="3_uv4k6"]
 [ext_resource type="Script" uid="uid://dy1gbro3cso46" path="res://assets/prefabs/ui/map/input-handler.gd" id="5_hf3yc"]
+[ext_resource type="Texture2D" uid="uid://dcrhx5al7qsbx" path="res://assets/prefabs/ui/settings-menu/cog.png" id="6_tbp5u"]
 
 [node name="map" type="TextureRect" unique_id=595115752]
 offset_right = 40.0
@@ -66,3 +67,14 @@ text = "The operator froze to death.
 Select a starting location for
 his successor."
 horizontal_alignment = 1
+
+[node name="button-settings" type="TextureButton" parent="." unique_id=1791877921]
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 20.0
+offset_right = 1100.0
+offset_bottom = 100.0
+texture_normal = ExtResource("6_tbp5u")
+texture_pressed = ExtResource("6_tbp5u")
+texture_hover = ExtResource("6_tbp5u")
+texture_focused = ExtResource("6_tbp5u")

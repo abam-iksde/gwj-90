@@ -35,7 +35,6 @@ func _input(event: InputEvent) -> void:
 
 
 func _ready() -> void:
-	camera.fov = GameSettings.ON_FOOT_FOV
 	camera.make_current()
 	interact_raycast.add_exception(self)
 	
@@ -77,7 +76,6 @@ func _on_death():
 	dying.rotation.y = camera.rotation.y
 	dying.camera.rotation.x = camera.rotation.x
 	dying.camera.rotation.z = camera.rotation.z
-	dying.camera.fov = camera.fov
 	dying.camera.make_current()
 	dying.play()
 	queue_free()

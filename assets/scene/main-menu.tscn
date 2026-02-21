@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://ba3wlb4wttjci"]
+
+[ext_resource type="Script" uid="uid://x3xwcnpdw2r6" path="res://assets/scene/main-menu.gd" id="1_6iajy"]
+[ext_resource type="Environment" uid="uid://bwgv1joh0e51u" path="res://assets/map/world-environment.tres" id="1_lj4si"]
+[ext_resource type="Script" uid="uid://beulo8yhiavap" path="res://assets/prefabs/environment/world-environment.gd" id="2_6iajy"]
+[ext_resource type="Material" uid="uid://b6eh2q818jies" path="res://assets/map/heightmap_material.tres" id="3_lyxg1"]
+[ext_resource type="MultiMesh" uid="uid://da8sh8kgh303n" path="res://assets/map/multimesh.res" id="4_bpfhm"]
+[ext_resource type="Script" uid="uid://daqkjhaqnxnoq" path="res://assets/scene/snow-layer.gd" id="5_tstt3"]
+[ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="7_lyxg1"]
+
+[node name="main-menu" type="Node3D" unique_id=1613972091]
+script = ExtResource("1_6iajy")
+
+[node name="world-environment" type="WorldEnvironment" parent="." unique_id=871793233]
+process_mode = 3
+environment = ExtResource("1_lj4si")
+script = ExtResource("2_6iajy")
+real_time = false
+fixed_time = 20.0
+
+[node name="sun" type="DirectionalLight3D" parent="world-environment" unique_id=1089349731]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.6
+shadow_enabled = true
+
+[node name="snow-layer" type="MultiMeshInstance3D" parent="." unique_id=682170859]
+material_override = ExtResource("3_lyxg1")
+cast_shadow = 0
+custom_aabb = AABB(-20000, -20000, -20000, 40000, 40000, 40000)
+multimesh = ExtResource("4_bpfhm")
+script = ExtResource("5_tstt3")
+
+[node name="camera-pivot" type="Node3D" parent="." unique_id=1830335599]
+transform = Transform3D(-0.692588, -0.13036619, 0.70945513, 0.01976936, 0.9797328, 0.19933054, -0.72106254, 0.15207939, -0.67597395, 414.732, 51.195305, 141.53172)
+
+[node name="camera-3d" type="Camera3D" parent="camera-pivot" unique_id=491203205]
+transform = Transform3D(1, 2.2351742e-08, -2.9802322e-08, 0, 1.0000001, -7.450581e-09, 0, 2.2351742e-08, 1, 0, 0, 0)
+
+[node name="ui" type="Control" parent="." unique_id=2006460218]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 900.0
+offset_bottom = 900.0
+
+[node name="label" type="Label" parent="ui" unique_id=1281777439]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 490.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 50
+text = "The Operatorhood"
+
+[node name="button-play" type="Button" parent="ui" unique_id=1644976204]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 193.0
+offset_right = 395.0
+offset_bottom = 273.0
+text = "PLAY"
+
+[node name="button-settings" type="Button" parent="ui" unique_id=483785793]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 288.225
+offset_right = 395.0
+offset_bottom = 368.22504
+text = "SETTINGS"
+
+[node name="settings" parent="." unique_id=855291482 instance=ExtResource("7_lyxg1")]
+visible = false
+
+[node name="fade" type="ColorRect" parent="." unique_id=426919855]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
