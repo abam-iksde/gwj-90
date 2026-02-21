@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://kdsii1kg63gl" path="res://assets/prefabs/ui/hud/food/food-number.tscn" id="9_ufjas"]
 [ext_resource type="Script" uid="uid://dov6guqk7soh" path="res://assets/prefabs/ui/interaction-label.gd" id="11_be6lj"]
 [ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="15_qdye4"]
+[ext_resource type="Script" uid="uid://cc4cqn8odeyar" path="res://assets/prefabs/ui/fade.gd" id="16_7yeje"]
 
 [node name="ui-container" type="Control" unique_id=1969353579]
 layout_mode = 3
@@ -141,3 +142,15 @@ layout_mode = 0
 visible = false
 layout_mode = 1
 with_quit = true
+
+[node name="fade" type="ColorRect" parent="." unique_id=492725918]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("16_7yeje")

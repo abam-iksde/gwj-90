@@ -7,6 +7,7 @@ extends Node3D
 
 @onready var button_play: Button = get_node('ui/button-play')
 @onready var button_settings: Button = get_node('ui/button-settings')
+@onready var button_exit: Button = get_node('ui/button-exit')
 
 @onready var settings_screen: SettingsScreen = get_node('settings')
 
@@ -26,6 +27,11 @@ func _ready() -> void:
 		button_settings.disabled = false
 		settings_screen.visible = false
 	)
+	
+	if OS.get_name() == 'Web':
+		button_exit.visible = false
+	else:
+		button_exit.pressed.connect(get_tree().quit)
 
 
 func _process(delta: float) -> void:

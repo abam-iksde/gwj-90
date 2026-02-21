@@ -62,10 +62,18 @@ text = "PLAY"
 [node name="button-settings" type="Button" parent="ui" unique_id=483785793]
 layout_mode = 0
 offset_left = 140.0
-offset_top = 288.225
+offset_top = 288.0
 offset_right = 395.0
-offset_bottom = 368.22504
+offset_bottom = 368.00003
 text = "SETTINGS"
+
+[node name="button-exit" type="Button" parent="ui" unique_id=1185229997]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 383.0
+offset_right = 395.0
+offset_bottom = 463.00003
+text = "EXIT"
 
 [node name="settings" parent="." unique_id=855291482 instance=ExtResource("7_lyxg1")]
 visible = false

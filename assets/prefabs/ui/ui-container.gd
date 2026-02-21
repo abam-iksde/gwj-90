@@ -23,6 +23,7 @@ enum Modal {
 }
 
 @onready var dim: ColorRect = get_node('dim')
+@onready var fade: Fade = get_node('fade')
 
 var visible_modal: Control = null
 var sliding := false
@@ -78,6 +79,8 @@ func _ready() -> void:
 		modal.process_mode = Node.PROCESS_MODE_DISABLED
 	get_viewport().size_changed.connect(_on_window_resized)
 	dim.color.a = 0.0
+	
+	modals[Modal.MAP].settings_screen.quit_requested.connect(_on_quit_requested)
 
 
 func slide_update(progress_flat: float, modal: Control, easing: Callable):
@@ -114,3 +117,11 @@ func update_modal_size(modal: Control):
 func _on_window_resized():
 	if visible_modal:
 		update_modal_size(visible_modal)
+
+
+func _on_quit_requested():
+	var tween := fade.fade_out()
+	tween.tween_callback(func():
+		get_tree().paused = false
+		get_tree().change_scene_to_file('res://assets/scene/main-menu.tscn')
+	)

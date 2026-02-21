@@ -3,6 +3,7 @@ extends Control
 
 
 signal back_requested
+signal quit_requested
 
 
 const SENSITIVITY_DENOMINATION = 160.0
@@ -99,5 +100,6 @@ func _on_quit_cancel():
 
 
 func _on_quit_confirm():
-	get_tree().paused = false
-	get_tree().change_scene_to_file('res://assets/scene/main-menu.tscn')
+	button_quit_confirm_no.disabled = true
+	button_quit_confirm_yes.disabled = true
+	quit_requested.emit()
