@@ -30,6 +30,7 @@ func show_modal(modal_id: Modal, payload = null) -> void:
 	var modal = modals[modal_id]
 	modal.on_show(payload)
 	modal.visible = true
+	modal.position.y = -20000.0
 	(modal as Node).process_mode = Node.PROCESS_MODE_ALWAYS
 	visible_modal = modal
 	sliding = true

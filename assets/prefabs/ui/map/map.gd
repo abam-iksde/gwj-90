@@ -31,8 +31,8 @@ func on_show(payload):
 			house.global_position.x / float(Constants.MAP_SIZE) * 750.0 - icon.size.x / 2,
 			house.global_position.z / float(Constants.MAP_SIZE) * 750.0 - icon.size.y / 2
 		)
-		icon.spawn_position = house.global_position + Vector3(0.0, 5.0, 0.0)
-		icon.spawn_rotation = house.global_rotation.y
+		icon.spawn_position = house.to_global(Vector3(0.0, 0.0, 1.0))
+		icon.spawn_rotation = house.global_rotation.y - PI
 		if not show_respawn_options:
 			icon.disable()
 
@@ -54,4 +54,5 @@ func _on_player_spawn_clicked():
 	player.camera.global_rotation.y = icon_container.selected_house.spawn_rotation
 	GameState.game_data.player_dead = false
 	GameState.game_data.player_health = Constants.PLAYER_MAX_HEALTH
+	GameState.notify_player_spawned()
 	GameState.ui.hide_modal()

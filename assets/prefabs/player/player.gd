@@ -57,7 +57,13 @@ func handle_interact():
 
 
 func _on_death():
-	var body := preload('res://assets/prefabs/dead-operator/dead_operator.tscn').instantiate()
-	get_parent().add_child(body)
-	body.global_position = global_position - Vector3(0.0, 1.0, 0.0)
+	var dying = preload('res://assets/prefabs/player/dying-player.tscn').instantiate()
+	get_parent().add_child(dying)
+	dying.global_position = global_position
+	dying.rotation.y = camera.rotation.y
+	dying.camera.rotation.x = camera.rotation.x
+	dying.camera.rotation.z = camera.rotation.z
+	dying.camera.fov = camera.fov
+	dying.camera.make_current()
+	dying.play()
 	queue_free()

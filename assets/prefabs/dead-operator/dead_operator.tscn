@@ -10,6 +10,11 @@ albedo_color = Color(0, 1, 0, 1)
 script = ExtResource("1_wocna")
 
 [node name="mesh-instance-3d" type="MeshInstance3D" parent="." unique_id=2065641013]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.25, -2.1855694e-08, -2.1855696e-08, 2.1855694e-08, -1.0927847e-08, 0.25, -2.1855696e-08, -0.25, -1.0927845e-08, 0, 0.086714745, 1)
 mesh = ExtResource("1_vee4y")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5558")
+
+[node name="ray-cast-3d" type="RayCast3D" parent="." unique_id=1948359468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+enabled = false
+target_position = Vector3(0, -20, 0)

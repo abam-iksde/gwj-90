@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://ca5iv8loboy13"]
+
+[ext_resource type="Script" uid="uid://bxi3fvboic7uy" path="res://assets/prefabs/player/dying-player.gd" id="1_sjvdm"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_ch7n1"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_sjvdm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("camera-target:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.7, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("camera-target:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_laxmo"]
+resource_name = "die"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("camera-target:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.2333333, 1.4933333, 1.7433333, 3.1, 3.8099997, 4.29, 4.5, 5.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.7, 0), Vector3(0, 1.7164083, -0.25851372), Vector3(0, 1.3635812, -0.50763386), Vector3(0, 1.2101871, -0.49088225), Vector3(0, 1.3051647, -0.50108975), Vector3(0, 1.2716476, -0.4618156), Vector3(0, 1.0264605, -0.9081433), Vector3(0, 0.32044327, -1.302869), Vector3(0, 0.42258286, -1.3536338), Vector3(0.016199503, 0.38782203, -1.3567663)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("camera-target:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.2333333, 1.4933333, 1.7433333, 3.1, 3.3666666, 3.8099997, 4.29, 4.5, 5.0666666, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.005608157, 0, 0), Vector3(-0.28344148, 0, 0), Vector3(-0.34775686, 0, 0), Vector3(-0.087214105, 0, 0), Vector3(0.2797763, 0, 0), Vector3(0.2797763, 0, 0), Vector3(-0.14133129, 1.3372307, -0.93322814), Vector3(0.3726071, 1.645153, -1.3445754), Vector3(0.9009408, 1.8346556, -1.2276299), Vector3(1.1276253, 1.7618122, -1.3007257), Vector3(1.3890436, 2.1939597, -0.88545966)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uyaf7"]
+_data = {
+&"RESET": SubResource("Animation_sjvdm"),
+&"die": SubResource("Animation_laxmo")
+}
+
+[node name="dying-player" type="Node3D" unique_id=890028222]
+script = ExtResource("1_sjvdm")
+
+[node name="camera" type="Camera3D" parent="." unique_id=64933486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="camera-target" type="Node3D" parent="." unique_id=1785887056]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 1.7, 0)
+metadata/_edit_group_ = true
+
+[node name="mesh-instance-3d" type="MeshInstance3D" parent="camera-target" unique_id=1968143655]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.25)
+visible = false
+mesh = SubResource("PrismMesh_ch7n1")
+
+[node name="animation-player" type="AnimationPlayer" parent="." unique_id=928229650]
+libraries/ = SubResource("AnimationLibrary_uyaf7")
+
+[node name="wall-ray-cast" type="RayCast3D" parent="." unique_id=1741380759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+enabled = false
+target_position = Vector3(0, 0, -2)

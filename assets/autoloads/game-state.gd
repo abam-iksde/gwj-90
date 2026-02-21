@@ -2,6 +2,7 @@ extends Node
 
 
 signal player_died
+signal player_spawned
 
 
 var start_image := preload('res://assets/map/dig-default.png').get_image()
@@ -26,6 +27,10 @@ func notify_player_died():
 		return
 	player_died.emit()
 	game_data.player_dead = true
+
+
+func notify_player_spawned():
+	player_spawned.emit()
 
 
 var scene_root: Node3D
