@@ -16,6 +16,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dtdlhritt1nd" path="res://assets/meshes/test-house/test-house.obj" id="12_e1l3o"]
 [ext_resource type="Script" uid="uid://0pc5n42p5k5a" path="res://assets/classes/house-entrance.gd" id="13_n2fkg"]
 [ext_resource type="Script" uid="uid://bpend6qrw2xqa" path="res://assets/classes/food-manager.gd" id="16_b1t8s"]
+[ext_resource type="Script" uid="uid://b00t7lfhfkm8l" path="res://assets/classes/editor-snow-collider.gd" id="17_v3p45"]
+[ext_resource type="Shape3D" uid="uid://2khlv7bip838" path="res://generated/snow-collision.res" id="18_h6xn6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4k1"]
 albedo_texture = ExtResource("5_me04n")
@@ -127,3 +129,13 @@ shape = SubResource("BoxShape3D_n2fkg")
 [node name="food-manager" type="Node" parent="." unique_id=1647409772]
 script = ExtResource("16_b1t8s")
 metadata/_custom_type_script = "uid://bpend6qrw2xqa"
+
+[node name="snow-collider" type="Node3D" parent="." unique_id=1639821831]
+script = ExtResource("17_v3p45")
+
+[node name="static-body-3d" type="StaticBody3D" parent="snow-collider" unique_id=1903683245]
+collision_layer = 524288
+collision_mask = 524288
+
+[node name="collision-shape-3d" type="CollisionShape3D" parent="snow-collider/static-body-3d" unique_id=1570645744]
+shape = ExtResource("18_h6xn6")

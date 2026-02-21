@@ -8,10 +8,10 @@ static func get_ground_height_at_position(global_position: Vector3, ignore_dig :
 
 static func get_ground_height_and_elevation_at_position(global_position: Vector3, ignore_dig := false) -> Vector2:
 	if (
-		global_position.x < 0.0
-		or global_position.x >= Constants.MAP_SIZE
-		or global_position.z < 0.0
-		or global_position.z >= Constants.MAP_SIZE
+		global_position.x < 0.5
+		or global_position.x >= float(Constants.MAP_SIZE) - 0.5
+		or global_position.z < 0.5
+		or global_position.z >= float(Constants.MAP_SIZE) - 0.5
 	):
 		return Vector2(0.0, 0.0)
 	
