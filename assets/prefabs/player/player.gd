@@ -4,12 +4,16 @@ extends SnowCharacter
 
 const BASE_MOVE_SPEED = 4.5
 const SLOPE_MOVE_SPEED = 1.5
+const SLOPE_MIN_MOVE_SPEED = 0.2
 const JUMP_FORCE = 6.5
 const GRAVITY = -20.0
 
 
 @onready var camera: Camera3D = get_node('camera')
 @onready var interact_raycast: RayCast3D = get_node('camera/ray-cast')
+
+
+var step_tween: Tween = null
 
 
 func _enter_tree() -> void:
@@ -47,12 +51,26 @@ func _physics_process(delta: float) -> void:
 		_is_on_snow = false
 		velocity.y = JUMP_FORCE
 	var input := Input.get_vector(&'walk_left', &'walk_right', &'walk_forward', &'walk_backward').rotated(-camera.rotation.y)
+	if input.length_squared() > 0.0:
+		_start_walk_sound()
+	else:
+		if step_tween:
+			step_tween.kill()
+			step_tween = null
 	velocity.y += GRAVITY * delta
-	var move_speed := SLOPE_MOVE_SPEED if _is_on_slope else BASE_MOVE_SPEED
+	var move_speed := maxf(lerpf(SLOPE_MOVE_SPEED, SLOPE_MIN_MOVE_SPEED, (_ground_elevation - 1.7) / 4.3), SLOPE_MIN_MOVE_SPEED) if _is_on_slope else BASE_MOVE_SPEED
 	velocity.x = input.x * move_speed
 	velocity.z = input.y * move_speed
 	
 	move_and_slide_with_snow()
+	if _fallen_high:
+		var fall_volume := minf((-_fall_velocity / 4.0 - 15.0), 0.0)
+		if _is_on_snow:
+			Sounds.play_fall(fall_volume)
+		else:
+			Sounds.play_fall_obj(fall_volume)
+		if _fall_velocity < -16.0:
+			GameState.game_data.player_health += (_fall_velocity + 16.0) * 4.0
 
 
 func handle_interact():
@@ -79,3 +97,26 @@ func _on_death():
 	dying.camera.make_current()
 	dying.play()
 	queue_free()
+
+
+func _start_walk_sound():
+	if step_tween and step_tween.is_running():
+		return
+	_setup_walk_sound_tween()
+
+
+func _setup_walk_sound_tween():
+	step_tween = create_tween()
+	step_tween.tween_interval(1.0 if _is_on_slope else 0.5)
+	step_tween.tween_callback(func():
+		if not is_on_ground():
+			return
+		if _is_on_slope:
+			Sounds.play_climb_grab()
+		else:
+			if _is_on_snow:
+				Sounds.play_step_sound()
+			else:
+				Sounds.play_step_sound_obj()
+		_setup_walk_sound_tween()
+	)
