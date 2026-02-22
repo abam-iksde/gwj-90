@@ -61,17 +61,23 @@ theme_override_fonts/font = ExtResource("6_bpfhm")
 theme_override_font_sizes/font_size = 52
 text = "The Operatorhood"
 
-[node name="button-exit" type="Button" parent="ui" unique_id=1259522884]
+[node name="buttons" type="Control" parent="ui" unique_id=2106166382]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.25, 1.25)
+
+[node name="button-exit" type="Button" parent="ui/buttons" unique_id=1259522884]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -259.0
-offset_top = -562.0
-offset_right = -104.0
-offset_bottom = -493.0
+offset_left = 90.4
+offset_top = 255.6
+offset_right = 245.4
+offset_bottom = 324.6
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_bpfhm")
@@ -83,17 +89,17 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_xkyjh")
 theme_override_styles/focus = SubResource("StyleBoxTexture_xkyjh")
 text = "Exit"
 
-[node name="button-settings" type="Button" parent="ui" unique_id=919735657]
+[node name="button-settings" type="Button" parent="ui/buttons" unique_id=919735657]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -259.0
-offset_top = -631.0
-offset_right = -104.0
-offset_bottom = -562.0
+offset_left = 90.4
+offset_top = 186.6
+offset_right = 245.4
+offset_bottom = 255.6
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_bpfhm")
@@ -105,17 +111,17 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_xkyjh")
 theme_override_styles/focus = SubResource("StyleBoxTexture_xkyjh")
 text = "Settings"
 
-[node name="button-play" type="Button" parent="ui" unique_id=2057225566]
+[node name="button-play" type="Button" parent="ui/buttons" unique_id=2057225566]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -259.0
-offset_top = -700.0
-offset_right = -104.0
-offset_bottom = -631.0
+offset_left = 90.4
+offset_top = 117.600006
+offset_right = 245.4
+offset_bottom = 186.6
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_bpfhm")
@@ -144,5 +150,5 @@ color = Color(0, 0, 0, 0)
 
 [node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=113835947]
 stream = ExtResource("11_r15ym")
-volume_db = -25.5
+volume_db = -22.5
 autoplay = true

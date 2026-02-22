@@ -3,17 +3,17 @@
 shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
 
-uniform sampler2D texture_albedo : source_color, filter_nearest_mipmap, repeat_enable;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
 uniform float point_size : hint_range(0.1, 128.0, 0.1);
 
 uniform float roughness : hint_range(0.0, 1.0);
 uniform sampler2D texture_metallic : hint_default_white, filter_nearest, repeat_enable;
 uniform vec4 metallic_texture_channel;
-uniform sampler2D texture_roughness : hint_roughness_r, filter_nearest_mipmap, repeat_enable;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
 
 uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_disable;
-uniform sampler2D texture_ground : source_color, filter_nearest_mipmap, repeat_disable;
-uniform sampler2D texture_rock : source_color, filter_nearest_mipmap, repeat_disable;
+uniform sampler2D texture_ground : source_color, filter_linear_mipmap, repeat_disable;
+uniform sampler2D texture_rock : source_color, filter_linear_mipmap, repeat_disable;
 
 uniform float specular : hint_range(0.0, 1.0, 0.01);
 uniform float metallic : hint_range(0.0, 1.0, 0.01);

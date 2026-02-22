@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkqpdajxa2tph"
-path="res://.godot/imported/win-screen.png-881f18d1c14e19057bb356203d54370e.ctex"
+uid="uid://bnai41gsbqw1n"
+path="res://.godot/imported/winscreen.PNG-d206912067d77a34585d85f806e62a9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/win-screen/win-screen.png"
-dest_files=["res://.godot/imported/win-screen.png-881f18d1c14e19057bb356203d54370e.ctex"]
+source_file="res://assets/prefabs/ui/win-screen/winscreen.PNG"
+dest_files=["res://.godot/imported/winscreen.PNG-d206912067d77a34585d85f806e62a9d.ctex"]
 
 [params]
 

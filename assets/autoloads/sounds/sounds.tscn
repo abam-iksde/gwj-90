@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://b3rbf1lraw2di" path="res://assets/sounds/snow-push/snow-push.wav" id="17_bwgpg"]
 [ext_resource type="AudioStream" uid="uid://cksv53gbfjgng" path="res://assets/sounds/grunt/grunt1.wav" id="18_imhf0"]
 [ext_resource type="AudioStream" uid="uid://nxkq3lcjxtg2" path="res://assets/sounds/grunt/grunt3.wav" id="19_6hbvd"]
+[ext_resource type="AudioStream" uid="uid://dxf28k2f3ebqq" path="res://assets/sounds/grunt/grunt2.wav" id="19_nb3x8"]
 [ext_resource type="AudioStream" uid="uid://db1tx6iplvg4s" path="res://assets/sounds/door/freesound_community-door-open-and-close-with-a-creak-102380.mp3" id="20_6hbvd"]
 [ext_resource type="AudioStream" uid="uid://r7dnm071r2ho" path="res://assets/sounds/map/paper.wav" id="21_fhsbn"]
 [ext_resource type="AudioStream" uid="uid://bxtyaljbook3t" path="res://assets/sounds/click/soundreality-pen-click-2-411631.mp3" id="22_gxle4"]
@@ -72,6 +73,7 @@ volume_db = -20.0
 
 [node name="fall" type="AudioStreamPlayer" parent="." unique_id=1809320520]
 stream = ExtResource("8_8nfan")
+volume_db = -12.0
 
 [node name="fall-obj" type="AudioStreamPlayer" parent="." unique_id=87708775]
 stream = ExtResource("12_4v8f6")
@@ -102,11 +104,11 @@ stream = ExtResource("18_imhf0")
 volume_db = -10.0
 
 [node name="grunt2" type="AudioStreamPlayer" parent="grunts" unique_id=112762420]
-stream = ExtResource("19_6hbvd")
+stream = ExtResource("19_nb3x8")
 volume_db = -10.0
 
 [node name="grunt3" type="AudioStreamPlayer" parent="grunts" unique_id=1551723652]
-stream = ExtResource("17_bwgpg")
+stream = ExtResource("19_6hbvd")
 volume_db = -10.0
 
 [node name="door-open" type="AudioStreamPlayer" parent="." unique_id=1680140810]
