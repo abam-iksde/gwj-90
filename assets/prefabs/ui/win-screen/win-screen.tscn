@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://d0qmbuguvnpaf"]
 
-[ext_resource type="Texture2D" uid="uid://dkqpdajxa2tph" path="res://assets/prefabs/ui/win-screen/win-screen.png" id="1_gg3yh"]
+[ext_resource type="Texture2D" uid="uid://bnai41gsbqw1n" path="res://assets/prefabs/ui/win-screen/winscreen.PNG" id="1_gphh3"]
 [ext_resource type="Script" uid="uid://bjgn6xbmvm3t0" path="res://assets/prefabs/ui/win-screen/win_screen.gd" id="2_gphh3"]
+[ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="3_dipix"]
+[ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="4_yjuma"]
+[ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="5_45igj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy1iw"]
+texture = ExtResource("4_yjuma")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4iojy"]
+texture = ExtResource("5_45igj")
 
 [node name="win-screen" type="TextureRect" unique_id=1450497098]
 process_mode = 3
-texture = ExtResource("1_gg3yh")
+texture = ExtResource("1_gphh3")
 script = ExtResource("2_gphh3")
 
-[node name="button-exit" type="Button" parent="." unique_id=1064322181]
-layout_mode = 0
-offset_left = 567.0
-offset_top = 713.0
-offset_right = 704.0
-offset_bottom = 789.0
-text = "exit
-"
-
 [node name="button-continue" type="Button" parent="." unique_id=194476194]
+visible = false
 layout_mode = 0
 offset_left = 362.0
 offset_top = 709.0
@@ -25,3 +26,25 @@ offset_right = 535.0
 offset_bottom = 796.0
 text = "continue driving
 "
+
+[node name="button-exit" type="Button" parent="." unique_id=1647500957]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 390.0
+offset_top = -836.0
+offset_right = 545.0
+offset_bottom = -767.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_dipix")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_wy1iw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4iojy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wy1iw")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wy1iw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wy1iw")
+text = "Exit"

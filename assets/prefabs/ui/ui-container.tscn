@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c8ry2lxk4cgfq" path="res://assets/prefabs/ui/hud/clock/clock.tscn" id="13_jty4p"]
 [ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="15_qdye4"]
 [ext_resource type="Script" uid="uid://cc4cqn8odeyar" path="res://assets/prefabs/ui/fade.gd" id="16_7yeje"]
+[ext_resource type="PackedScene" uid="uid://f5q2dpw6waqr" path="res://assets/prefabs/ui/credits/credits.tscn" id="18_b5fj4"]
 
 [node name="ui-container" type="Control" unique_id=1969353579]
 layout_mode = 3
@@ -157,6 +158,12 @@ layout_mode = 0
 [node name="map" parent="." unique_id=595115752 instance=ExtResource("5_lji3o")]
 visible = false
 layout_mode = 0
+
+[node name="credits" parent="." unique_id=678547094 instance=ExtResource("18_b5fj4")]
+visible = false
+layout_mode = 0
+offset_right = 1120.0
+offset_bottom = 850.0
 
 [node name="settings" parent="." unique_id=855291482 instance=ExtResource("15_qdye4")]
 visible = false

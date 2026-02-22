@@ -212,7 +212,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_5fqig")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uy281")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_uy281")
 theme_override_styles/focus = SubResource("StyleBoxTexture_uy281")
-text = "BACK"
+text = "Back"
 
 [node name="button-quit" type="TextureButton" parent="texture-rect" unique_id=1839234260]
 layout_mode = 0

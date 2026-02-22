@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://f5q2dpw6waqr"]
+
+[ext_resource type="Texture2D" uid="uid://bclk04h1pisd7" path="res://assets/prefabs/ui/house-interior/interior-background.png" id="1_60pjw"]
+[ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="2_i0g2n"]
+[ext_resource type="Script" uid="uid://hxrgtbnwdajb" path="res://assets/prefabs/ui/credits/credits.gd" id="2_rc3d7"]
+[ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="3_rc3d7"]
+[ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="4_xovt7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i2sb7"]
+texture = ExtResource("3_rc3d7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6kd4"]
+texture = ExtResource("4_xovt7")
+
+[node name="credits" type="TextureRect" unique_id=678547094]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_60pjw")
+script = ExtResource("2_rc3d7")
+
+[node name="label" type="Label" parent="." unique_id=2054849286]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -243.5
+offset_top = 60.745
+offset_right = 243.5
+offset_bottom = 126.744995
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 56
+text = "The Operatorhood"
+
+[node name="label2" type="Label" parent="." unique_id=398221053]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.0
+offset_top = 151.945
+offset_right = 309.0
+offset_bottom = 180.94504
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "A game by MMM Entertainment Software Delivery"
+
+[node name="label3" type="Label" parent="." unique_id=603159962]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.0
+offset_top = 222.81
+offset_right = 309.0
+offset_bottom = 255.81
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "The team"
+horizontal_alignment = 1
+
+[node name="label4" type="Label" parent="." unique_id=17596827]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.5
+offset_top = 522.81
+offset_right = 321.5
+offset_bottom = 555.81
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "Developed for Godot Wild Jam #90 - \"Journey\""
+horizontal_alignment = 1
+
+[node name="label5" type="Label" parent="." unique_id=2063642467]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.5
+offset_top = 609.225
+offset_right = 321.5
+offset_bottom = 642.225
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "Thank you for playing!"
+horizontal_alignment = 1
+
+[node name="control" type="Control" parent="." unique_id=1800255775]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="label4" type="Label" parent="control" unique_id=1717915546]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 273.98
+offset_right = 849.0
+offset_bottom = 306.98
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "bobby popcorn"
+horizontal_alignment = 1
+
+[node name="label5" type="Label" parent="control" unique_id=583705955]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 308.775
+offset_right = 849.0
+offset_bottom = 377.775
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.527, 0.55335, 0.62, 1)
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 25
+text = "programming,
+game design,
+sound design"
+horizontal_alignment = 1
+
+[node name="control2" type="Control" parent="." unique_id=560702199]
+anchors_preset = 0
+offset_left = 300.0
+offset_right = 340.0
+offset_bottom = 40.0
+
+[node name="label4" type="Label" parent="control2" unique_id=1913803773]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 273.98
+offset_right = 849.0
+offset_bottom = 306.98
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "Kryc"
+horizontal_alignment = 1
+
+[node name="label5" type="Label" parent="control2" unique_id=423774243]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 308.775
+offset_right = 849.0
+offset_bottom = 377.775
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.527, 0.55335, 0.62, 1)
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 25
+text = "3D art,
+level design"
+horizontal_alignment = 1
+
+[node name="control3" type="Control" parent="." unique_id=1902034191]
+anchors_preset = 0
+offset_left = -350.0
+offset_right = -310.0
+offset_bottom = 40.0
+
+[node name="label4" type="Label" parent="control3" unique_id=8121323]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 273.98
+offset_right = 849.0
+offset_bottom = 306.98
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 28
+text = "jackssoon"
+horizontal_alignment = 1
+
+[node name="label5" type="Label" parent="control3" unique_id=1543511843]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 231.0
+offset_top = 308.775
+offset_right = 849.0
+offset_bottom = 377.775
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.527, 0.55335, 0.62, 1)
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 25
+text = "texturing,
+UI art"
+horizontal_alignment = 1
+
+[node name="button-exit" type="Button" parent="." unique_id=30515741]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = -121.0
+offset_right = 77.5
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_i0g2n")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_i2sb7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b6kd4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i2sb7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_i2sb7")
+theme_override_styles/focus = SubResource("StyleBoxTexture_i2sb7")
+text = "Menu"

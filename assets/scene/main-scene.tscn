@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://bpend6qrw2xqa" path="res://assets/classes/food-manager.gd" id="16_b1t8s"]
 [ext_resource type="Script" uid="uid://b00t7lfhfkm8l" path="res://assets/classes/editor-snow-collider.gd" id="17_v3p45"]
 [ext_resource type="PackedScene" uid="uid://dd6bveslvtahm" path="res://assets/prefabs/ui/tutorial/tutorials.tscn" id="18_0ura5"]
-[ext_resource type="Shape3D" uid="uid://buyx4ff2ce3it" path="res://generated/snow-collision.res" id="18_h6xn6"]
+[ext_resource type="Shape3D" uid="uid://2khlv7bip838" path="res://generated/snow-collision.res" id="18_h6xn6"]
 [ext_resource type="AudioStream" uid="uid://b5qb71rrgnr45" path="res://assets/sounds/wind-loop/shut_up_ghost-gusty-winter-wind-loop-by-using-crossfades-215541.mp3" id="19_0ura5"]
 [ext_resource type="Script" uid="uid://j4pucxrdl75g" path="res://addons/proton_scatter/src/scatter.gd" id="19_r8qc0"]
 [ext_resource type="Script" uid="uid://ri4k451ijilg" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="20_83sqm"]
@@ -2188,5 +2188,5 @@ amount = 1
 
 [node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=1911532108]
 stream = ExtResource("19_0ura5")
-volume_db = -25.5
+volume_db = -22.5
 autoplay = true
