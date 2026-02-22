@@ -31,6 +31,7 @@ enum AudioState {
 	IDLE,
 	DRIVE,
 	REV,
+	OFF,
 }
 
 var audio_state := AudioState.IDLE
@@ -97,6 +98,7 @@ func _physics_process(delta: float) -> void:
 	
 	if fuel <= 0.0:
 		GameState.request_tutorial('no_fuel')
+		audio_state = AudioState.OFF
 		return
 	
 	fuel -= delta * Constants.PLOW_IDLE_FUEL_COST

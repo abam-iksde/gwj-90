@@ -143,5 +143,5 @@ visible = false
 
 [node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=1911532108]
 stream = ExtResource("19_0ura5")
-volume_db = -22.0
+volume_db = -25.5
 autoplay = true

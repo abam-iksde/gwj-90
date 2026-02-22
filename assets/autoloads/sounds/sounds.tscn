@@ -22,6 +22,8 @@
 [ext_resource type="AudioStream" uid="uid://db1tx6iplvg4s" path="res://assets/sounds/door/freesound_community-door-open-and-close-with-a-creak-102380.mp3" id="20_6hbvd"]
 [ext_resource type="AudioStream" uid="uid://r7dnm071r2ho" path="res://assets/sounds/map/paper.wav" id="21_fhsbn"]
 [ext_resource type="AudioStream" uid="uid://bxtyaljbook3t" path="res://assets/sounds/click/soundreality-pen-click-2-411631.mp3" id="22_gxle4"]
+[ext_resource type="AudioStream" uid="uid://doww7rytgqg7o" path="res://assets/sounds/food/much.wav" id="23_qrbd8"]
+[ext_resource type="AudioStream" uid="uid://dn6ljbgelgl5q" path="res://assets/sounds/food/freesound_community-carrotnom-92106.mp3" id="24_nb3x8"]
 
 [node name="sounds" type="Node" unique_id=646558253]
 script = ExtResource("1_drcgv")
@@ -119,3 +121,18 @@ volume_db = -10.0
 [node name="click" type="AudioStreamPlayer" parent="." unique_id=574849250]
 process_mode = 3
 stream = ExtResource("22_gxle4")
+volume_db = -8.0
+
+[node name="eat" type="Node" parent="." unique_id=1344101606]
+
+[node name="step1" type="AudioStreamPlayer" parent="eat" unique_id=1822369051]
+stream = ExtResource("23_qrbd8")
+volume_db = -9.0
+
+[node name="step2" type="AudioStreamPlayer" parent="eat" unique_id=1959564705]
+stream = ExtResource("24_nb3x8")
+volume_db = -9.0
+
+[node name="step3" type="AudioStreamPlayer" parent="eat" unique_id=1004136885]
+stream = ExtResource("23_qrbd8")
+volume_db = -9.0

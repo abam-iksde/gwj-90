@@ -18,6 +18,8 @@ const SENSITIVITY_DENOMINATION = 160.0
 @onready var label_fov_tpp: Label = get_node('texture-rect/slider-fov-plow/label')
 @onready var slider_fov_tpp: HSlider = get_node('texture-rect/slider-fov-plow')
 
+@onready var slider_volume: HSlider = get_node('texture-rect/slider-volume')
+
 @onready var button_back: Button = get_node('texture-rect/button-back')
 @onready var button_quit: TextureButton = get_node('texture-rect/button-quit')
 
@@ -29,6 +31,7 @@ const SENSITIVITY_DENOMINATION = 160.0
 
 var dragging_fov_fpp := false
 var dragging_fov_tpp := false
+var dragging_volume := false
 
 
 func _ready() -> void:
@@ -41,6 +44,7 @@ func _ready() -> void:
 	slider_sensitivity.value = GameSettings.MOUSE_SENSITIVITY * SENSITIVITY_DENOMINATION
 	slider_fov_fpp.value = GameSettings.ON_FOOT_FOV
 	slider_fov_tpp.value = GameSettings.PLOW_FOV
+	slider_volume.value = GameSettings.VOLUME
 	
 	label_fov_fpp.text = 'FOV - first person (walk): ' + str(int(GameSettings.ON_FOOT_FOV))
 	label_fov_tpp.text = 'FOV - third person (drive): ' + str(int(GameSettings.PLOW_FOV))
@@ -57,6 +61,12 @@ func _ready() -> void:
 	)
 	slider_sensitivity.drag_ended.connect(func(_value):
 		GameSettings.MOUSE_SENSITIVITY = slider_sensitivity.value / SENSITIVITY_DENOMINATION
+		GameSettings.save_settings()
+	)
+	
+	slider_volume.drag_started.connect(func(): dragging_volume = true)
+	slider_volume.drag_ended.connect(func(_value):
+		dragging_volume = false
 		GameSettings.save_settings()
 	)
 	
@@ -77,6 +87,9 @@ func _process(_delta: float) -> void:
 	if dragging_fov_tpp:
 		label_fov_tpp.text = 'FOV - third person (drive): ' + str(int(slider_fov_tpp.value))
 		GameSettings.PLOW_FOV = slider_fov_tpp.value
+	if dragging_volume:
+		GameSettings.VOLUME = slider_volume.value if slider_volume.value > -40.0 else -80.0
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index('Master'), GameSettings.VOLUME)
 
 
 func _on_resize():

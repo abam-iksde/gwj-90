@@ -21,25 +21,35 @@ extends Node
 
 @onready var click: AudioStreamPlayer = get_node('click')
 
+@onready var eat := get_node('eat').get_children()
+
 
 func play_step_sound():
-	footsteps.pick_random().play()
+	var step = footsteps.pick_random()
+	step.stop()
+	step.play()
 
 
 func play_step_sound_obj():
-	footsteps_obj.pick_random().play()
+	var step = footsteps_obj.pick_random()
+	step.stop()
+	step.play()
 
 
 func play_climb_grab():
-	climb_grabs.pick_random().play()
+	var _grab = climb_grabs.pick_random()
+	_grab.stop()
+	_grab.play()
 
 
 func play_fall_obj(volume: float):
+	fall_obj.stop()
 	fall_obj.volume_db = volume
 	fall_obj.play()
 
 
 func play_fall(volume: float):
+	fall.stop()
 	fall.volume_db = volume
 	fall.play()
 
@@ -57,7 +67,9 @@ func stop_engine_sounds():
 
 
 func play_grunt():
-	grunts.pick_random().play()
+	var _grunt = grunts.pick_random()
+	_grunt.stop()
+	_grunt.play()
 
 
 func play_door_open():
@@ -78,6 +90,12 @@ func play_map():
 func play_click():
 	click.stop()
 	click.play()
+
+
+func play_eat():
+	var eat_sound = eat.pick_random()
+	eat_sound.stop()
+	eat_sound.play()
 
 
 func _ready() -> void:
