@@ -16,8 +16,8 @@ func _ready() -> void:
 		for y in map_dimension:
 			var instance_index = x * map_dimension + y
 			var instance_transform := Transform3D.IDENTITY
-			var instance_x = float(x) * INSTANCE_SIZE
-			var instance_y = float(y) * INSTANCE_SIZE
+			var instance_x = float(x) * float(INSTANCE_SIZE)
+			var instance_y = float(y) * float(INSTANCE_SIZE)
 			instance_transform = instance_transform.translated(Vector3(
 				instance_x,
 				0.0,

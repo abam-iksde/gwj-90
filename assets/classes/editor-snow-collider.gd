@@ -8,7 +8,9 @@ extends Node3D
 		_regenerate()
 
 
-
+func _ready():
+	if not Engine.is_editor_hint():
+		queue_free()
 
 
 func _regenerate():

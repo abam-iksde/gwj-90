@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbid7yk6gy2is" path="res://assets/map/ground.png" id="4_gvfjx"]
 [ext_resource type="Texture2D" uid="uid://b2ntst5c58r6e" path="res://assets/map/snow-roughness.png" id="4_vdmvd"]
 [ext_resource type="Texture2D" uid="uid://ceie46uk8n6r4" path="res://assets/map/target.png" id="5_gvfjx"]
-[ext_resource type="Texture2D" uid="uid://dk0bbojflxn65" path="res://assets/map/rock.png" id="5_vdmvd"]
+[ext_resource type="Texture2D" uid="uid://ci2dygcpo06qo" path="res://assets/map/Rock/Rock_BaseColor.png" id="5_vdmvd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfiuq"]
 load_path = "res://.godot/imported/dig-default.png-84cf0e66991b94d9e8057d1ce233b9e8.s3tc.ctex"
