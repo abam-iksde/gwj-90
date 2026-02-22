@@ -12,14 +12,16 @@ const FIXED_MODAL_SIZE = Vector2(1120.0, 850.0)
 enum Modal {
 	WIN_SCREEN,
 	INTERIOR,
-	MAP
+	MAP,
+	CREDITS,
 }
 
 
 @onready var modals = {
 	Modal.WIN_SCREEN: get_node('win-screen'),
 	Modal.INTERIOR: get_node('interior'),
-	Modal.MAP: get_node('map')
+	Modal.MAP: get_node('map'),
+	Modal.CREDITS: get_node('credits'),
 }
 
 @onready var dim: ColorRect = get_node('dim')
