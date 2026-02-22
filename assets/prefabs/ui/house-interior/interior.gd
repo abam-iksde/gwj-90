@@ -21,6 +21,7 @@ var sleep_slider_dragging := false
 
 
 func on_show(_payload):
+	Sounds.play_door_open()
 	get_tree().paused = true
 	GameState.mouse_capture.unfocus_mouse()
 	update_values()
@@ -28,7 +29,7 @@ func on_show(_payload):
 
 
 func on_hide():
-	pass
+	Sounds.play_door_close()
 
 
 func _ready() -> void:
@@ -44,12 +45,14 @@ func _ready() -> void:
 
 
 func _on_exit_clicked():
+	Sounds.play_click()
 	get_tree().paused = false
 	GameState.mouse_capture.focus_mouse()
 	GameState.ui.hide_modal()
 
 
 func _on_sleep_clicked():
+	Sounds.play_click()
 	GameState.game_data.time += slider_sleep_time.value
 	GameState.game_data.player_health = Constants.PLAYER_MAX_HEALTH
 	
@@ -63,6 +66,7 @@ func _on_sleep_clicked():
 
 
 func _on_sleep_confirmed():
+	Sounds.play_click()
 	slider_sleep_time.editable = true
 	slider_supply.editable = true
 	button_exit.disabled = false

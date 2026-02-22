@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://cgggpsjyk5cei"]
+
+[ext_resource type="Script" uid="uid://cd0cnn0pj72we" path="res://assets/autoloads/sounds/sounds.gd" id="1_drcgv"]
+[ext_resource type="AudioStream" uid="uid://bsox5n8afjo2k" path="res://assets/sounds/footsteps/freesound_community-snow-step-1-81064.mp3" id="2_5pp38"]
+[ext_resource type="AudioStream" uid="uid://2tvpq751y04q" path="res://assets/sounds/footsteps-obj/step1.wav" id="2_rqf0f"]
+[ext_resource type="AudioStream" uid="uid://yvbqy3h2bcaw" path="res://assets/sounds/footsteps-obj/step2.wav" id="3_4v8f6"]
+[ext_resource type="AudioStream" uid="uid://osfqpbpnpyhk" path="res://assets/sounds/footsteps/freesound_community-snow-step-2-102324.mp3" id="3_dtk6b"]
+[ext_resource type="AudioStream" uid="uid://djf4dmi1qsrlx" path="res://assets/sounds/footsteps-obj/step3.wav" id="4_lw4p7"]
+[ext_resource type="AudioStream" uid="uid://bmm575suhla34" path="res://assets/sounds/footsteps/freesound_community-snow-step-3-81065.mp3" id="4_xk7vn"]
+[ext_resource type="AudioStream" uid="uid://dtbgw2budo1bv" path="res://assets/sounds/climb/floraphonic-foot-step-snow-4-189865.mp3" id="5_d7flb"]
+[ext_resource type="AudioStream" uid="uid://dmib6uvk5sjv8" path="res://assets/sounds/climb/floraphonic-foot-step-snow-12-189872.mp3" id="6_8nfan"]
+[ext_resource type="AudioStream" uid="uid://cysm3io5jc0ek" path="res://assets/sounds/climb/floraphonic-foot-step-snow-13-189871.mp3" id="7_8h446"]
+[ext_resource type="AudioStream" uid="uid://crne5pttaa6r0" path="res://assets/sounds/fall/floraphonic-foot-step-snow-1-189869.mp3" id="8_8nfan"]
+[ext_resource type="AudioStream" uid="uid://dtubf6sshlsr2" path="res://assets/sounds/fall-obj/fall.wav" id="12_4v8f6"]
+[ext_resource type="AudioStream" uid="uid://bls1g5ovvn8ic" path="res://assets/sounds/engine/start.wav" id="13_2bceg"]
+[ext_resource type="AudioStream" uid="uid://ukpofltycoht" path="res://assets/sounds/engine/idle-loop.wav" id="14_bwgpg"]
+[ext_resource type="AudioStream" uid="uid://dqjwogqa42w5a" path="res://assets/sounds/engine/drive-loop.wav" id="15_xa507"]
+[ext_resource type="AudioStream" uid="uid://bk1evypmu0rqv" path="res://assets/sounds/engine/high-rpm.wav" id="16_imhf0"]
+[ext_resource type="AudioStream" uid="uid://b3rbf1lraw2di" path="res://assets/sounds/snow-push/snow-push.wav" id="17_bwgpg"]
+[ext_resource type="AudioStream" uid="uid://cksv53gbfjgng" path="res://assets/sounds/grunt/grunt1.wav" id="18_imhf0"]
+[ext_resource type="AudioStream" uid="uid://nxkq3lcjxtg2" path="res://assets/sounds/grunt/grunt3.wav" id="19_6hbvd"]
+[ext_resource type="AudioStream" uid="uid://db1tx6iplvg4s" path="res://assets/sounds/door/freesound_community-door-open-and-close-with-a-creak-102380.mp3" id="20_6hbvd"]
+[ext_resource type="AudioStream" uid="uid://r7dnm071r2ho" path="res://assets/sounds/map/paper.wav" id="21_fhsbn"]
+[ext_resource type="AudioStream" uid="uid://bxtyaljbook3t" path="res://assets/sounds/click/soundreality-pen-click-2-411631.mp3" id="22_gxle4"]
+[ext_resource type="AudioStream" uid="uid://doww7rytgqg7o" path="res://assets/sounds/food/much.wav" id="23_qrbd8"]
+[ext_resource type="AudioStream" uid="uid://dn6ljbgelgl5q" path="res://assets/sounds/food/freesound_community-carrotnom-92106.mp3" id="24_nb3x8"]
+
+[node name="sounds" type="Node" unique_id=646558253]
+script = ExtResource("1_drcgv")
+
+[node name="footsteps-obj" type="Node" parent="." unique_id=2026542329]
+
+[node name="step1" type="AudioStreamPlayer" parent="footsteps-obj" unique_id=1242838696]
+stream = ExtResource("2_rqf0f")
+volume_db = -9.0
+
+[node name="step2" type="AudioStreamPlayer" parent="footsteps-obj" unique_id=650433820]
+stream = ExtResource("3_4v8f6")
+volume_db = -9.0
+
+[node name="step3" type="AudioStreamPlayer" parent="footsteps-obj" unique_id=1819267649]
+stream = ExtResource("4_lw4p7")
+volume_db = -9.0
+
+[node name="footsteps" type="Node" parent="." unique_id=1199836536]
+
+[node name="step1" type="AudioStreamPlayer" parent="footsteps" unique_id=108784627]
+stream = ExtResource("2_5pp38")
+volume_db = -9.0
+
+[node name="step2" type="AudioStreamPlayer" parent="footsteps" unique_id=483431410]
+stream = ExtResource("3_dtk6b")
+volume_db = -9.0
+
+[node name="step3" type="AudioStreamPlayer" parent="footsteps" unique_id=1672970669]
+stream = ExtResource("4_xk7vn")
+volume_db = -9.0
+
+[node name="climb" type="Node" parent="." unique_id=948646092]
+
+[node name="step1" type="AudioStreamPlayer" parent="climb" unique_id=932232548]
+stream = ExtResource("5_d7flb")
+volume_db = -20.0
+
+[node name="step2" type="AudioStreamPlayer" parent="climb" unique_id=1186226838]
+stream = ExtResource("6_8nfan")
+volume_db = -20.0
+
+[node name="step3" type="AudioStreamPlayer" parent="climb" unique_id=1178705771]
+stream = ExtResource("7_8h446")
+volume_db = -20.0
+
+[node name="fall" type="AudioStreamPlayer" parent="." unique_id=1809320520]
+stream = ExtResource("8_8nfan")
+
+[node name="fall-obj" type="AudioStreamPlayer" parent="." unique_id=87708775]
+stream = ExtResource("12_4v8f6")
+
+[node name="engine" type="Node" parent="." unique_id=917752035]
+
+[node name="start" type="AudioStreamPlayer" parent="engine" unique_id=1613944256]
+stream = ExtResource("13_2bceg")
+volume_db = -17.0
+
+[node name="idle-loop" type="AudioStreamPlayer" parent="engine" unique_id=1943495026]
+stream = ExtResource("14_bwgpg")
+
+[node name="drive-loop" type="AudioStreamPlayer" parent="engine" unique_id=1410873858]
+stream = ExtResource("15_xa507")
+
+[node name="high-rpm" type="AudioStreamPlayer" parent="engine" unique_id=586618079]
+stream = ExtResource("16_imhf0")
+
+[node name="snow-push" type="AudioStreamPlayer" parent="." unique_id=646216022]
+stream = ExtResource("17_bwgpg")
+volume_db = -40.0
+
+[node name="grunts" type="Node" parent="." unique_id=862349652]
+
+[node name="grunt" type="AudioStreamPlayer" parent="grunts" unique_id=1618383259]
+stream = ExtResource("18_imhf0")
+volume_db = -10.0
+
+[node name="grunt2" type="AudioStreamPlayer" parent="grunts" unique_id=112762420]
+stream = ExtResource("19_6hbvd")
+volume_db = -10.0
+
+[node name="grunt3" type="AudioStreamPlayer" parent="grunts" unique_id=1551723652]
+stream = ExtResource("17_bwgpg")
+volume_db = -10.0
+
+[node name="door-open" type="AudioStreamPlayer" parent="." unique_id=1680140810]
+process_mode = 3
+stream = ExtResource("20_6hbvd")
+
+[node name="map" type="AudioStreamPlayer" parent="." unique_id=1513888989]
+process_mode = 3
+stream = ExtResource("21_fhsbn")
+volume_db = -10.0
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=574849250]
+process_mode = 3
+stream = ExtResource("22_gxle4")
+volume_db = -8.0
+
+[node name="eat" type="Node" parent="." unique_id=1344101606]
+
+[node name="step1" type="AudioStreamPlayer" parent="eat" unique_id=1822369051]
+stream = ExtResource("23_qrbd8")
+volume_db = -9.0
+
+[node name="step2" type="AudioStreamPlayer" parent="eat" unique_id=1959564705]
+stream = ExtResource("24_nb3x8")
+volume_db = -9.0
+
+[node name="step3" type="AudioStreamPlayer" parent="eat" unique_id=1004136885]
+stream = ExtResource("23_qrbd8")
+volume_db = -9.0

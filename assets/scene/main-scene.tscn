@@ -13,11 +13,14 @@
 [ext_resource type="Script" uid="uid://bf65de4snoiv0" path="res://assets/prefabs/win-trigger/win-trigger.gd" id="8_45682"]
 [ext_resource type="PackedScene" uid="uid://b3mif1kwp16q" path="res://assets/prefabs/ui/ui-container.tscn" id="9_xmbbe"]
 [ext_resource type="Script" uid="uid://twiavfjpee5a" path="res://assets/classes/cold.gd" id="11_67fty"]
+[ext_resource type="Texture2D" uid="uid://d2mkb0e4ufae0" path="res://assets/prefabs/ui/cold-vignette.tres" id="12_4inm4"]
+[ext_resource type="Script" uid="uid://c77ms3b1edk2d" path="res://assets/classes/cold-vignette.gd" id="13_kgtr4"]
 [ext_resource type="PackedScene" uid="uid://bnoyf2cucdi1c" path="res://assets/prefabs/house/house.tscn" id="14_v3p45"]
 [ext_resource type="Script" uid="uid://bpend6qrw2xqa" path="res://assets/classes/food-manager.gd" id="16_b1t8s"]
 [ext_resource type="Script" uid="uid://b00t7lfhfkm8l" path="res://assets/classes/editor-snow-collider.gd" id="17_v3p45"]
 [ext_resource type="PackedScene" uid="uid://dd6bveslvtahm" path="res://assets/prefabs/ui/tutorial/tutorials.tscn" id="18_0ura5"]
-[ext_resource type="Shape3D" uid="uid://2khlv7bip838" path="res://generated/snow-collision.res" id="18_h6xn6"]
+[ext_resource type="Shape3D" uid="uid://buyx4ff2ce3it" path="res://generated/snow-collision.res" id="18_h6xn6"]
+[ext_resource type="AudioStream" uid="uid://b5qb71rrgnr45" path="res://assets/sounds/wind-loop/shut_up_ghost-gusty-winter-wind-loop-by-using-crossfades-215541.mp3" id="19_0ura5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4k1"]
 albedo_texture = ExtResource("5_me04n")
@@ -74,6 +77,7 @@ mesh = SubResource("PlaneMesh_m6igg")
 transform = Transform3D(-0.70710605, 0, 0.70710653, 0, 1, 0, -0.70710653, 0, -0.70710605, 450.6432, 4.7683716e-07, 56.723408)
 
 [node name="ground" type="StaticBody3D" parent="." unique_id=1154189234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -281.02194, 0)
 
 [node name="collision-shape-3d" type="CollisionShape3D" parent="ground" unique_id=2002656989]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 512, -0.5, 512)
@@ -96,6 +100,18 @@ metadata/_custom_type_script = "uid://bf65de4snoiv0"
 
 [node name="collision-shape-3d" type="CollisionShape3D" parent="win-trigger" unique_id=29259828]
 shape = SubResource("CylinderShape3D_xmbbe")
+
+[node name="cold-vignette" type="TextureRect" parent="." unique_id=1025856649]
+process_mode = 3
+modulate = Color(0.31041354, 0.6122199, 0.9999847, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_4inm4")
+expand_mode = 1
+script = ExtResource("13_kgtr4")
 
 [node name="ui-container" parent="." unique_id=1969353579 instance=ExtResource("9_xmbbe")]
 process_mode = 3
@@ -124,3 +140,8 @@ shape = ExtResource("18_h6xn6")
 [node name="tutorials" parent="." unique_id=841447284 instance=ExtResource("18_0ura5")]
 process_mode = 3
 visible = false
+
+[node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=1911532108]
+stream = ExtResource("19_0ura5")
+volume_db = -25.5
+autoplay = true
