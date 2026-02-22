@@ -18,21 +18,21 @@ func _on_pressed() -> void:
 
 func _on_house_selected(house: TextureButton) -> void:
 	if house == self:
-		texture_normal = preload('res://assets/prefabs/ui/map/house-selected.png')
-		texture_pressed = preload('res://assets/prefabs/ui/map/house-selected.png')
-		texture_hover = preload('res://assets/prefabs/ui/map/house-selected.png')
-		texture_focused = preload('res://assets/prefabs/ui/map/house-selected.png')
+		texture_normal = preload('res://assets/prefabs/ui/map/house_pressed.PNG')
+		texture_pressed = preload('res://assets/prefabs/ui/map/house_pressed.PNG')
+		texture_hover = preload('res://assets/prefabs/ui/map/house_pressed.PNG')
+		texture_focused = preload('res://assets/prefabs/ui/map/house_pressed.PNG')
 		return
-	texture_normal = preload('res://assets/prefabs/ui/map/house-inactive.png')
-	texture_pressed = preload('res://assets/prefabs/ui/map/house-selected.png')
-	texture_hover = preload('res://assets/prefabs/ui/map/house-active.png')
-	texture_focused = preload('res://assets/prefabs/ui/map/house-active.png')
+	texture_normal = preload('res://assets/prefabs/ui/map/house_disabled.PNG')
+	texture_pressed = preload('res://assets/prefabs/ui/map/house_pressed.PNG')
+	texture_hover = preload('res://assets/prefabs/ui/map/house_hover.PNG')
+	texture_focused = preload('res://assets/prefabs/ui/map/house_hover.PNG')
 
 
 func disable():
 	disabled = true
-	texture_normal = preload('res://assets/prefabs/ui/map/house-inactive.png')
-	texture_pressed = preload('res://assets/prefabs/ui/map/house-inactive.png')
-	texture_hover = preload('res://assets/prefabs/ui/map/house-inactive.png')
-	texture_focused = preload('res://assets/prefabs/ui/map/house-inactive.png')
-	texture_disabled = preload('res://assets/prefabs/ui/map/house-inactive.png')
+	texture_normal = preload('res://assets/prefabs/ui/map/house_disabled.PNG')
+	texture_pressed = preload('res://assets/prefabs/ui/map/house_disabled.PNG')
+	texture_hover = preload('res://assets/prefabs/ui/map/house_disabled.PNG')
+	texture_focused = preload('res://assets/prefabs/ui/map/house_disabled.PNG')
+	texture_disabled = preload('res://assets/prefabs/ui/map/house_disabled.PNG')

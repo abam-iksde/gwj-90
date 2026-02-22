@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccspdogul5t15"
-path="res://.godot/imported/house-active.png-97e16a7ffe335083938c6a2c767a58f3.ctex"
+uid="uid://cd0d8bmc356km"
+path="res://.godot/imported/house_pressed.PNG-6a3fe7a2d9b94d020f708757b941d895.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/map/house-active.png"
-dest_files=["res://.godot/imported/house-active.png-97e16a7ffe335083938c6a2c767a58f3.ctex"]
+source_file="res://assets/prefabs/ui/map/house_pressed.PNG"
+dest_files=["res://.godot/imported/house_pressed.PNG-6a3fe7a2d9b94d020f708757b941d895.ctex"]
 
 [params]
 

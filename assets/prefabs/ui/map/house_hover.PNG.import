@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsyj2vnuogh2"
-path="res://.godot/imported/quit.png-50179b2a93c07e431e42c85a3a59bc9a.ctex"
+uid="uid://cvqmk0fv7cu5d"
+path="res://.godot/imported/house_hover.PNG-1feaca2fd34adfe2503a2eee5d2b6c4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/settings-menu/quit.png"
-dest_files=["res://.godot/imported/quit.png-50179b2a93c07e431e42c85a3a59bc9a.ctex"]
+source_file="res://assets/prefabs/ui/map/house_hover.PNG"
+dest_files=["res://.godot/imported/house_hover.PNG-1feaca2fd34adfe2503a2eee5d2b6c4a.ctex"]
 
 [params]
 

@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://5s6s38fktufa" path="res://assets/prefabs/ui/settings-menu/settings.gd" id="1_xmg4a"]
 [ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="1_yr2q1"]
-[ext_resource type="Texture2D" uid="uid://bsyj2vnuogh2" path="res://assets/prefabs/ui/settings-menu/quit.png" id="3_756o3"]
 [ext_resource type="Texture2D" uid="uid://bwvuqfbqyt46j" path="res://assets/prefabs/ui/grabber.png" id="3_ly64i"]
 [ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="4_m35k7"]
 [ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="4_y4hmr"]
 [ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="5_ly64i"]
+[ext_resource type="Texture2D" uid="uid://du32us50dhd02" path="res://assets/prefabs/ui/settings-menu/exit.PNG" id="7_ly64i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m35k7"]
 content_margin_left = 7.0
@@ -216,11 +216,13 @@ text = "Back"
 
 [node name="button-quit" type="TextureButton" parent="texture-rect" unique_id=1839234260]
 layout_mode = 0
-offset_left = 576.0
-offset_top = 9.0
-offset_right = 656.0
-offset_bottom = 89.0
-texture_normal = ExtResource("3_756o3")
+offset_left = 569.0
+offset_top = 13.0
+offset_right = 639.0
+offset_bottom = 83.0
+texture_normal = ExtResource("7_ly64i")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="quit-confirmation" type="TextureRect" parent="texture-rect" unique_id=497206153]
 visible = false
