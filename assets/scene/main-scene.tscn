@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b00t7lfhfkm8l" path="res://assets/classes/editor-snow-collider.gd" id="17_v3p45"]
 [ext_resource type="PackedScene" uid="uid://dd6bveslvtahm" path="res://assets/prefabs/ui/tutorial/tutorials.tscn" id="18_0ura5"]
 [ext_resource type="Shape3D" uid="uid://buyx4ff2ce3it" path="res://generated/snow-collision.res" id="18_h6xn6"]
+[ext_resource type="AudioStream" uid="uid://b5qb71rrgnr45" path="res://assets/sounds/wind-loop/shut_up_ghost-gusty-winter-wind-loop-by-using-crossfades-215541.mp3" id="19_0ura5"]
 [ext_resource type="Script" uid="uid://j4pucxrdl75g" path="res://addons/proton_scatter/src/scatter.gd" id="19_r8qc0"]
 [ext_resource type="Script" uid="uid://ri4k451ijilg" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="20_83sqm"]
 [ext_resource type="Script" uid="uid://bm750psf08cce" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="21_nomhn"]
@@ -34,7 +35,6 @@
 [ext_resource type="PackedScene" uid="uid://cxfkn8rxv8y7j" path="res://assets/meshes/trees/spruce/spruce.glb" id="30_n07kg"]
 [ext_resource type="PackedScene" uid="uid://kk5fk10smrnt" path="res://assets/meshes/trees/birtch/birtch-01.glb" id="31_5yv6h"]
 [ext_resource type="PackedScene" uid="uid://burb8lammmw1u" path="res://assets/prefabs/snow-particles/snow_particles.tscn" id="32_5yv6h"]
-[ext_resource type="AudioStream" uid="uid://b5qb71rrgnr45" path="res://assets/sounds/wind-loop/shut_up_ghost-gusty-winter-wind-loop-by-using-crossfades-215541.mp3" id="19_0ura5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if4k1"]
 albedo_texture = ExtResource("5_me04n")
@@ -565,39 +565,39 @@ transform = Transform3D(0.86203635, 0, 0.5068464, 0, 1, 0, -0.5068464, 0, 0.8620
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_r8qc0")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter" unique_id=1457816996]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter" unique_id=2048632731]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter/ScatterOutput" unique_id=1430932965]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter/ScatterOutput" unique_id=1282409188]
 
-[node name="Villagehut-01" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=621873973 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, -23.751503, 0.5655899, -18.375267)
+[node name="Villagehut-01" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1916073075 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, -23.751505, 7.6293945e-06, -18.375267)
 
-[node name="Villagehut-02" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=788910732 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, -25.83957, 0.5655899, -0.9692993)
+[node name="Villagehut-02" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=42363157 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, -25.839571, 7.6293945e-06, -0.96929705)
 
-[node name="Villagehut-03" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1473436152 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 6.588661, 0.5655899, -4.4148407)
+[node name="Villagehut-03" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1553022822 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 6.588664, 7.6293945e-06, -4.4148397)
 
-[node name="Villagehut-04" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1042247928 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, -1.2710419, 0.5655899, 4.975609)
+[node name="Villagehut-04" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=787676707 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, -1.2710438, 7.6293945e-06, 4.975609)
 
-[node name="Villagehut-05" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1862725844 instance=ExtResource("29_83sqm")]
-transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, -13.93927, 0.5655899, -12.582436)
+[node name="Villagehut-05" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1485500961 instance=ExtResource("29_83sqm")]
+transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, -13.939272, 7.6293945e-06, -12.582436)
 
-[node name="Villagehut-06" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1816748085 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, -2.682457, 0.5655899, -21.082924)
+[node name="Villagehut-06" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1373379811 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, -2.6824565, 7.6293945e-06, -21.082924)
 
-[node name="Villagehut-07" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=907698803 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, -4.7105484, 0.5655899, -5.903084)
+[node name="Villagehut-07" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=1515325668 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, -4.7105474, 7.6293945e-06, -5.9030805)
 
-[node name="Villagehut-08" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=838222472 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 7.82341, 0.5655899, -16.006577)
+[node name="Villagehut-08" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=2106074124 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 7.8234096, 7.6293945e-06, -16.006578)
 
-[node name="Villagehut-09" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=272193145 instance=ExtResource("29_83sqm")]
-transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, -13.824287, 0.5655899, -24.511116)
+[node name="Villagehut-09" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=801494316 instance=ExtResource("29_83sqm")]
+transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, -13.824289, 7.6293945e-06, -24.511116)
 
-[node name="Villagehut-10" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=819365145 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 12.623688, 0.5655899, 8.622353)
+[node name="Villagehut-10" type="Node3D" parent="proton-scatter/ScatterOutput/ScatterItem" unique_id=324679846 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 12.623691, 7.6293945e-06, 8.622354)
 
 [node name="proton-scatter2" type="Node3D" parent="." unique_id=1401972352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.1217, 44.526466, 149.97563)
@@ -621,209 +621,209 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_g8bsm")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter2" unique_id=120857814]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter2" unique_id=829053742]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter2/ScatterOutput" unique_id=1837316086]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter2/ScatterOutput" unique_id=1680867291]
 
-[node name="spruce" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2078697411 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1875042740 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, 4.3460236, -27.950447, 2.5083008)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1863210839 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1344911865 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 1.0035019, -20.442188, 14.031326)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1403941610 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1593367 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 57.47776, -20.31521, -27.535095)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1322266152 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1133351404 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 51.529762, -24.012068, -20.046768)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1038237590 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=929265460 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, 31.673164, -1.4957123, 12.740097)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1145731339 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1180577619 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, -9.683708, -37.792004, -10.701569)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=526362149 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1967625897 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 29.612434, -29.683388, 60.9738)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1014255521 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=429891582 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 36.115135, -25.550802, -12.697449)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1061276165 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=53312988 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.23080084, 0, 1.0645099, 0, 1.0892429, 0, -1.0645099, 0, -0.23080084, 55.115242, -11.762039, -2.4651947)
 
-[node name="spruce10" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2118033033 instance=ExtResource("30_n07kg")]
+[node name="spruce10" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1517103652 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.57746863, 0, 0.8623217, 0, 1.0378191, 0, -0.8623217, 0, -0.57746863, 19.472122, -33.271408, -13.297501)
 
-[node name="spruce11" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=437372985 instance=ExtResource("30_n07kg")]
+[node name="spruce11" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=991411812 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9105978, 0, 0.4724589, 0, 1.0258683, 0, -0.4724589, 0, 0.9105978, -11.2712555, -32.713547, 6.6763)
 
-[node name="spruce12" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=616408912 instance=ExtResource("30_n07kg")]
+[node name="spruce12" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2115985644 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.96952057, 0, -0.31237593, 0, 1.0186014, 0, 0.31237593, 0, 0.96952057, 65.10409, -13.47739, 35.957993)
 
-[node name="spruce13" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=653348890 instance=ExtResource("30_n07kg")]
+[node name="spruce13" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2015415521 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.74641055, 0, 0.7897042, 0, 1.0866284, 0, -0.7897042, 0, 0.74641055, 16.44696, 1.2932701, 32.337677)
 
-[node name="spruce14" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1499062720 instance=ExtResource("30_n07kg")]
+[node name="spruce14" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1927749996 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97430366, 0, 0.3650147, 0, 1.0404342, 0, -0.3650147, 0, 0.97430366, 15.914253, -34.354828, -19.36612)
 
-[node name="spruce15" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1964523526 instance=ExtResource("30_n07kg")]
+[node name="spruce15" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1467881516 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43097433, 0, 0.93684953, 0, 1.0312254, 0, -0.93684953, 0, -0.43097433, -13.061722, -28.604134, 15.15744)
 
-[node name="spruce16" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=307960509 instance=ExtResource("30_n07kg")]
+[node name="spruce16" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1743245143 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.1492845, 0, 1.0322645, 0, 1.0430033, 0, -1.0322645, 0, 0.1492845, 64.05497, -0.15385437, 15.053879)
 
-[node name="spruce17" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1126560827 instance=ExtResource("30_n07kg")]
+[node name="spruce17" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=710083893 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9073217, 0, -0.4895473, 0, 1.0309652, 0, 0.4895473, 0, -0.9073217, 39.694557, -33.360676, -32.983444)
 
-[node name="spruce18" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2062810150 instance=ExtResource("30_n07kg")]
+[node name="spruce18" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2039880247 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0247104, 0, -0.36572966, 0, 1.0880209, 0, 0.36572966, 0, -1.0247104, 58.732033, -18.503565, -10.184387)
 
-[node name="spruce19" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=933375895 instance=ExtResource("30_n07kg")]
+[node name="spruce19" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1508839020 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9567836, 0, 0.3780463, 0, 1.0287632, 0, -0.3780463, 0, -0.9567836, 60.060463, -29.741474, 55.74434)
 
-[node name="spruce20" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2051853252 instance=ExtResource("30_n07kg")]
+[node name="spruce20" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1417198548 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0750602, 0, 0.042675704, 0, 1.0759069, 0, -0.042675704, 0, 1.0750602, 22.768913, -33.470085, -16.419083)
 
-[node name="spruce21" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=401971377 instance=ExtResource("30_n07kg")]
+[node name="spruce21" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=896023659 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0469445, 0, 0.28886518, 0, 1.0860643, 0, -0.28886518, 0, 1.0469445, -8.926453, -27.219547, 21.45308)
 
-[node name="spruce22" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1468559918 instance=ExtResource("30_n07kg")]
+[node name="spruce22" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1570722333 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5383891, 0, -0.92731345, 0, 1.0722747, 0, 0.92731345, 0, -0.5383891, 26.177101, -3.6829185, 7.5418854)
 
-[node name="spruce23" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=236184163 instance=ExtResource("30_n07kg")]
+[node name="spruce23" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2025546792 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.95734394, 0, 0.5142355, 0, 1.0867132, 0, -0.5142355, 0, 0.95734394, 79.922035, 4.8211136, 12.955795)
 
-[node name="spruce24" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1282181545 instance=ExtResource("30_n07kg")]
+[node name="spruce24" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1683356356 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8403248, 0, 0.6978276, 0, 1.0922954, 0, -0.6978276, 0, -0.84032476, 32.363914, -30.844173, -16.326187)
 
-[node name="spruce25" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1090626953 instance=ExtResource("30_n07kg")]
+[node name="spruce25" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=201612873 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6803522, 0, 0.83789164, 0, 1.0793245, 0, -0.8378916, 0, -0.6803522, -6.103615, -28.211838, 14.694595)
 
-[node name="spruce26" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1121213139 instance=ExtResource("30_n07kg")]
+[node name="spruce26" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=309810192 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.0921688, 0, -1.068224, 0, 1.0721929, 0, 1.068224, 0, 0.0921688, 50.633385, -23.09251, -17.404556)
 
-[node name="spruce27" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=691026512 instance=ExtResource("30_n07kg")]
+[node name="spruce27" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1098204118 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.46883562, 0, -0.9414153, 0, 1.0516984, 0, 0.9414153, 0, 0.46883562, -3.4415283, -27.909668, 50.947266)
 
-[node name="spruce28" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=485296150 instance=ExtResource("30_n07kg")]
+[node name="spruce28" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=424144451 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5962139, 0, 0.8628039, 0, 1.048762, 0, -0.8628039, 0, 0.5962139, 70.33689, 3.6326904, 23.236862)
 
-[node name="spruce29" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=75987094 instance=ExtResource("30_n07kg")]
+[node name="spruce29" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=869137140 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0055789, 0, -0.23625715, 0, 1.0329599, 0, 0.23625717, 0, -1.0055789, -0.05974579, -33.19761, -2.7042694)
 
-[node name="spruce30" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1480699772 instance=ExtResource("30_n07kg")]
+[node name="spruce30" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=526500270 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0428377, 0, -0.22334574, 0, 1.0664867, 0, 0.22334574, 0, 1.0428377, 41.835625, 1.7218399, 34.30179)
 
-[node name="spruce31" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1342913707 instance=ExtResource("30_n07kg")]
+[node name="spruce31" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1249993866 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48684677, 0, -0.9645665, 0, 1.0804667, 0, 0.9645665, 0, 0.48684677, -2.09507, -24.748999, 41.05458)
 
-[node name="spruce32" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1995305253 instance=ExtResource("30_n07kg")]
+[node name="spruce32" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=695116608 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.0023737238, 0, 1.0739341, 0, 1.0739367, 0, -1.0739341, 0, -0.0023737238, 28.290123, -4.5461845, 6.585907)
 
-[node name="spruce33" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1891993061 instance=ExtResource("30_n07kg")]
+[node name="spruce33" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1500259426 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97812784, 0, 0.22750695, 0, 1.0042378, 0, -0.22750695, 0, 0.97812784, 64.68113, -13.9428215, -4.678406)
 
-[node name="spruce34" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=544514033 instance=ExtResource("30_n07kg")]
+[node name="spruce34" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=438405344 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0105164, 0, 0.23503554, 0, 1.0374898, 0, -0.23503552, 0, 1.0105164, 80.25828, 3.7406235, 11.126205)
 
-[node name="spruce35" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1584169826 instance=ExtResource("30_n07kg")]
+[node name="spruce35" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1342145876 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.92907083, 0, 0.4357396, 0, 1.0261781, 0, -0.43573958, 0, 0.92907083, 64.775215, -35.54992, 56.987106)
 
-[node name="spruce36" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1590995409 instance=ExtResource("30_n07kg")]
+[node name="spruce36" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=266622571 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.253958, 0, 0.9760345, 0, 1.0085326, 0, -0.9760345, 0, -0.253958, 76.03092, -4.1093483, -6.5227966)
 
-[node name="spruce37" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2014160618 instance=ExtResource("30_n07kg")]
+[node name="spruce37" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=22990717 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.23896979, 0, -1.0206305, 0, 1.0482334, 0, 1.0206305, 0, 0.23896979, 48.954994, -21.115057, -12.799835)
 
-[node name="spruce38" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1335192505 instance=ExtResource("30_n07kg")]
+[node name="spruce38" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1068272614 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0422063, 0, 0.08546273, 0, 1.0457045, 0, -0.08546273, 0, -1.0422063, 35.834953, -6.3873444, 44.554535)
 
-[node name="spruce39" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=398436484 instance=ExtResource("30_n07kg")]
+[node name="spruce39" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1826321469 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9656757, 0, -0.40604368, 0, 1.0475692, 0, 0.4060437, 0, -0.9656757, -6.544792, -32.49791, -0.6194458)
 
-[node name="spruce40" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=959093481 instance=ExtResource("30_n07kg")]
+[node name="spruce40" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1879130837 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0401192, 0, 0.2727139, 0, 1.0752771, 0, -0.2727139, 0, 1.0401192, 32.33143, -36.635357, 68.89848)
 
-[node name="spruce41" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=730732298 instance=ExtResource("30_n07kg")]
+[node name="spruce41" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=773038247 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5470765, 0, -0.9399822, 0, 1.0875933, 0, 0.9399822, 0, 0.5470765, 73.457115, -4.840744, -15.354553)
 
-[node name="spruce42" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=369737601 instance=ExtResource("30_n07kg")]
+[node name="spruce42" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1108082546 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6563479, 0, 0.7613643, 0, 1.0052204, 0, -0.7613643, 0, -0.6563479, 65.2981, -29.458454, 51.509933)
 
-[node name="spruce43" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1544289406 instance=ExtResource("30_n07kg")]
+[node name="spruce43" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=128557600 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0575027, 0, -0.074209854, 0, 1.0601033, 0, 0.07420986, 0, 1.0575027, 45.475624, 0.6770668, 48.041992)
 
-[node name="spruce44" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=506478200 instance=ExtResource("30_n07kg")]
+[node name="spruce44" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1710328532 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.12566212, 0, 1.0507853, 0, 1.0582725, 0, -1.0507853, 0, 0.12566212, 5.292572, -35.314526, -16.573761)
 
-[node name="spruce45" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=453618885 instance=ExtResource("30_n07kg")]
+[node name="spruce45" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=772726889 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0209459, 0, -0.3402979, 0, 1.0761659, 0, 0.34029788, 0, -1.0209459, 51.217476, -4.1374893, 49.501724)
 
-[node name="spruce46" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1748659365 instance=ExtResource("30_n07kg")]
+[node name="spruce46" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1137972317 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5822724, 0, -0.8162381, 0, 1.0026394, 0, 0.8162381, 0, -0.5822724, -5.125801, -33.825134, -7.2027435)
 
-[node name="spruce47" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1853429307 instance=ExtResource("30_n07kg")]
+[node name="spruce47" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2117487400 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.66771215, 0, 0.78010577, 0, 1.026842, 0, -0.78010577, 0, 0.66771215, 75.56307, -24.333832, 40.68994)
 
-[node name="spruce48" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1950811270 instance=ExtResource("30_n07kg")]
+[node name="spruce48" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1158496261 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8876286, 0, -0.57570547, 0, 1.0579798, 0, 0.57570547, 0, -0.8876286, 72.825386, 1.473732, 16.3918)
 
-[node name="spruce49" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2030909919 instance=ExtResource("30_n07kg")]
+[node name="spruce49" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1051923948 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6631902, 0, -0.8019663, 0, 1.0406591, 0, 0.8019663, 0, -0.6631902, 51.22753, -32.308598, 61.97783)
 
-[node name="spruce50" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=524950695 instance=ExtResource("30_n07kg")]
+[node name="spruce50" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1633490602 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.44083467, 0, -0.93382406, 0, 1.0326483, 0, 0.93382406, 0, 0.44083467, 37.520027, -28.626266, -18.057938)
 
-[node name="spruce51" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1710636730 instance=ExtResource("30_n07kg")]
+[node name="spruce51" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=32809006 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43163607, 0, 0.9758478, 0, 1.0670468, 0, -0.9758478, 0, -0.43163607, 70.333626, 2.4773636, 25.496368)
 
-[node name="spruce52" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=464433166 instance=ExtResource("30_n07kg")]
+[node name="spruce52" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1214150165 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.4461776, 0, 0.9814575, 0, 1.0781156, 0, -0.9814575, 0, -0.44617757, 19.141823, -26.869791, 59.327164)
 
-[node name="spruce53" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=185983164 instance=ExtResource("30_n07kg")]
+[node name="spruce53" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=288994069 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.36955503, 0, -0.9315781, 0, 1.0022019, 0, 0.9315781, 0, -0.36955503, 11.0140915, -26.24105, -0.8786011)
 
-[node name="spruce54" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1648646691 instance=ExtResource("30_n07kg")]
+[node name="spruce54" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1265408316 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48331302, 0, -0.93253046, 0, 1.0503355, 0, 0.9325306, 0, 0.483313, 71.59568, 4.200657, 21.348999)
 
-[node name="spruce55" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1963214664 instance=ExtResource("30_n07kg")]
+[node name="spruce55" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=583379984 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.47561392, 0, -0.95079327, 0, 1.0631164, 0, 0.95079327, 0, -0.47561392, 52.93833, -21.616413, -15.40213)
 
-[node name="spruce56" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=261060554 instance=ExtResource("30_n07kg")]
+[node name="spruce56" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=926226182 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0596683, 0, 0.010116037, 0, 1.0597166, 0, -0.010116037, 0, -1.0596683, 47.568306, -26.436377, 60.105087)
 
-[node name="spruce57" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2002835386 instance=ExtResource("30_n07kg")]
+[node name="spruce57" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1556093989 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.057030715, 0, 1.0295113, 0, 1.0310898, 0, -1.0295113, 0, 0.057030715, 48.551186, 0.9083557, 41.70221)
 
-[node name="spruce58" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1188760089 instance=ExtResource("30_n07kg")]
+[node name="spruce58" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1765877709 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.98186046, 0, -0.26027387, 0, 1.0157719, 0, 0.26027387, 0, 0.98186046, 67.44251, -12.712748, -9.5876465)
 
-[node name="spruce59" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=960404672 instance=ExtResource("30_n07kg")]
+[node name="spruce59" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1771783269 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8346065, 0, -0.6707759, 0, 1.0707513, 0, 0.67077595, 0, -0.8346066, 39.13401, -19.347013, -7.5785675)
 
-[node name="spruce60" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1831714618 instance=ExtResource("30_n07kg")]
+[node name="spruce60" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1522185308 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5022005, 0, 0.9634398, 0, 1.086472, 0, -0.9634398, 0, 0.5022005, 71.91679, -10.46843, 30.802658)
 
-[node name="spruce61" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1542491849 instance=ExtResource("30_n07kg")]
+[node name="spruce61" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=61603062 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87231076, 0, 0.5054607, 0, 1.0081749, 0, -0.5054607, 0, -0.87231076, -8.620834, -33.378254, -4.6585693)
 
-[node name="spruce62" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=380532418 instance=ExtResource("30_n07kg")]
+[node name="spruce62" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1402078302 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.32379055, 0, -1.0447087, 0, 1.0937352, 0, 1.0447087, 0, -0.32379055, 8.819443, -2.6968231, 12.387695)
 
-[node name="spruce63" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=825731767 instance=ExtResource("30_n07kg")]
+[node name="spruce63" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1165365324 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.8935445, 0, -0.50047195, 0, 1.0241553, 0, 0.50047195, 0, 0.8935445, 15.30349, -30.750767, -6.918289)
 
-[node name="spruce64" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1601414351 instance=ExtResource("30_n07kg")]
+[node name="spruce64" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=991113194 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.17514151, 0, -1.0712396, 0, 1.0854625, 0, 1.0712396, 0, -0.17514153, 32.493477, -3.5764885, 39.626755)
 
-[node name="spruce65" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1993854194 instance=ExtResource("30_n07kg")]
+[node name="spruce65" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=2033838474 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.4434605, 0, -0.9434196, 0, 1.0424479, 0, 0.9434196, 0, 0.4434605, 32.65783, -3.5866776, 7.1183777)
 
-[node name="spruce66" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=786713228 instance=ExtResource("30_n07kg")]
+[node name="spruce66" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=790326714 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9294445, 0, 0.50894946, 0, 1.0596682, 0, -0.50894946, 0, 0.9294445, 70.51939, -5.0824013, 5.122635)
 
-[node name="spruce67" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1696020477 instance=ExtResource("30_n07kg")]
+[node name="spruce67" type="Node3D" parent="proton-scatter2/ScatterOutput/ScatterItem" unique_id=1478872856 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0421414, 0, -0.24093543, 0, 1.0696301, 0, 0.24093543, 0, 1.0421414, 26.32853, -24.991623, 56.05095)
 
 [node name="proton-scatter3" type="Node3D" parent="." unique_id=204717140]
@@ -848,194 +848,194 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_apwny")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter3" unique_id=61656914]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter3" unique_id=1680391373]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter3/ScatterOutput" unique_id=364858961]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter3/ScatterOutput" unique_id=1009349219]
 
-[node name="spruce" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1925054945 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1998545964 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, 4.3460236, -3.2700615, 2.5082932)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2032531544 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1202547822 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 1.0035095, -7.38752, 14.031334)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1436580992 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1790477872 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 57.477768, -17.273726, -27.535091)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1113155695 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=113591020 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, 49.992203, 2.7700653, 25.55523)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1632349795 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1654046186 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, 47.260727, 3.0226326, 27.616043)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=307180463 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1176391965 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 51.52977, -1.5213242, -20.046776)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=102969327 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1497351421 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, -9.683701, -12.309189, -10.701569)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=617903568 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1909883154 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 29.612442, -7.7686005, 60.9738)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=88769492 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=456021051 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 36.115143, -2.4154778, -12.697449)
 
-[node name="spruce10" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=587169000 instance=ExtResource("30_n07kg")]
+[node name="spruce10" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=857357406 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9800306, 0, -0.22435361, 0, 1.0053828, 0, 0.22435361, 0, 0.9800306, 43.544357, 4.367977, 18.593376)
 
-[node name="spruce11" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=979636620 instance=ExtResource("30_n07kg")]
+[node name="spruce11" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=120663226 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.23080084, 0, 1.0645099, 0, 1.0892429, 0, -1.0645099, 0, -0.23080084, 55.11525, 1.8757248, -2.4651947)
 
-[node name="spruce12" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=242534781 instance=ExtResource("30_n07kg")]
+[node name="spruce12" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=56178855 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.57746863, 0, 0.8623217, 0, 1.0378191, 0, -0.8623217, 0, -0.57746863, 19.472122, -2.8913536, -13.297508)
 
-[node name="spruce13" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=62520355 instance=ExtResource("30_n07kg")]
+[node name="spruce13" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1767174283 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9105978, 0, 0.4724589, 0, 1.0258683, 0, -0.4724589, 0, 0.9105978, -11.2712555, -15.00798, 6.6763)
 
-[node name="spruce14" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1591277572 instance=ExtResource("30_n07kg")]
+[node name="spruce14" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=142491316 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97430366, 0, 0.3650147, 0, 1.0404342, 0, -0.3650147, 0, 0.97430366, 15.914261, -13.362427, -19.36612)
 
-[node name="spruce15" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1600072671 instance=ExtResource("30_n07kg")]
+[node name="spruce15" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=277442080 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43097433, 0, 0.93684953, 0, 1.0312254, 0, -0.93684953, 0, -0.43097433, -13.061722, -26.780329, 15.15744)
 
-[node name="spruce16" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=838264138 instance=ExtResource("30_n07kg")]
+[node name="spruce16" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1022206678 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.1492845, 0, 1.0322645, 0, 1.0430033, 0, -1.0322645, 0, 0.1492845, 64.05498, 4.7659492, 15.053871)
 
-[node name="spruce17" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=277680688 instance=ExtResource("30_n07kg")]
+[node name="spruce17" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=357965067 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0247104, 0, -0.36572966, 0, 1.0880209, 0, 0.36572966, 0, -1.0247104, 58.73204, 1.1615067, -10.184387)
 
-[node name="spruce18" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1010690839 instance=ExtResource("30_n07kg")]
+[node name="spruce18" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=121710859 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9567836, 0, 0.3780463, 0, 1.0287632, 0, -0.3780463, 0, -0.9567836, 60.06047, 0.6278534, 55.74434)
 
-[node name="spruce19" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1164478853 instance=ExtResource("30_n07kg")]
+[node name="spruce19" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1859331704 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0750602, 0, 0.042675704, 0, 1.0759069, 0, -0.042675704, 0, 1.0750602, 22.76892, -8.125317, -16.419075)
 
-[node name="spruce20" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=17876042 instance=ExtResource("30_n07kg")]
+[node name="spruce20" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1676996144 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0469445, 0, 0.28886518, 0, 1.0860643, 0, -0.28886518, 0, 1.0469445, -8.926453, -18.81643, 21.45308)
 
-[node name="spruce21" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1522608567 instance=ExtResource("30_n07kg")]
+[node name="spruce21" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=361164518 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5383891, 0, -0.92731345, 0, 1.0722747, 0, 0.92731345, 0, -0.5383891, 26.177109, 4.7424965, 7.5418854)
 
-[node name="spruce22" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1872703541 instance=ExtResource("30_n07kg")]
+[node name="spruce22" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=466438076 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.95734394, 0, 0.5142355, 0, 1.0867132, 0, -0.5142355, 0, 0.95734394, 79.92201, -0.84767914, 12.955803)
 
-[node name="spruce23" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1526752752 instance=ExtResource("30_n07kg")]
+[node name="spruce23" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=799537259 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8403248, 0, 0.6978276, 0, 1.0922954, 0, -0.6978276, 0, -0.84032476, 32.363922, -6.9719315, -16.326187)
 
-[node name="spruce24" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2108699355 instance=ExtResource("30_n07kg")]
+[node name="spruce24" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1116802081 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6803522, 0, 0.83789164, 0, 1.0793245, 0, -0.8378916, 0, -0.6803522, -6.103607, -16.216852, 14.694595)
 
-[node name="spruce25" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=636906253 instance=ExtResource("30_n07kg")]
+[node name="spruce25" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1040425792 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.0921688, 0, -1.068224, 0, 1.0721929, 0, 1.068224, 0, 0.0921688, 50.633392, -0.048561096, -17.404556)
 
-[node name="spruce26" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=809407050 instance=ExtResource("30_n07kg")]
+[node name="spruce26" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=853789848 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.46883562, 0, -0.9414153, 0, 1.0516984, 0, 0.9414153, 0, 0.46883562, -3.441513, -3.4443245, 50.947266)
 
-[node name="spruce27" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1109663498 instance=ExtResource("30_n07kg")]
+[node name="spruce27" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1134977300 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0055789, 0, -0.23625715, 0, 1.0329599, 0, 0.23625717, 0, -1.0055789, -0.05973816, -6.831169, -2.7042694)
 
-[node name="spruce28" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=886410914 instance=ExtResource("30_n07kg")]
+[node name="spruce28" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1830485388 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0428377, 0, -0.22334574, 0, 1.0664867, 0, 0.22334574, 0, 1.0428377, 41.835632, 4.751232, 34.30179)
 
-[node name="spruce29" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1248270443 instance=ExtResource("30_n07kg")]
+[node name="spruce29" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2097988394 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48684677, 0, -0.9645665, 0, 1.0804667, 0, 0.9645665, 0, 0.48684677, -2.0950623, -1.6895905, 41.05459)
 
-[node name="spruce30" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=921878471 instance=ExtResource("30_n07kg")]
+[node name="spruce30" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1970981556 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97812784, 0, 0.22750695, 0, 1.0042378, 0, -0.22750695, 0, 0.97812784, 64.68114, 1.5658379, -4.678406)
 
-[node name="spruce31" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=105481136 instance=ExtResource("30_n07kg")]
+[node name="spruce31" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1626245822 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0105164, 0, 0.23503554, 0, 1.0374898, 0, -0.23503552, 0, 1.0105164, 80.258316, -1.2048454, 11.126205)
 
-[node name="spruce32" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=963025596 instance=ExtResource("30_n07kg")]
+[node name="spruce32" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1561655913 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.92907083, 0, 0.4357396, 0, 1.0261781, 0, -0.43573958, 0, 0.92907083, 64.77522, 1.0719414, 56.98709)
 
-[node name="spruce33" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=583368485 instance=ExtResource("30_n07kg")]
+[node name="spruce33" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1487583385 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.253958, 0, 0.9760345, 0, 1.0085326, 0, -0.9760345, 0, -0.253958, 76.03093, -0.80329895, -6.522789)
 
-[node name="spruce34" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1642332573 instance=ExtResource("30_n07kg")]
+[node name="spruce34" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1917386596 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.23896979, 0, -1.0206305, 0, 1.0482334, 0, 1.0206305, 0, 0.23896979, 48.955, 0.6257286, -12.799835)
 
-[node name="spruce35" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=230923096 instance=ExtResource("30_n07kg")]
+[node name="spruce35" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=245380068 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0422063, 0, 0.08546273, 0, 1.0457045, 0, -0.08546273, 0, -1.0422063, 35.83496, -1.617115, 44.554535)
 
-[node name="spruce36" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1605698227 instance=ExtResource("30_n07kg")]
+[node name="spruce36" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2145236229 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9656757, 0, -0.40604368, 0, 1.0475692, 0, 0.4060437, 0, -0.9656757, -6.5447845, -10.962402, -0.6194382)
 
-[node name="spruce37" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=162385953 instance=ExtResource("30_n07kg")]
+[node name="spruce37" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1376421222 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0401192, 0, 0.2727139, 0, 1.0752771, 0, -0.2727139, 0, 1.0401192, 32.331436, -11.765583, 68.8985)
 
-[node name="spruce38" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=705723349 instance=ExtResource("30_n07kg")]
+[node name="spruce38" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=639729938 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5470765, 0, -0.9399822, 0, 1.0875933, 0, 0.9399822, 0, 0.5470765, 73.45711, -0.8523102, -15.354553)
 
-[node name="spruce39" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=137968615 instance=ExtResource("30_n07kg")]
+[node name="spruce39" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=375798894 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6563479, 0, 0.7613643, 0, 1.0052204, 0, -0.7613643, 0, -0.6563479, 65.29811, 2.3174896, 51.50992)
 
-[node name="spruce40" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1199990984 instance=ExtResource("30_n07kg")]
+[node name="spruce40" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=399656542 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0575027, 0, -0.074209854, 0, 1.0601033, 0, 0.07420986, 0, 1.0575027, 45.47563, 0.9648857, 48.041992)
 
-[node name="spruce41" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1458669638 instance=ExtResource("30_n07kg")]
+[node name="spruce41" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1412700358 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.12566212, 0, 1.0507853, 0, 1.0582725, 0, -1.0507853, 0, 0.12566212, 5.2925873, -13.194214, -16.573761)
 
-[node name="spruce42" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1268579108 instance=ExtResource("30_n07kg")]
+[node name="spruce42" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=753749467 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0209459, 0, -0.3402979, 0, 1.0761659, 0, 0.34029788, 0, -1.0209459, 51.217484, 2.4323654, 49.501724)
 
-[node name="spruce43" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=780512191 instance=ExtResource("30_n07kg")]
+[node name="spruce43" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=505119574 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5822724, 0, -0.8162381, 0, 1.0026394, 0, 0.8162381, 0, -0.5822724, -5.1257935, -11.32061, -7.2027435)
 
-[node name="spruce44" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1347696110 instance=ExtResource("30_n07kg")]
+[node name="spruce44" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1790246666 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.66771215, 0, 0.78010577, 0, 1.026842, 0, -0.78010577, 0, 0.66771215, 75.563065, -1.8887062, 40.68994)
 
-[node name="spruce45" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=429940638 instance=ExtResource("30_n07kg")]
+[node name="spruce45" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=367638895 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8876286, 0, -0.57570547, 0, 1.0579798, 0, 0.57570547, 0, -0.8876286, 72.82539, 1.9290619, 16.3918)
 
-[node name="spruce46" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=26460493 instance=ExtResource("30_n07kg")]
+[node name="spruce46" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=597866211 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6631902, 0, -0.8019663, 0, 1.0406591, 0, 0.8019663, 0, -0.6631902, 51.22754, -9.50259, 61.977844)
 
-[node name="spruce47" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=479556441 instance=ExtResource("30_n07kg")]
+[node name="spruce47" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1703971044 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.44083467, 0, -0.93382406, 0, 1.0326483, 0, 0.93382406, 0, 0.44083467, 37.520035, -5.817024, -18.057938)
 
-[node name="spruce48" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2113757527 instance=ExtResource("30_n07kg")]
+[node name="spruce48" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1032871242 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.4461776, 0, 0.9814575, 0, 1.0781156, 0, -0.9814575, 0, -0.44617757, 19.14183, 1.8153954, 59.327164)
 
-[node name="spruce49" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=836805550 instance=ExtResource("30_n07kg")]
+[node name="spruce49" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1847791064 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.36955503, 0, -0.9315781, 0, 1.0022019, 0, 0.9315781, 0, -0.36955503, 11.014099, 0.74119186, -0.87859344)
 
-[node name="spruce50" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=53035890 instance=ExtResource("30_n07kg")]
+[node name="spruce50" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=578358770 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48331302, 0, -0.93253046, 0, 1.0503355, 0, 0.9325306, 0, 0.483313, 71.59569, 4.0128098, 21.349007)
 
-[node name="spruce51" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2024378261 instance=ExtResource("30_n07kg")]
+[node name="spruce51" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1210253122 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.47561392, 0, -0.95079327, 0, 1.0631164, 0, 0.95079327, 0, -0.47561392, 52.93834, 1.1915817, -15.4021225)
 
-[node name="spruce52" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=718658789 instance=ExtResource("30_n07kg")]
+[node name="spruce52" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1879095046 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0596683, 0, 0.010116037, 0, 1.0597166, 0, -0.010116037, 0, -1.0596683, 47.568314, -7.963112, 60.105103)
 
-[node name="spruce53" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1124663680 instance=ExtResource("30_n07kg")]
+[node name="spruce53" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=335564370 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.98186046, 0, -0.26027387, 0, 1.0157719, 0, 0.26027387, 0, 0.98186046, 67.44252, 0.27560806, -9.587654)
 
-[node name="spruce54" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=565034038 instance=ExtResource("30_n07kg")]
+[node name="spruce54" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1885503207 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8346065, 0, -0.6707759, 0, 1.0707513, 0, 0.67077595, 0, -0.8346066, 39.134018, 0.60185623, -7.5785675)
 
-[node name="spruce55" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1283347329 instance=ExtResource("30_n07kg")]
+[node name="spruce55" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1921522560 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5022005, 0, 0.9634398, 0, 1.086472, 0, -0.9634398, 0, 0.5022005, 71.91676, 2.915577, 30.80265)
 
-[node name="spruce56" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=604641131 instance=ExtResource("30_n07kg")]
+[node name="spruce56" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1438215722 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87231076, 0, 0.5054607, 0, 1.0081749, 0, -0.5054607, 0, -0.87231076, -8.620819, -11.747757, -4.6585693)
 
-[node name="spruce57" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1872248486 instance=ExtResource("30_n07kg")]
+[node name="spruce57" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1960787738 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.97537756, 0, -0.31881455, 0, 1.0261599, 0, 0.31881455, 0, -0.97537756, 44.11644, 3.3468056, 24.891068)
 
-[node name="spruce58" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2066389885 instance=ExtResource("30_n07kg")]
+[node name="spruce58" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=266072414 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.32379055, 0, -1.0447087, 0, 1.0937352, 0, 1.0447087, 0, -0.32379055, 8.819458, -0.47275162, 12.387688)
 
-[node name="spruce59" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1947160742 instance=ExtResource("30_n07kg")]
+[node name="spruce59" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=720543924 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.8935445, 0, -0.50047195, 0, 1.0241553, 0, 0.50047195, 0, 0.8935445, 15.303497, 1.3274498, -6.918297)
 
-[node name="spruce60" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=543008741 instance=ExtResource("30_n07kg")]
+[node name="spruce60" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1846537189 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.17514151, 0, -1.0712396, 0, 1.0854625, 0, 1.0712396, 0, -0.17514153, 32.493484, 2.8543968, 39.626747)
 
-[node name="spruce61" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=2065673793 instance=ExtResource("30_n07kg")]
+[node name="spruce61" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1306198738 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9294445, 0, 0.50894946, 0, 1.0596682, 0, -0.50894946, 0, 0.9294445, 70.519394, 3.093525, 5.122635)
 
-[node name="spruce62" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1829956954 instance=ExtResource("30_n07kg")]
+[node name="spruce62" type="Node3D" parent="proton-scatter3/ScatterOutput/ScatterItem" unique_id=1758047724 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0421414, 0, -0.24093543, 0, 1.0696301, 0, 0.24093543, 0, 1.0421414, 26.328537, -5.7092247, 56.050964)
 
 [node name="proton-scatter4" type="Node3D" parent="." unique_id=1663386279]
@@ -1060,227 +1060,227 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_aqhby")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter4" unique_id=942662370]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter4" unique_id=208217625]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter4/ScatterOutput" unique_id=1969995116]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter4/ScatterOutput" unique_id=42763624]
 
-[node name="spruce" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1754080105 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1058939005 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, 11.156677, -18.696102, 5.745529)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=737393525 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=618669145 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 8.580109, -19.915009, 14.670425)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1773391792 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=78471051 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 52.702393, -20.476215, -17.91893)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1383940576 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=620874173 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, 46.85379, -4.2648964, 23.636444)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=241738793 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1594687859 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, 44.57602, -2.4221764, 25.37001)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=521402679 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1359453912 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 48.018524, -16.215593, -12.075882)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2063894783 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1131669949 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 0.029510498, -25.194841, -4.719017)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=88453497 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=715113320 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 30.894226, -11.023018, 51.477585)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=220459622 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1012528571 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 35.993317, -6.822624, -6.1496887)
 
-[node name="spruce10" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=527698870 instance=ExtResource("30_n07kg")]
+[node name="spruce10" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=639242417 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9800306, 0, -0.22435361, 0, 1.0053828, 0, 0.22435361, 0, 0.9800306, 41.786163, 4.7587776, 18.167877)
 
-[node name="spruce11" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1547146191 instance=ExtResource("30_n07kg")]
+[node name="spruce11" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=912129109 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.23080084, 0, 1.0645099, 0, 1.0892429, 0, -1.0645099, 0, -0.23080084, 50.746155, -6.3889313, 1.8667068)
 
-[node name="spruce12" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=892024265 instance=ExtResource("30_n07kg")]
+[node name="spruce12" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=752793525 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.57746863, 0, 0.8623217, 0, 1.0378191, 0, -0.8623217, 0, -0.57746863, 22.845093, -14.398916, -6.6362305)
 
-[node name="spruce13" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2081763619 instance=ExtResource("30_n07kg")]
+[node name="spruce13" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1512087583 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9105978, 0, 0.4724589, 0, 1.0258683, 0, -0.4724589, 0, 0.9105978, -1.1334839, -28.65276, 8.865234)
 
-[node name="spruce14" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=238860335 instance=ExtResource("30_n07kg")]
+[node name="spruce14" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=104113099 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.96952057, 0, -0.31237593, 0, 1.0186014, 0, 0.31237593, 0, 0.96952057, 58.51245, -14.4127655, 31.88565)
 
-[node name="spruce15" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1357396817 instance=ExtResource("30_n07kg")]
+[node name="spruce15" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=236032232 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.74641055, 0, 0.7897042, 0, 1.0866284, 0, -0.7897042, 0, 0.74641055, 20.504333, -9.832329, 29.095215)
 
-[node name="spruce16" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1999427626 instance=ExtResource("30_n07kg")]
+[node name="spruce16" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1223772387 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97430366, 0, 0.3650147, 0, 1.0404342, 0, -0.3650147, 0, 0.97430366, 20.089111, -20.373138, -11.522003)
 
-[node name="spruce17" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1715003522 instance=ExtResource("30_n07kg")]
+[node name="spruce17" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=345415571 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43097433, 0, 0.93684953, 0, 1.0312254, 0, -0.93684953, 0, -0.43097433, -2.6302795, -31.809711, 15.567001)
 
-[node name="spruce18" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=488931443 instance=ExtResource("30_n07kg")]
+[node name="spruce18" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=516896734 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.1492845, 0, 1.0322645, 0, 1.0430033, 0, -1.0322645, 0, 0.1492845, 57.684418, -11.394798, 15.466263)
 
-[node name="spruce19" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=291765424 instance=ExtResource("30_n07kg")]
+[node name="spruce19" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2117331862 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9073217, 0, -0.4895473, 0, 1.0309652, 0, 0.4895473, 0, -0.9073217, 38.742554, -27.796638, -22.193108)
 
-[node name="spruce20" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=57465040 instance=ExtResource("30_n07kg")]
+[node name="spruce20" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1873943356 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0247104, 0, -0.36572966, 0, 1.0880209, 0, 0.36572966, 0, -1.0247104, 53.667694, -13.252298, -4.2395325)
 
-[node name="spruce21" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=279421855 instance=ExtResource("30_n07kg")]
+[node name="spruce21" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1544739286 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.2504256, 0, 1.0595287, 0, 1.0887213, 0, -1.0595287, 0, 0.2504256, 39.354736, 3.4402199, 22.01921)
 
-[node name="spruce22" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=47751992 instance=ExtResource("30_n07kg")]
+[node name="spruce22" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=237950365 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9567836, 0, 0.3780463, 0, 1.0287632, 0, -0.3780463, 0, -0.9567836, 54.55081, -7.925789, 47.27249)
 
-[node name="spruce23" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1346777851 instance=ExtResource("30_n07kg")]
+[node name="spruce23" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2141047390 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0750602, 0, 0.042675704, 0, 1.0759069, 0, -0.042675704, 0, 1.0750602, 25.55542, -15.387875, -9.211998)
 
-[node name="spruce24" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1811155751 instance=ExtResource("30_n07kg")]
+[node name="spruce24" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=279765926 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0469445, 0, 0.28886518, 0, 1.0860643, 0, -0.28886518, 0, 1.0469445, 0.6542969, -28.16098, 20.580246)
 
-[node name="spruce25" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1629536343 instance=ExtResource("30_n07kg")]
+[node name="spruce25" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=361721385 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5383891, 0, -0.92731345, 0, 1.0722747, 0, 0.92731345, 0, -0.5383891, 28.05603, 2.509552, 9.649628)
 
-[node name="spruce26" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=856601381 instance=ExtResource("30_n07kg")]
+[node name="spruce26" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=250042804 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.95734394, 0, 0.5142355, 0, 1.0867132, 0, -0.5142355, 0, 0.95734394, 70.16931, -28.77599, 13.940018)
 
-[node name="spruce27" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=47330171 instance=ExtResource("30_n07kg")]
+[node name="spruce27" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1816995709 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8403248, 0, 0.6978276, 0, 1.0922954, 0, -0.6978276, 0, -0.84032476, 32.93329, -8.896606, -9.143799)
 
-[node name="spruce28" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=850425010 instance=ExtResource("30_n07kg")]
+[node name="spruce28" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1603769769 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6803522, 0, 0.83789164, 0, 1.0793245, 0, -0.8378916, 0, -0.6803522, 3.018036, -25.769314, 15.196411)
 
-[node name="spruce29" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1833690773 instance=ExtResource("30_n07kg")]
+[node name="spruce29" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1948686440 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.0921688, 0, -1.068224, 0, 1.0721929, 0, 1.068224, 0, 0.0921688, 47.229828, -15.669666, -9.924309)
 
-[node name="spruce30" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1270165576 instance=ExtResource("30_n07kg")]
+[node name="spruce30" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1120243287 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.46883562, 0, -0.9414153, 0, 1.0516984, 0, 0.9414153, 0, 0.46883562, 4.9848022, -27.794167, 43.655212)
 
-[node name="spruce31" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1978715158 instance=ExtResource("30_n07kg")]
+[node name="spruce31" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1298728054 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5962139, 0, 0.8628039, 0, 1.048762, 0, -0.8628039, 0, 0.5962139, 62.707825, -19.65302, 21.773163)
 
-[node name="spruce32" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1613620308 instance=ExtResource("30_n07kg")]
+[node name="spruce32" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2016276496 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0055789, 0, -0.23625715, 0, 1.0329599, 0, 0.23625717, 0, -1.0055789, 7.711792, -21.19003, 1.6999359)
 
-[node name="spruce33" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1898521120 instance=ExtResource("30_n07kg")]
+[node name="spruce33" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=156845309 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0428377, 0, -0.22334574, 0, 1.0664867, 0, 0.22334574, 0, 1.0428377, 40.329773, -6.224415, 30.61029)
 
-[node name="spruce34" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1771930583 instance=ExtResource("30_n07kg")]
+[node name="spruce34" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=376394138 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48684677, 0, -0.9645665, 0, 1.0804667, 0, 0.9645665, 0, 0.48684677, 6.054413, -24.277157, 35.701355)
 
-[node name="spruce35" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=586967212 instance=ExtResource("30_n07kg")]
+[node name="spruce35" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1179110798 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.0023737238, 0, 1.0739341, 0, 1.0739367, 0, -1.0739341, 0, -0.0023737238, 29.891327, 3.4907646, 8.822662)
 
-[node name="spruce36" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1908844117 instance=ExtResource("30_n07kg")]
+[node name="spruce36" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=589562194 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97812784, 0, 0.22750695, 0, 1.0042378, 0, -0.22750695, 0, 0.97812784, 58.215363, -14.151573, 0.14065552)
 
-[node name="spruce37" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1876237482 instance=ExtResource("30_n07kg")]
+[node name="spruce37" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=345824584 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0105164, 0, 0.23503554, 0, 1.0374898, 0, -0.23503552, 0, 1.0105164, 70.48645, -29.701412, 12.313126)
 
-[node name="spruce38" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=493425140 instance=ExtResource("30_n07kg")]
+[node name="spruce38" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=41329970 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.92907083, 0, 0.4357396, 0, 1.0261781, 0, -0.43573958, 0, 0.92907083, 58.43103, -11.077148, 48.28659)
 
-[node name="spruce39" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1285488428 instance=ExtResource("30_n07kg")]
+[node name="spruce39" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1390791159 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.253958, 0, 0.9760345, 0, 1.0085326, 0, -0.9760345, 0, -0.253958, 67.24365, -27.258709, -1.3810425)
 
-[node name="spruce40" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=565883148 instance=ExtResource("30_n07kg")]
+[node name="spruce40" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=389300420 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.23896979, 0, -1.0206305, 0, 1.0482334, 0, 1.0206305, 0, 0.23896979, 45.890015, -12.940186, -6.2476807)
 
-[node name="spruce41" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1968222996 instance=ExtResource("30_n07kg")]
+[node name="spruce41" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=774184923 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0422063, 0, 0.08546273, 0, 1.0457045, 0, -0.08546273, 0, -1.0422063, 35.761597, -14.164724, 38.627533)
 
-[node name="spruce42" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2061876083 instance=ExtResource("30_n07kg")]
+[node name="spruce42" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=160775870 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9656757, 0, -0.40604368, 0, 1.0475692, 0, 0.4060437, 0, -0.9656757, 2.596527, -25.093912, 3.2994385)
 
-[node name="spruce43" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1582881867 instance=ExtResource("30_n07kg")]
+[node name="spruce43" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=350541850 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0401192, 0, 0.2727139, 0, 1.0752771, 0, -0.2727139, 0, 1.0401192, 33.00049, -9.365234, 57.680878)
 
-[node name="spruce44" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1610646242 instance=ExtResource("30_n07kg")]
+[node name="spruce44" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2009356342 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5470765, 0, -0.9399822, 0, 1.0875933, 0, 0.9399822, 0, 0.5470765, 65.2056, -27.23904, -8.373314)
 
-[node name="spruce45" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1577266619 instance=ExtResource("30_n07kg")]
+[node name="spruce45" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1063305792 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6563479, 0, 0.7613643, 0, 1.0052204, 0, -0.7613643, 0, -0.6563479, 58.757874, -10.827328, 43.88669)
 
-[node name="spruce46" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1360071681 instance=ExtResource("30_n07kg")]
+[node name="spruce46" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=60047051 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0575027, 0, -0.074209854, 0, 1.0601033, 0, 0.07420986, 0, 1.0575027, 43.151184, -9.396797, 41.241104)
 
-[node name="spruce47" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=549468286 instance=ExtResource("30_n07kg")]
+[node name="spruce47" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1945779968 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.324873, 0, -0.99354583, 0, 1.0453113, 0, 0.99354583, 0, -0.324873, 21.95871, -5.8790627, 24.469238)
 
-[node name="spruce48" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=241439156 instance=ExtResource("30_n07kg")]
+[node name="spruce48" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1395430507 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.12566212, 0, 1.0507853, 0, 1.0582725, 0, -1.0507853, 0, 0.12566212, 11.724884, -14.744213, -9.232338)
 
-[node name="spruce49" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1115831632 instance=ExtResource("30_n07kg")]
+[node name="spruce49" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2043978578 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0209459, 0, -0.3402979, 0, 1.0761659, 0, 0.34029788, 0, -1.0209459, 47.83908, -6.4222946, 42.436035)
 
-[node name="spruce50" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=335738443 instance=ExtResource("30_n07kg")]
+[node name="spruce50" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=454489893 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5822724, 0, -0.8162381, 0, 1.0026394, 0, 0.8162381, 0, -0.5822724, 3.768921, -22.251463, -1.9792862)
 
-[node name="spruce51" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=899374690 instance=ExtResource("30_n07kg")]
+[node name="spruce51" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=877293829 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.66771215, 0, 0.78010577, 0, 1.026842, 0, -0.78010577, 0, 0.66771215, 66.82623, -21.441126, 35.611923)
 
-[node name="spruce52" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2001934772 instance=ExtResource("30_n07kg")]
+[node name="spruce52" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1744428231 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8876286, 0, -0.57570547, 0, 1.0579798, 0, 0.57570547, 0, -0.8876286, 64.66022, -20.573826, 16.422318)
 
-[node name="spruce53" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1500872270 instance=ExtResource("30_n07kg")]
+[node name="spruce53" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=808855246 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6631902, 0, -0.8019663, 0, 1.0406591, 0, 0.8019663, 0, -0.6631902, 47.841034, -8.306496, 52.216095)
 
-[node name="spruce54" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=161201782 instance=ExtResource("30_n07kg")]
+[node name="spruce54" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1115801611 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.44083467, 0, -0.93382406, 0, 1.0326483, 0, 0.93382406, 0, 0.44083467, 37.13391, -11.495678, -10.448975)
 
-[node name="spruce55" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=297040455 instance=ExtResource("30_n07kg")]
+[node name="spruce55" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2013197306 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43163607, 0, 0.9758478, 0, 1.0670468, 0, -0.9758478, 0, -0.43163607, 62.683228, -19.757296, 23.737198)
 
-[node name="spruce56" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=160536899 instance=ExtResource("30_n07kg")]
+[node name="spruce56" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=973508051 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.4461776, 0, 0.9814575, 0, 1.0781156, 0, -0.9814575, 0, -0.44617757, 22.55603, -12.440498, 50.133286)
 
-[node name="spruce57" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=264937126 instance=ExtResource("30_n07kg")]
+[node name="spruce57" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=453326011 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.2381406, 0, -1.0279971, 0, 1.0552199, 0, 1.0279971, 0, -0.23814061, 24.28836, -3.9484558, 24.276993)
 
-[node name="spruce58" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1278429484 instance=ExtResource("30_n07kg")]
+[node name="spruce58" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=964008155 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.36955503, 0, -0.9315781, 0, 1.0022019, 0, 0.9315781, 0, -0.36955503, 16.312256, -12.143555, 3.0168457)
 
-[node name="spruce59" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=2096866699 instance=ExtResource("30_n07kg")]
+[node name="spruce59" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1020031352 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48331302, 0, -0.93253046, 0, 1.0503355, 0, 0.9325306, 0, 0.483313, 63.74649, -20.23498, 20.329926)
 
-[node name="spruce60" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1625828493 instance=ExtResource("30_n07kg")]
+[node name="spruce60" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1895631296 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.47561392, 0, -0.95079327, 0, 1.0631164, 0, 0.95079327, 0, -0.47561392, 49.167328, -14.580893, -8.273338)
 
-[node name="spruce61" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1160443087 instance=ExtResource("30_n07kg")]
+[node name="spruce61" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1428100680 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0596683, 0, 0.010116037, 0, 1.0597166, 0, -0.010116037, 0, -1.0596683, 44.78839, -7.924507, 50.676056)
 
-[node name="spruce62" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=419785867 instance=ExtResource("30_n07kg")]
+[node name="spruce62" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=831134086 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.2678871, 0, -1.05575, 0, 1.0892068, 0, 1.05575, 0, -0.2678871, 38.280792, 3.9224472, 21.555496)
 
-[node name="spruce63" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=314826545 instance=ExtResource("30_n07kg")]
+[node name="spruce63" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=497413198 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.057030715, 0, 1.0295113, 0, 1.0310898, 0, -1.0295113, 0, 0.057030715, 45.691956, -10.013401, 36.2276)
 
-[node name="spruce64" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1987270434 instance=ExtResource("30_n07kg")]
+[node name="spruce64" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=559356912 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.98186046, 0, -0.26027387, 0, 1.0157719, 0, 0.26027387, 0, 0.98186046, 60.485077, -19.136684, -3.8835602)
 
-[node name="spruce65" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1016922134 instance=ExtResource("30_n07kg")]
+[node name="spruce65" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1289811200 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8346065, 0, -0.6707759, 0, 1.0707513, 0, 0.67077595, 0, -0.8346066, 38.333893, -4.274872, -2.1269531)
 
-[node name="spruce66" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=799613119 instance=ExtResource("30_n07kg")]
+[node name="spruce66" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=130715165 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5022005, 0, 0.9634398, 0, 1.086472, 0, -0.9634398, 0, 0.5022005, 63.971893, -19.834768, 27.89064)
 
-[node name="spruce67" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1309814424 instance=ExtResource("30_n07kg")]
+[node name="spruce67" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1904335155 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87231076, 0, 0.5054607, 0, 1.0081749, 0, -0.5054607, 0, -0.87231076, 0.86550903, -25.571033, 0.10543823)
 
-[node name="spruce68" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=887476116 instance=ExtResource("30_n07kg")]
+[node name="spruce68" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=286313870 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.97537756, 0, -0.31881455, 0, 1.0261599, 0, 0.31881455, 0, -0.97537756, 42.23224, 1.125351, 23.170212)
 
-[node name="spruce69" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=997890527 instance=ExtResource("30_n07kg")]
+[node name="spruce69" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=303105972 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.32379055, 0, -1.0447087, 0, 1.0937352, 0, 1.0447087, 0, -0.32379055, 14.688477, -11.883175, 13.369659)
 
-[node name="spruce70" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=369826781 instance=ExtResource("30_n07kg")]
+[node name="spruce70" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1671678407 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.8935445, 0, -0.50047195, 0, 1.0241553, 0, 0.50047195, 0, 0.8935445, 19.674652, -10.52137, -1.7426147)
 
-[node name="spruce71" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=343709882 instance=ExtResource("30_n07kg")]
+[node name="spruce71" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1993093875 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.17514151, 0, -1.0712396, 0, 1.0854625, 0, 1.0712396, 0, -0.17514153, 33.05078, -13.107752, 34.604614)
 
-[node name="spruce72" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=418205724 instance=ExtResource("30_n07kg")]
+[node name="spruce72" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=844550243 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9294445, 0, 0.50894946, 0, 1.0596682, 0, -0.50894946, 0, 0.9294445, 62.90735, -18.149605, 7.813751)
 
-[node name="spruce73" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1749968157 instance=ExtResource("30_n07kg")]
+[node name="spruce73" type="Node3D" parent="proton-scatter4/ScatterOutput/ScatterItem" unique_id=1143148116 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0421414, 0, -0.24093543, 0, 1.0696301, 0, 0.24093543, 0, 1.0421414, 28.23053, -10.601723, 47.44818)
 
 [node name="proton-scatter5" type="Node3D" parent="." unique_id=1417397315]
@@ -1304,203 +1304,203 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_00t1k")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter5" unique_id=824387210]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter5" unique_id=1037495722]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter5/ScatterOutput" unique_id=288548423]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter5/ScatterOutput" unique_id=1258019392]
 
-[node name="spruce" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1900050803 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1366855291 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, 11.156677, -21.027243, 5.745514)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2086837292 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1105669804 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 8.580109, -20.682995, 14.67041)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=533005581 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1702818731 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 52.702393, -1.6423454, -17.918945)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1698588446 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=737880618 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, 46.85379, 0.16549301, 23.636444)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1219711977 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=12633142 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, 44.57602, 0.3777275, 25.369995)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2102332324 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1969283103 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 48.018524, 0.6201515, -12.075897)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=173235349 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1790655641 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 0.029510498, -32.487713, -4.7190247)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=640446541 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1862079267 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 30.894196, -27.249691, 51.47757)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=851015333 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=136701390 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 35.993317, -4.8675537, -6.1496887)
 
-[node name="spruce10" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=98437196 instance=ExtResource("30_n07kg")]
+[node name="spruce10" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=567174445 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.57746863, 0, 0.8623217, 0, 1.0378191, 0, -0.8623217, 0, -0.57746863, 22.845123, -19.568151, -6.6362305)
 
-[node name="spruce11" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1755288595 instance=ExtResource("30_n07kg")]
+[node name="spruce11" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1464534519 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9105978, 0, 0.4724589, 0, 1.0258683, 0, -0.4724589, 0, 0.9105978, -1.1334839, -28.895912, 8.865234)
 
-[node name="spruce12" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=557554490 instance=ExtResource("30_n07kg")]
+[node name="spruce12" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1101542709 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.96952057, 0, -0.31237593, 0, 1.0186014, 0, 0.31237593, 0, 0.96952057, 58.51245, -18.532589, 31.88565)
 
-[node name="spruce13" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=189182321 instance=ExtResource("30_n07kg")]
+[node name="spruce13" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=88094143 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.74641055, 0, 0.7897042, 0, 1.0866284, 0, -0.7897042, 0, 0.74641055, 20.504333, -13.635839, 29.095215)
 
-[node name="spruce14" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=816058338 instance=ExtResource("30_n07kg")]
+[node name="spruce14" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=185449800 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97430366, 0, 0.3650147, 0, 1.0404342, 0, -0.3650147, 0, 0.97430366, 20.089111, -23.301771, -11.522003)
 
-[node name="spruce15" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2090672292 instance=ExtResource("30_n07kg")]
+[node name="spruce15" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1394949740 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43097433, 0, 0.93684953, 0, 1.0312254, 0, -0.93684953, 0, -0.43097433, -2.6302795, -28.640781, 15.567017)
 
-[node name="spruce16" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=385220259 instance=ExtResource("30_n07kg")]
+[node name="spruce16" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=548238303 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.1492845, 0, 1.0322645, 0, 1.0430033, 0, -1.0322645, 0, 0.1492845, 57.684418, -6.3784103, 15.466248)
 
-[node name="spruce17" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=150024022 instance=ExtResource("30_n07kg")]
+[node name="spruce17" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1267777208 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9073217, 0, -0.4895473, 0, 1.0309652, 0, 0.4895473, 0, -0.9073217, 38.742554, -18.556776, -22.193115)
 
-[node name="spruce18" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=74954988 instance=ExtResource("30_n07kg")]
+[node name="spruce18" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1382663025 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9567836, 0, 0.3780463, 0, 1.0287632, 0, -0.3780463, 0, -0.9567836, 54.55081, -30.338943, 47.27249)
 
-[node name="spruce19" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1772494219 instance=ExtResource("30_n07kg")]
+[node name="spruce19" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1305223301 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0750602, 0, 0.042675704, 0, 1.0759069, 0, -0.042675704, 0, 1.0750602, 25.55542, -19.257566, -9.212006)
 
-[node name="spruce20" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1182092624 instance=ExtResource("30_n07kg")]
+[node name="spruce20" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1837539152 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0469445, 0, 0.28886518, 0, 1.0860643, 0, -0.28886518, 0, 1.0469445, 0.6542969, -25.572544, 20.580261)
 
-[node name="spruce21" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1642543294 instance=ExtResource("30_n07kg")]
+[node name="spruce21" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=571792483 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5383891, 0, -0.92731345, 0, 1.0722747, 0, 0.92731345, 0, -0.5383891, 28.056, 0.6383171, 9.649628)
 
-[node name="spruce22" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1588071578 instance=ExtResource("30_n07kg")]
+[node name="spruce22" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1574614268 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.95734394, 0, 0.5142355, 0, 1.0867132, 0, -0.5142355, 0, 0.95734394, 70.16931, -15.983629, 13.940033)
 
-[node name="spruce23" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=62539382 instance=ExtResource("30_n07kg")]
+[node name="spruce23" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=859048575 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8403248, 0, 0.6978276, 0, 1.0922954, 0, -0.6978276, 0, -0.84032476, 32.93329, -13.288557, -9.143799)
 
-[node name="spruce24" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=339813335 instance=ExtResource("30_n07kg")]
+[node name="spruce24" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=628254431 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6803522, 0, 0.83789164, 0, 1.0793245, 0, -0.8378916, 0, -0.6803522, 3.018036, -24.795023, 15.196411)
 
-[node name="spruce25" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1495903733 instance=ExtResource("30_n07kg")]
+[node name="spruce25" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1959738212 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.0921688, 0, -1.068224, 0, 1.0721929, 0, 1.068224, 0, 0.0921688, 47.229828, 2.1058083, -9.924316)
 
-[node name="spruce26" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1509999417 instance=ExtResource("30_n07kg")]
+[node name="spruce26" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1487471046 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.46883562, 0, -0.9414153, 0, 1.0516984, 0, 0.9414153, 0, 0.46883562, 4.9848022, -25.399307, 43.655212)
 
-[node name="spruce27" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1658371932 instance=ExtResource("30_n07kg")]
+[node name="spruce27" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1750873183 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5962139, 0, 0.8628039, 0, 1.048762, 0, -0.8628039, 0, 0.5962139, 62.707855, -14.272894, 21.773163)
 
-[node name="spruce28" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1469832535 instance=ExtResource("30_n07kg")]
+[node name="spruce28" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=898009434 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0055789, 0, -0.23625715, 0, 1.0329599, 0, 0.23625717, 0, -1.0055789, 7.711792, -24.818804, 1.6999207)
 
-[node name="spruce29" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=213143649 instance=ExtResource("30_n07kg")]
+[node name="spruce29" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=569232150 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0428377, 0, -0.22334574, 0, 1.0664867, 0, 0.22334574, 0, 1.0428377, 40.329773, -4.3454094, 30.61029)
 
-[node name="spruce30" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=626711404 instance=ExtResource("30_n07kg")]
+[node name="spruce30" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=738639435 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48684677, 0, -0.9645665, 0, 1.0804667, 0, 0.9645665, 0, 0.48684677, 6.054413, -23.542274, 35.701355)
 
-[node name="spruce31" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=321399092 instance=ExtResource("30_n07kg")]
+[node name="spruce31" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1033570968 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.0023737238, 0, 1.0739341, 0, 1.0739367, 0, -1.0739341, 0, -0.0023737238, 29.891327, 2.1496773, 8.822662)
 
-[node name="spruce32" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1851187524 instance=ExtResource("30_n07kg")]
+[node name="spruce32" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1262127042 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0105164, 0, 0.23503554, 0, 1.0374898, 0, -0.23503552, 0, 1.0105164, 70.48645, -15.115856, 12.31311)
 
-[node name="spruce33" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1481447775 instance=ExtResource("30_n07kg")]
+[node name="spruce33" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=970643891 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.253958, 0, 0.9760345, 0, 1.0085326, 0, -0.9760345, 0, -0.253958, 67.24368, 2.5548935, -1.3810425)
 
-[node name="spruce34" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1694947015 instance=ExtResource("30_n07kg")]
+[node name="spruce34" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1029619830 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.23896979, 0, -1.0206305, 0, 1.0482334, 0, 1.0206305, 0, 0.23896979, 45.890015, 3.433937, -6.2476807)
 
-[node name="spruce35" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=27002150 instance=ExtResource("30_n07kg")]
+[node name="spruce35" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1058695592 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0422063, 0, 0.08546273, 0, 1.0457045, 0, -0.08546273, 0, -1.0422063, 35.761597, -15.710686, 38.627533)
 
-[node name="spruce36" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=886949153 instance=ExtResource("30_n07kg")]
+[node name="spruce36" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1403497077 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9656757, 0, -0.40604368, 0, 1.0475692, 0, 0.4060437, 0, -0.9656757, 2.596527, -27.817608, 3.2994385)
 
-[node name="spruce37" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1218060351 instance=ExtResource("30_n07kg")]
+[node name="spruce37" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=681851421 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0401192, 0, 0.2727139, 0, 1.0752771, 0, -0.2727139, 0, 1.0401192, 33.00049, -34.925613, 57.680878)
 
-[node name="spruce38" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1161111765 instance=ExtResource("30_n07kg")]
+[node name="spruce38" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1785978301 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6563479, 0, 0.7613643, 0, 1.0052204, 0, -0.7613643, 0, -0.6563479, 58.757904, -31.022701, 43.88669)
 
-[node name="spruce39" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2045824614 instance=ExtResource("30_n07kg")]
+[node name="spruce39" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=448796934 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0575027, 0, -0.074209854, 0, 1.0601033, 0, 0.07420986, 0, 1.0575027, 43.151184, -18.379303, 41.24109)
 
-[node name="spruce40" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2067289312 instance=ExtResource("30_n07kg")]
+[node name="spruce40" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=657284233 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.324873, 0, -0.99354583, 0, 1.0453113, 0, 0.99354583, 0, -0.324873, 21.95871, -9.307991, 24.469238)
 
-[node name="spruce41" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1255878350 instance=ExtResource("30_n07kg")]
+[node name="spruce41" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=852512617 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.12566212, 0, 1.0507853, 0, 1.0582725, 0, -1.0507853, 0, 0.12566212, 11.724884, -27.504776, -9.23233)
 
-[node name="spruce42" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=132399801 instance=ExtResource("30_n07kg")]
+[node name="spruce42" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1836440768 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0209459, 0, -0.3402979, 0, 1.0761659, 0, 0.34029788, 0, -1.0209459, 47.83908, -19.587954, 42.436035)
 
-[node name="spruce43" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1180064926 instance=ExtResource("30_n07kg")]
+[node name="spruce43" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1021161698 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5822724, 0, -0.8162381, 0, 1.0026394, 0, 0.8162381, 0, -0.5822724, 3.768921, -28.756676, -1.9792786)
 
-[node name="spruce44" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1324950830 instance=ExtResource("30_n07kg")]
+[node name="spruce44" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1633586563 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.66771215, 0, 0.78010577, 0, 1.026842, 0, -0.78010577, 0, 0.66771215, 66.82623, -27.513615, 35.61194)
 
-[node name="spruce45" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1998833808 instance=ExtResource("30_n07kg")]
+[node name="spruce45" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=609724530 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8876286, 0, -0.57570547, 0, 1.0579798, 0, 0.57570547, 0, -0.8876286, 64.66022, -13.070427, 16.422302)
 
-[node name="spruce46" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2122029393 instance=ExtResource("30_n07kg")]
+[node name="spruce46" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=52242689 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6631902, 0, -0.8019663, 0, 1.0406591, 0, 0.8019663, 0, -0.6631902, 47.841034, -31.49989, 52.216095)
 
-[node name="spruce47" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=350109358 instance=ExtResource("30_n07kg")]
+[node name="spruce47" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1892801184 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.44083467, 0, -0.93382406, 0, 1.0326483, 0, 0.93382406, 0, 0.44083467, 37.13391, -9.955734, -10.448975)
 
-[node name="spruce48" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1550716729 instance=ExtResource("30_n07kg")]
+[node name="spruce48" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1944313475 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43163607, 0, 0.9758478, 0, 1.0670468, 0, -0.9758478, 0, -0.43163607, 62.683197, -15.116783, 23.737213)
 
-[node name="spruce49" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1924605671 instance=ExtResource("30_n07kg")]
+[node name="spruce49" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=785665882 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.4461776, 0, 0.9814575, 0, 1.0781156, 0, -0.9814575, 0, -0.44617757, 22.55603, -25.888903, 50.1333)
 
-[node name="spruce50" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1420385757 instance=ExtResource("30_n07kg")]
+[node name="spruce50" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=2080590712 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.2381406, 0, -1.0279971, 0, 1.0552199, 0, 1.0279971, 0, -0.23814061, 24.28836, -6.006386, 24.277008)
 
-[node name="spruce51" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1933902797 instance=ExtResource("30_n07kg")]
+[node name="spruce51" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1563958642 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.36955503, 0, -0.9315781, 0, 1.0022019, 0, 0.9315781, 0, -0.36955503, 16.312256, -19.253305, 3.0168457)
 
-[node name="spruce52" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=366034542 instance=ExtResource("30_n07kg")]
+[node name="spruce52" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1857344637 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48331302, 0, -0.93253046, 0, 1.0503355, 0, 0.9325306, 0, 0.483313, 63.74649, -14.112474, 20.329926)
 
-[node name="spruce53" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=847111496 instance=ExtResource("30_n07kg")]
+[node name="spruce53" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=846199591 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.47561392, 0, -0.95079327, 0, 1.0631164, 0, 0.95079327, 0, -0.47561392, 49.167328, 3.6475563, -8.273346)
 
-[node name="spruce54" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=93220903 instance=ExtResource("30_n07kg")]
+[node name="spruce54" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1396434050 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0596683, 0, 0.010116037, 0, 1.0597166, 0, -0.010116037, 0, -1.0596683, 44.78839, -27.318272, 50.676056)
 
-[node name="spruce55" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1539566792 instance=ExtResource("30_n07kg")]
+[node name="spruce55" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=161611780 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.057030715, 0, 1.0295113, 0, 1.0310898, 0, -1.0295113, 0, 0.057030715, 45.691986, -15.290802, 36.2276)
 
-[node name="spruce56" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1779794352 instance=ExtResource("30_n07kg")]
+[node name="spruce56" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1868623563 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8346065, 0, -0.6707759, 0, 1.0707513, 0, 0.67077595, 0, -0.8346066, 38.333893, 1.8914566, -2.1269531)
 
-[node name="spruce57" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=324453251 instance=ExtResource("30_n07kg")]
+[node name="spruce57" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1215323697 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5022005, 0, 0.9634398, 0, 1.086472, 0, -0.9634398, 0, 0.5022005, 63.971893, -19.021559, 27.890656)
 
-[node name="spruce58" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=299928555 instance=ExtResource("30_n07kg")]
+[node name="spruce58" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=636346258 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87231076, 0, 0.5054607, 0, 1.0081749, 0, -0.5054607, 0, -0.87231076, 0.86550903, -30.17427, 0.10543823)
 
-[node name="spruce59" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=22421599 instance=ExtResource("30_n07kg")]
+[node name="spruce59" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1215364037 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.97537756, 0, -0.31881455, 0, 1.0261599, 0, 0.31881455, 0, -0.97537756, 42.23221, 4.719734, 23.170227)
 
-[node name="spruce60" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1770275441 instance=ExtResource("30_n07kg")]
+[node name="spruce60" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1849006969 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.32379055, 0, -1.0447087, 0, 1.0937352, 0, 1.0447087, 0, -0.32379055, 14.688477, -17.09796, 13.369659)
 
-[node name="spruce61" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=60049899 instance=ExtResource("30_n07kg")]
+[node name="spruce61" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1789164274 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.8935445, 0, -0.50047195, 0, 1.0241553, 0, 0.50047195, 0, 0.8935445, 19.674652, -18.711868, -1.7426147)
 
-[node name="spruce62" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1651459524 instance=ExtResource("30_n07kg")]
+[node name="spruce62" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=752469720 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.17514151, 0, -1.0712396, 0, 1.0854625, 0, 1.0712396, 0, -0.17514153, 33.05078, -11.330521, 34.604614)
 
-[node name="spruce63" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1805271059 instance=ExtResource("30_n07kg")]
+[node name="spruce63" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=964496868 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.4434605, 0, -0.9434196, 0, 1.0424479, 0, 0.9434196, 0, 0.4434605, 33.331757, 4.9825172, 9.276672)
 
-[node name="spruce64" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=755358608 instance=ExtResource("30_n07kg")]
+[node name="spruce64" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1934601041 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9294445, 0, 0.50894946, 0, 1.0596682, 0, -0.50894946, 0, 0.9294445, 62.90732, -4.584305, 7.813751)
 
-[node name="spruce65" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=1070663846 instance=ExtResource("30_n07kg")]
+[node name="spruce65" type="Node3D" parent="proton-scatter5/ScatterOutput/ScatterItem" unique_id=771628496 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0421414, 0, -0.24093543, 0, 1.0696301, 0, 0.24093543, 0, 1.0421414, 28.23053, -23.267727, 47.44818)
 
 [node name="proton-scatter6" type="Node3D" parent="." unique_id=923685253]
@@ -1524,35 +1524,35 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_4epgr")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter6" unique_id=1489037855]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter6" unique_id=1430034185]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter6/ScatterOutput" unique_id=1659445975]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter6/ScatterOutput" unique_id=444562949]
 
-[node name="spruce" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=404806448 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=896695519 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 15.403885, -18.709906, 15.782898)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=610959735 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1837414054 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 48.02574, -13.376911, -8.51181)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=464910465 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=878314656 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, 43.781754, -0.77618027, 21.757599)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1922702728 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1615243949 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, 41.9498, -0.6074562, 23.17334)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=784740870 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=603851756 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 44.176514, -11.339966, -3.463623)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=410148937 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=861393059 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, 32.939606, -13.931141, 13.979279)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1517851881 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1302255039 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 9.5447235, -42.924526, 1.1228638)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=462498467 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=2046378199 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 31.674164, -16.497591, 42.204468)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=1658721322 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter6/ScatterOutput/ScatterItem" unique_id=431244960 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 35.116394, -14.752773, 0.105285645)
 
 [node name="proton-scatter7" type="Node3D" parent="." unique_id=252818750]
@@ -1576,209 +1576,209 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_3qyt7")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter7" unique_id=1103855724]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter7" unique_id=1701777783]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter7/ScatterOutput" unique_id=953499664]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter7/ScatterOutput" unique_id=783014263]
 
-[node name="spruce" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1744266119 instance=ExtResource("30_n07kg")]
+[node name="spruce" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=902586423 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, 4.3460236, -63.652504, 2.5083008)
 
-[node name="spruce2" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1606255905 instance=ExtResource("30_n07kg")]
+[node name="spruce2" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1354591996 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, 1.0035019, -64.179184, 14.031342)
 
-[node name="spruce3" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=391235542 instance=ExtResource("30_n07kg")]
+[node name="spruce3" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=248067920 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 57.47776, -63.692665, -27.535095)
 
-[node name="spruce4" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=160796029 instance=ExtResource("30_n07kg")]
+[node name="spruce4" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1736168256 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, 49.992195, -66.0791, 25.555237)
 
-[node name="spruce5" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1681784479 instance=ExtResource("30_n07kg")]
+[node name="spruce5" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=207711621 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, 47.26072, -65.8682, 27.616028)
 
-[node name="spruce6" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=120726786 instance=ExtResource("30_n07kg")]
+[node name="spruce6" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=958140889 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, 51.529762, -63.710907, -20.046783)
 
-[node name="spruce7" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=700676184 instance=ExtResource("30_n07kg")]
+[node name="spruce7" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1387335043 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, 31.673164, -63.863953, 12.740112)
 
-[node name="spruce8" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=361751139 instance=ExtResource("30_n07kg")]
+[node name="spruce8" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1247693135 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, 29.612434, -79.71711, 60.973816)
 
-[node name="spruce9" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=2077965356 instance=ExtResource("30_n07kg")]
+[node name="spruce9" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=907557959 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 36.115135, -63.783684, -12.697449)
 
-[node name="spruce10" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=541065879 instance=ExtResource("30_n07kg")]
+[node name="spruce10" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=265277281 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9800306, 0, -0.22435361, 0, 1.0053828, 0, 0.22435361, 0, 0.9800306, 43.54435, -65.425, 18.593384)
 
-[node name="spruce11" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1660534948 instance=ExtResource("30_n07kg")]
+[node name="spruce11" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=634395813 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.23080084, 0, 1.0645099, 0, 1.0892429, 0, -1.0645099, 0, -0.23080084, 55.115242, -72.467705, -2.46521)
 
-[node name="spruce12" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1097334127 instance=ExtResource("30_n07kg")]
+[node name="spruce12" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=103290955 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.57746863, 0, 0.8623217, 0, 1.0378191, 0, -0.8623217, 0, -0.57746863, 19.472122, -65.234344, -13.297516)
 
-[node name="spruce13" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=792779535 instance=ExtResource("30_n07kg")]
+[node name="spruce13" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=316425879 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9105978, 0, 0.4724589, 0, 1.0258683, 0, -0.4724589, 0, 0.9105978, -11.2712555, -63.931686, 6.6763)
 
-[node name="spruce14" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1823814809 instance=ExtResource("30_n07kg")]
+[node name="spruce14" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1895579862 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.74641055, 0, 0.7897042, 0, 1.0866284, 0, -0.7897042, 0, 0.74641055, 16.44696, -75.72024, 32.337677)
 
-[node name="spruce15" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=565998042 instance=ExtResource("30_n07kg")]
+[node name="spruce15" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1497667125 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97430366, 0, 0.3650147, 0, 1.0404342, 0, -0.3650147, 0, 0.97430366, 15.914253, -69.83777, -19.36612)
 
-[node name="spruce16" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=2131703348 instance=ExtResource("30_n07kg")]
+[node name="spruce16" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1047862862 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.43097433, 0, 0.93684953, 0, 1.0312254, 0, -0.93684953, 0, -0.43097433, -13.061722, -65.58534, 15.15744)
 
-[node name="spruce17" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=136808346 instance=ExtResource("30_n07kg")]
+[node name="spruce17" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1853780187 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.1492845, 0, 1.0322645, 0, 1.0430033, 0, -1.0322645, 0, 0.1492845, 64.05497, -86.01106, 15.053864)
 
-[node name="spruce18" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=467610488 instance=ExtResource("30_n07kg")]
+[node name="spruce18" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=660358083 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9073217, 0, -0.4895473, 0, 1.0309652, 0, 0.4895473, 0, -0.9073217, 39.694557, -78.869125, -32.983444)
 
-[node name="spruce19" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=522110871 instance=ExtResource("30_n07kg")]
+[node name="spruce19" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=618002250 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0247104, 0, -0.36572966, 0, 1.0880209, 0, 0.36572966, 0, -1.0247104, 58.732033, -69.64119, -10.184387)
 
-[node name="spruce20" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=2144512020 instance=ExtResource("30_n07kg")]
+[node name="spruce20" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=485035407 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.2504256, 0, 1.0595287, 0, 1.0887213, 0, -1.0595287, 0, 0.2504256, 40.392006, -65.096405, 23.327118)
 
-[node name="spruce21" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=97597389 instance=ExtResource("30_n07kg")]
+[node name="spruce21" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=33052460 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9567836, 0, 0.3780463, 0, 1.0287632, 0, -0.3780463, 0, -0.9567836, 60.060463, -70.943855, 55.744354)
 
-[node name="spruce22" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1483075598 instance=ExtResource("30_n07kg")]
+[node name="spruce22" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=937859260 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0750602, 0, 0.042675704, 0, 1.0759069, 0, -0.042675704, 0, 1.0750602, 22.768913, -66.84748, -16.419067)
 
-[node name="spruce23" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1519205273 instance=ExtResource("30_n07kg")]
+[node name="spruce23" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1999804006 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0469445, 0, 0.28886518, 0, 1.0860643, 0, -0.28886518, 0, 1.0469445, -8.926453, -67.81278, 21.453094)
 
-[node name="spruce24" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1726592526 instance=ExtResource("30_n07kg")]
+[node name="spruce24" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1789176615 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.5383891, 0, -0.92731345, 0, 1.0722747, 0, 0.92731345, 0, -0.5383891, 26.177101, -63.251106, 7.5419006)
 
-[node name="spruce25" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=882485851 instance=ExtResource("30_n07kg")]
+[node name="spruce25" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=661904941 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.95734394, 0, 0.5142355, 0, 1.0867132, 0, -0.5142355, 0, 0.95734394, 79.922035, -87.472244, 12.955811)
 
-[node name="spruce26" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1222470474 instance=ExtResource("30_n07kg")]
+[node name="spruce26" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1791430044 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8403248, 0, 0.6978276, 0, 1.0922954, 0, -0.6978276, 0, -0.84032476, 32.363914, -64.867165, -16.326202)
 
-[node name="spruce27" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1448641492 instance=ExtResource("30_n07kg")]
+[node name="spruce27" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=235003074 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6803522, 0, 0.83789164, 0, 1.0793245, 0, -0.8378916, 0, -0.6803522, -6.103615, -65.0598, 14.694611)
 
-[node name="spruce28" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1128693114 instance=ExtResource("30_n07kg")]
+[node name="spruce28" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=43445837 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.0921688, 0, -1.068224, 0, 1.0721929, 0, 1.068224, 0, 0.0921688, 50.633385, -64.200424, -17.404572)
 
-[node name="spruce29" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=137329629 instance=ExtResource("30_n07kg")]
+[node name="spruce29" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=291533907 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.46883562, 0, -0.9414153, 0, 1.0516984, 0, 0.9414153, 0, 0.46883562, -3.4415283, -87.33013, 50.947266)
 
-[node name="spruce30" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1023400982 instance=ExtResource("30_n07kg")]
+[node name="spruce30" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=396698889 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5962139, 0, 0.8628039, 0, 1.048762, 0, -0.8628039, 0, 0.5962139, 70.33689, -86.96506, 23.236877)
 
-[node name="spruce31" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=92937161 instance=ExtResource("30_n07kg")]
+[node name="spruce31" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1830459131 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0055789, 0, -0.23625715, 0, 1.0329599, 0, 0.23625717, 0, -1.0055789, -0.05974579, -65.024765, -2.7042847)
 
-[node name="spruce32" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1028894362 instance=ExtResource("30_n07kg")]
+[node name="spruce32" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1709177421 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0428377, 0, -0.22334574, 0, 1.0664867, 0, 0.22334574, 0, 1.0428377, 41.835625, -64.863205, 34.30179)
 
-[node name="spruce33" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1793816272 instance=ExtResource("30_n07kg")]
+[node name="spruce33" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1428839695 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48684677, 0, -0.9645665, 0, 1.0804667, 0, 0.9645665, 0, 0.48684677, -2.09507, -80.04488, 41.054596)
 
-[node name="spruce34" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=564079507 instance=ExtResource("30_n07kg")]
+[node name="spruce34" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=45305965 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.0023737238, 0, 1.0739341, 0, 1.0739367, 0, -1.0739341, 0, -0.0023737238, 28.290123, -63.255257, 6.585907)
 
-[node name="spruce35" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1547705904 instance=ExtResource("30_n07kg")]
+[node name="spruce35" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=561362646 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.97812784, 0, 0.22750695, 0, 1.0042378, 0, -0.22750695, 0, 0.97812784, 64.68113, -80.6369, -4.678406)
 
-[node name="spruce36" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=594432614 instance=ExtResource("30_n07kg")]
+[node name="spruce36" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=49170438 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0105164, 0, 0.23503554, 0, 1.0374898, 0, -0.23503552, 0, 1.0105164, 80.25828, -87.472244, 11.12619)
 
-[node name="spruce37" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=398565899 instance=ExtResource("30_n07kg")]
+[node name="spruce37" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=891107348 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.92907083, 0, 0.4357396, 0, 1.0261781, 0, -0.43573958, 0, 0.92907083, 64.775215, -72.84135, 56.98709)
 
-[node name="spruce38" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=346697895 instance=ExtResource("30_n07kg")]
+[node name="spruce38" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=96579576 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.253958, 0, 0.9760345, 0, 1.0085326, 0, -0.9760345, 0, -0.253958, 76.03092, -87.38876, -6.5227966)
 
-[node name="spruce39" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=2090986258 instance=ExtResource("30_n07kg")]
+[node name="spruce39" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=982854928 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.23896979, 0, -1.0206305, 0, 1.0482334, 0, 1.0206305, 0, 0.23896979, 48.954994, -64.98643, -12.799835)
 
-[node name="spruce40" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1851151326 instance=ExtResource("30_n07kg")]
+[node name="spruce40" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1905377540 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0422063, 0, 0.08546273, 0, 1.0457045, 0, -0.08546273, 0, -1.0422063, 35.834953, -66.27428, 44.554535)
 
-[node name="spruce41" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1207240545 instance=ExtResource("30_n07kg")]
+[node name="spruce41" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=350690455 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.9656757, 0, -0.40604368, 0, 1.0475692, 0, 0.4060437, 0, -0.9656757, -6.544792, -65.63022, -0.6194458)
 
-[node name="spruce42" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=592514298 instance=ExtResource("30_n07kg")]
+[node name="spruce42" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=479849681 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6563479, 0, 0.7613643, 0, 1.0052204, 0, -0.7613643, 0, -0.6563479, 65.2981, -72.39448, 51.50992)
 
-[node name="spruce43" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=689051786 instance=ExtResource("30_n07kg")]
+[node name="spruce43" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1002586080 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0575027, 0, -0.074209854, 0, 1.0601033, 0, 0.07420986, 0, 1.0575027, 45.475624, -64.72098, 48.041992)
 
-[node name="spruce44" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1516495991 instance=ExtResource("30_n07kg")]
+[node name="spruce44" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1064750446 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.324873, 0, -0.99354583, 0, 1.0453113, 0, 0.99354583, 0, -0.324873, 18.375664, -69.31811, 26.530853)
 
-[node name="spruce45" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1560241453 instance=ExtResource("30_n07kg")]
+[node name="spruce45" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=35754190 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0209459, 0, -0.3402979, 0, 1.0761659, 0, 0.34029788, 0, -1.0209459, 51.217476, -66.77058, 49.50174)
 
-[node name="spruce46" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1646811217 instance=ExtResource("30_n07kg")]
+[node name="spruce46" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1928253272 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8876286, 0, -0.57570547, 0, 1.0579798, 0, 0.57570547, 0, -0.8876286, 72.825386, -87.472244, 16.391815)
 
-[node name="spruce47" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=624060974 instance=ExtResource("30_n07kg")]
+[node name="spruce47" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=978138161 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.6631902, 0, -0.8019663, 0, 1.0406591, 0, 0.8019663, 0, -0.6631902, 51.22753, -71.99599, 61.977844)
 
-[node name="spruce48" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=844232613 instance=ExtResource("30_n07kg")]
+[node name="spruce48" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=984519777 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.44083467, 0, -0.93382406, 0, 1.0326483, 0, 0.93382406, 0, 0.44083467, 37.520027, -64.2891, -18.057922)
 
-[node name="spruce49" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1399863911 instance=ExtResource("30_n07kg")]
+[node name="spruce49" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=413800135 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.4461776, 0, 0.9814575, 0, 1.0781156, 0, -0.9814575, 0, -0.44617757, 19.141823, -82.93039, 59.32718)
 
-[node name="spruce50" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=48030355 instance=ExtResource("30_n07kg")]
+[node name="spruce50" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1794654114 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.2381406, 0, -1.0279971, 0, 1.0552199, 0, 1.0279971, 0, -0.23814061, 21.111244, -67.83739, 26.335693)
 
-[node name="spruce51" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=744519581 instance=ExtResource("30_n07kg")]
+[node name="spruce51" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1073656310 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.36955503, 0, -0.9315781, 0, 1.0022019, 0, 0.9315781, 0, -0.36955503, 11.0140915, -63.80957, -0.8786011)
 
-[node name="spruce52" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=707926986 instance=ExtResource("30_n07kg")]
+[node name="spruce52" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=402599778 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.48331302, 0, -0.93253046, 0, 1.0503355, 0, 0.9325306, 0, 0.483313, 71.59568, -87.472244, 21.348999)
 
-[node name="spruce53" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=706421867 instance=ExtResource("30_n07kg")]
+[node name="spruce53" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1196732025 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.47561392, 0, -0.95079327, 0, 1.0631164, 0, 0.95079327, 0, -0.47561392, 52.93833, -64.98127, -15.40213)
 
-[node name="spruce54" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1389724176 instance=ExtResource("30_n07kg")]
+[node name="spruce54" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=497418820 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-1.0596683, 0, 0.010116037, 0, 1.0597166, 0, -0.010116037, 0, -1.0596683, 47.568306, -71.253685, 60.105103)
 
-[node name="spruce55" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=361419882 instance=ExtResource("30_n07kg")]
+[node name="spruce55" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=481161358 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.2678871, 0, -1.05575, 0, 1.0892068, 0, 1.05575, 0, -0.2678871, 39.220406, -64.90942, 22.91446)
 
-[node name="spruce56" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1998207679 instance=ExtResource("30_n07kg")]
+[node name="spruce56" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1093490452 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.057030715, 0, 1.0295113, 0, 1.0310898, 0, -1.0295113, 0, 0.057030715, 48.551186, -65.96038, 41.70221)
 
-[node name="spruce57" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=244205632 instance=ExtResource("30_n07kg")]
+[node name="spruce57" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1185289599 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.98186046, 0, -0.26027387, 0, 1.0157719, 0, 0.26027387, 0, 0.98186046, 67.44251, -78.923035, -9.5876465)
 
-[node name="spruce58" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=231502352 instance=ExtResource("30_n07kg")]
+[node name="spruce58" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1394838074 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.8346065, 0, -0.6707759, 0, 1.0707513, 0, 0.67077595, 0, -0.8346066, 39.13401, -63.826714, -7.578583)
 
-[node name="spruce59" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1377098511 instance=ExtResource("30_n07kg")]
+[node name="spruce59" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=942609420 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.5022005, 0, 0.9634398, 0, 1.086472, 0, -0.9634398, 0, 0.5022005, 71.91679, -87.11985, 30.802643)
 
-[node name="spruce60" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1357533962 instance=ExtResource("30_n07kg")]
+[node name="spruce60" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1200113897 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.87231076, 0, 0.5054607, 0, 1.0081749, 0, -0.5054607, 0, -0.87231076, -8.620834, -68.80054, -4.6585693)
 
-[node name="spruce61" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1889191725 instance=ExtResource("30_n07kg")]
+[node name="spruce61" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=705745090 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.97537756, 0, -0.31881455, 0, 1.0261599, 0, 0.31881455, 0, -0.97537756, 44.116432, -65.50351, 24.891083)
 
-[node name="spruce62" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1675765529 instance=ExtResource("30_n07kg")]
+[node name="spruce62" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=209886259 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.32379055, 0, -1.0447087, 0, 1.0937352, 0, 1.0447087, 0, -0.32379055, 8.819443, -63.800644, 12.387695)
 
-[node name="spruce63" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=697639213 instance=ExtResource("30_n07kg")]
+[node name="spruce63" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=670330120 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.8935445, 0, -0.50047195, 0, 1.0241553, 0, 0.50047195, 0, 0.8935445, 15.30349, -64.06971, -6.9183044)
 
-[node name="spruce64" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1787002639 instance=ExtResource("30_n07kg")]
+[node name="spruce64" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1279578676 instance=ExtResource("30_n07kg")]
 transform = Transform3D(-0.17514151, 0, -1.0712396, 0, 1.0854625, 0, 1.0712396, 0, -0.17514153, 32.493477, -66.33208, 39.62674)
 
-[node name="spruce65" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=173064823 instance=ExtResource("30_n07kg")]
+[node name="spruce65" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1143672893 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.4434605, 0, -0.9434196, 0, 1.0424479, 0, 0.9434196, 0, 0.4434605, 32.65783, -63.827095, 7.1183777)
 
-[node name="spruce66" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1832829775 instance=ExtResource("30_n07kg")]
+[node name="spruce66" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=812944904 instance=ExtResource("30_n07kg")]
 transform = Transform3D(0.9294445, 0, 0.50894946, 0, 1.0596682, 0, -0.50894946, 0, 0.9294445, 70.51939, -87.472244, 5.12265)
 
-[node name="spruce67" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=1620869636 instance=ExtResource("30_n07kg")]
+[node name="spruce67" type="Node3D" parent="proton-scatter7/ScatterOutput/ScatterItem" unique_id=499201114 instance=ExtResource("30_n07kg")]
 transform = Transform3D(1.0421414, 0, -0.24093543, 0, 1.0696301, 0, 0.24093543, 0, 1.0421414, 26.32853, -77.80957, 56.050964)
 
 [node name="proton-scatter8" type="Node3D" parent="." unique_id=727007702]
@@ -1822,47 +1822,47 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_67nyi")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter9" unique_id=2097124372]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter9" unique_id=824578106]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter9/ScatterOutput" unique_id=195018194]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter9/ScatterOutput" unique_id=140329443]
 
-[node name="birtch-012" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1462870694 instance=ExtResource("31_5yv6h")]
+[node name="birtch-012" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=486616662 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.00756736, 0, 1.6754476, 0, 1.6754646, 0, -1.6754476, 0, -0.007567361, 4.167633, -75.105354, 1.7200623)
 
-[node name="birtch-013" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=747507124 instance=ExtResource("31_5yv6h")]
+[node name="birtch-013" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=699405210 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(0.8617946, 0, 1.3484854, 0, 1.6003447, 0, -1.3484854, 0, 0.8617946, 0.5565338, -68.25348, 14.400543)
 
-[node name="birtch-014" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1321757205 instance=ExtResource("31_5yv6h")]
+[node name="birtch-014" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1916395141 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(0.3241789, 0, 3.3773944, 0, 3.392917, 0, -3.3773944, 0, 0.3241789, 57.475403, -79.4665, -27.536896)
 
-[node name="birtch-015" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=811087477 instance=ExtResource("31_5yv6h")]
+[node name="birtch-015" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=2128006539 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.7537197, 0, 2.5246103, 0, 3.0739536, 0, -2.5246103, 0, 1.7537197, 51.13022, -84.55377, -19.232574)
 
-[node name="birtch-016" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=341444059 instance=ExtResource("31_5yv6h")]
+[node name="birtch-016" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1042709290 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-4.6320786, 0, 1.033901, 0, 4.746062, 0, -1.0339009, 0, -4.6320786, 31.326416, -81.22133, 12.0503845)
 
-[node name="birtch-017" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=837480844 instance=ExtResource("31_5yv6h")]
+[node name="birtch-017" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1357785792 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.6741337, 0, -0.9640727, 0, 1.1763896, 0, 0.9640727, 0, -0.6741337, 36.24498, -80.52324, -13.005249)
 
-[node name="birtch-018" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=238841104 instance=ExtResource("31_5yv6h")]
+[node name="birtch-018" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=2085351190 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.96828276, 0, 4.465956, 0, 4.56972, 0, -4.465956, 0, -0.96828276, 55.418518, -89.42918, -2.4370422)
 
-[node name="birtch-019" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1533688986 instance=ExtResource("31_5yv6h")]
+[node name="birtch-019" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=179073656 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-1.398165, 0, 2.08785, 0, 2.512764, 0, -2.08785, 0, -1.398165, 20.06845, -79.89543, -13.233337)
 
-[node name="birtch-020" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=894032608 instance=ExtResource("31_5yv6h")]
+[node name="birtch-020" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=920891895 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.8061026, 0, 0.9370868, 0, 2.034733, 0, -0.9370868, 0, 1.8061028, -11.196503, -84.82615, 6.469574)
 
-[node name="birtch-021" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1252692177 instance=ExtResource("31_5yv6h")]
+[node name="birtch-021" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=405659937 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(3.067125, 0, 3.2450259, 0, 4.465137, 0, -3.2450259, 0, 3.067125, 16.925919, -72.08712, 32.246857)
 
-[node name="birtch-022" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=1714769309 instance=ExtResource("31_5yv6h")]
+[node name="birtch-022" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=2125555579 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(2.451007, 0, 0.9182492, 0, 2.6173685, 0, -0.9182492, 0, 2.451007, 15.896149, -83.977356, -19.354462)
 
-[node name="birtch-023" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=176400740 instance=ExtResource("31_5yv6h")]
+[node name="birtch-023" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=204444264 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.93991953, 0, 2.0431914, 0, 2.2490177, 0, -2.0431914, 0, -0.93991953, -12.674271, -80.51272, 15.583282)
 
-[node name="birtch-024" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=638400844 instance=ExtResource("31_5yv6h")]
+[node name="birtch-024" type="Node3D" parent="proton-scatter9/ScatterOutput/ScatterItem" unique_id=177229719 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-1.9701332, 0, -1.0629892, 0, 2.238609, 0, 1.0629894, 0, -1.9701332, 39.313873, -86.80421, -32.874146)
 
 [node name="proton-scatter10" type="Node3D" parent="." unique_id=401176529]
@@ -1886,62 +1886,62 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 35.26297
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_3h2le")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter10" unique_id=1004715870]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter10" unique_id=1501710773]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter10/ScatterOutput" unique_id=1480599505]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter10/ScatterOutput" unique_id=1722455583]
 
-[node name="birtch-012" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1017539319 instance=ExtResource("31_5yv6h")]
+[node name="birtch-012" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=775267937 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.00756736, 0, 1.6754476, 0, 1.6754646, 0, -1.6754476, 0, -0.007567361, 4.167633, -82.726326, 1.7200623)
 
-[node name="birtch-013" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=859497190 instance=ExtResource("31_5yv6h")]
+[node name="birtch-013" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1056941813 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(0.8617946, 0, 1.3484854, 0, 1.6003447, 0, -1.3484854, 0, 0.8617946, 0.5565491, -79.80842, 14.400543)
 
-[node name="birtch-014" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1719587463 instance=ExtResource("31_5yv6h")]
+[node name="birtch-014" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1795708554 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(0.3241789, 0, 3.3773944, 0, 3.392917, 0, -3.3773944, 0, 0.3241789, 57.475403, -78.84231, -27.536896)
 
-[node name="birtch-015" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=499859449 instance=ExtResource("31_5yv6h")]
+[node name="birtch-015" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=586201574 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-1.1284436, 0, 0.6484347, 0, 1.3014809, 0, -0.6484347, 0, -1.1284436, 49.992188, -78.68887, 25.555237)
 
-[node name="birtch-016" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=654110550 instance=ExtResource("31_5yv6h")]
+[node name="birtch-016" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1689470830 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(2.1998487, 0, -0.47686142, 0, 2.25094, 0, 0.47686142, 0, 2.1998487, 47.26071, -76.74693, 27.616028)
 
-[node name="birtch-017" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=528153132 instance=ExtResource("31_5yv6h")]
+[node name="birtch-017" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1372608947 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.7537197, 0, 2.5246103, 0, 3.0739536, 0, -2.5246103, 0, 1.7537197, 51.13022, -79.021774, -19.232574)
 
-[node name="birtch-018" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1151853752 instance=ExtResource("31_5yv6h")]
+[node name="birtch-018" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=303778042 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-4.6320786, 0, 1.033901, 0, 4.746062, 0, -1.0339009, 0, -4.6320786, 31.326416, -78.87203, 12.0503845)
 
-[node name="birtch-019" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1363114789 instance=ExtResource("31_5yv6h")]
+[node name="birtch-019" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=78155283 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.6741337, 0, -0.9640727, 0, 1.1763896, 0, 0.9640727, 0, -0.6741337, 36.244995, -80.30782, -13.005249)
 
-[node name="birtch-020" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1443686653 instance=ExtResource("31_5yv6h")]
+[node name="birtch-020" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1132509645 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.1846648, 0, -0.27119952, 0, 1.2153107, 0, 0.27119952, 0, 1.1846648, 42.94287, -79.14314, 18.63498)
 
-[node name="birtch-021" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1097735303 instance=ExtResource("31_5yv6h")]
+[node name="birtch-021" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1511395206 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.96828276, 0, 4.465956, 0, 4.56972, 0, -4.465956, 0, -0.96828276, 55.418518, -78.564026, -2.4370422)
 
-[node name="birtch-022" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=439820408 instance=ExtResource("31_5yv6h")]
+[node name="birtch-022" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1490739366 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-1.398165, 0, 2.08785, 0, 2.512764, 0, -2.08785, 0, -1.398165, 20.06845, -81.33354, -13.233337)
 
-[node name="birtch-023" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=417773034 instance=ExtResource("31_5yv6h")]
+[node name="birtch-023" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1320766440 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.8061026, 0, 0.9370868, 0, 2.034733, 0, -0.9370868, 0, 1.8061028, -11.196503, -81.72217, 6.469574)
 
-[node name="birtch-024" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=454233032 instance=ExtResource("31_5yv6h")]
+[node name="birtch-024" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1666607487 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(1.6600205, 0, -0.5348525, 0, 1.7440572, 0, 0.5348525, 0, 1.6600206, 65.8522, -71.73279, 35.916595)
 
-[node name="birtch-025" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1868279544 instance=ExtResource("31_5yv6h")]
+[node name="birtch-025" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=819578152 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(3.067125, 0, 3.2450259, 0, 4.465137, 0, -3.2450259, 0, 3.067125, 16.925903, -70.827385, 32.246857)
 
-[node name="birtch-026" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=802617725 instance=ExtResource("31_5yv6h")]
+[node name="birtch-026" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=877302155 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(2.451007, 0, 0.9182492, 0, 2.6173685, 0, -0.9182492, 0, 2.451007, 15.896149, -88.46556, -19.354462)
 
-[node name="birtch-027" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=2039518765 instance=ExtResource("31_5yv6h")]
+[node name="birtch-027" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=65644763 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-0.93991953, 0, 2.0431914, 0, 2.2490177, 0, -2.0431914, 0, -0.93991953, -12.674271, -79.54413, 15.583282)
 
-[node name="birtch-028" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=335239397 instance=ExtResource("31_5yv6h")]
+[node name="birtch-028" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=35846013 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(0.38933098, 0, 2.6921253, 0, 2.720132, 0, -2.6921253, 0, 0.389331, 64.88507, -79.108284, 14.870148)
 
-[node name="birtch-029" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=761014280 instance=ExtResource("31_5yv6h")]
+[node name="birtch-029" type="Node3D" parent="proton-scatter10/ScatterOutput/ScatterItem" unique_id=1943092012 instance=ExtResource("31_5yv6h")]
 transform = Transform3D(-1.9701332, 0, -1.0629892, 0, 2.238609, 0, 1.0629894, 0, -1.9701332, 39.313873, -81.69683, -32.874146)
 
 [node name="proton-scatter11" type="Node3D" parent="." unique_id=1383746539]
@@ -1965,44 +1965,45 @@ transform = Transform3D(0.86203635, 0, 0.5068464, 0, 1, 0, -0.5068464, 0, 0.8620
 script = ExtResource("27_63a10")
 shape = SubResource("Resource_na5dc")
 
-[node name="ScatterOutput" type="Marker3D" parent="proton-scatter11" unique_id=1633309070]
+[node name="ScatterOutput" type="Marker3D" parent="proton-scatter11" unique_id=868857485]
 
-[node name="ScatterItem" type="Node3D" parent="proton-scatter11/ScatterOutput" unique_id=557632290]
+[node name="ScatterItem" type="Node3D" parent="proton-scatter11/ScatterOutput" unique_id=1059845848]
 
-[node name="Villagehut-01" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=173616731 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, -23.751495, 0.5655899, -18.375244)
+[node name="Villagehut-01" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1673429960 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.004592844, 0, 1.0168762, 0, 1.0168866, 0, -1.0168762, 0, -0.004592844, -23.751501, 7.6293945e-06, -18.37525)
 
-[node name="Villagehut-02" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1819738820 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, -25.83957, 0.5655899, -0.9692383)
+[node name="Villagehut-02" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1354140221 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.5465879, 0, 0.8552685, 0, 1.0150086, 0, -0.8552685, 0, 0.5465879, -25.83957, 7.6293945e-06, -0.96927536)
 
-[node name="Villagehut-03" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1480303551 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 6.5886536, 0.5655899, -4.414795)
+[node name="Villagehut-03" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=229125724 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.10126161, 0, 1.0549743, 0, 1.0598229, 0, -1.0549743, 0, 0.10126161, 6.588672, 7.6293945e-06, -4.414812)
 
-[node name="Villagehut-04" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=353314497 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, -1.2710266, 0.5655899, 4.975647)
+[node name="Villagehut-04" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=2020709389 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.87358075, 0, 0.5019835, 0, 1.007537, 0, -0.5019835, 0, -0.87358075, -1.2710347, 7.6293945e-06, 4.975637)
 
-[node name="Villagehut-05" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1357131552 instance=ExtResource("29_83sqm")]
-transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, -13.9392395, 0.5655899, -12.582397)
+[node name="Villagehut-05" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1059990243 instance=ExtResource("29_83sqm")]
+transform = Transform3D(1.0078658, 0, -0.21847516, 0, 1.0312734, 0, 0.21847516, 0, 1.0078658, -13.939263, 7.6293945e-06, -12.582417)
 
-[node name="Villagehut-06" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1381412331 instance=ExtResource("29_83sqm")]
-transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, -2.6824646, 0.5655899, -21.082886)
+[node name="Villagehut-06" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=320553270 instance=ExtResource("29_83sqm")]
+transform = Transform3D(0.6000898, 0, 0.8638741, 0, 1.0518489, 0, -0.8638741, 0, 0.6000898, -2.682448, 7.6293945e-06, -21.082916)
 
-[node name="Villagehut-07" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=879538958 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, -4.710541, 0.5655899, -5.903076)
+[node name="Villagehut-07" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=186234219 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-1.067386, 0, 0.23824537, 0, 1.0936517, 0, -0.23824537, 0, -1.067386, -4.7105384, 7.6293945e-06, -5.9030604)
 
-[node name="Villagehut-08" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=880142372 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 7.823395, 0.5655899, -16.00653)
+[node name="Villagehut-08" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1386096639 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.8930058, 0, 0.50714654, 0, 1.0269649, 0, -0.50714654, 0, -0.8930058, 7.8234196, 7.6293945e-06, -16.006563)
 
-[node name="Villagehut-09" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1840269035 instance=ExtResource("29_83sqm")]
-transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, -13.82431, 0.5655899, -24.511078)
+[node name="Villagehut-09" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=1604243153 instance=ExtResource("29_83sqm")]
+transform = Transform3D(1.0468615, 0, -0.21608764, 0, 1.0689307, 0, 0.21608764, 0, 1.0468615, -13.824286, 7.6293945e-06, -24.511112)
 
-[node name="Villagehut-10" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=197635130 instance=ExtResource("29_83sqm")]
-transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 12.623688, 0.5655899, 8.622437)
+[node name="Villagehut-10" type="Node3D" parent="proton-scatter11/ScatterOutput/ScatterItem" unique_id=239420993 instance=ExtResource("29_83sqm")]
+transform = Transform3D(-0.5755802, 0, -0.8231321, 0, 1.0044098, 0, 0.8231321, 0, -0.5755802, 12.623702, 7.6293945e-06, 8.622386)
 
 [node name="snow-particles" parent="." unique_id=76497313 instance=ExtResource("32_5yv6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.16103, -9.222058, 81.41072)
 emitting = true
 amount = 1
+
 [node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=1911532108]
 stream = ExtResource("19_0ura5")
 volume_db = -25.5
