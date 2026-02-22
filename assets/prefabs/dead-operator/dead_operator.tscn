@@ -2,6 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://crg53mki8d4sq" path="res://assets/meshes/test-operator/operator.obj" id="1_vee4y"]
 [ext_resource type="Script" uid="uid://behffhg1j7r3f" path="res://assets/prefabs/dead-operator/dead-operator.gd" id="1_wocna"]
+[ext_resource type="PackedScene" uid="uid://b07u7g26cs0ix" path="res://assets/meshes/player/nemo.glb" id="3_fvvhj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5558"]
 albedo_color = Color(0, 1, 0, 1)
@@ -11,6 +12,7 @@ script = ExtResource("1_wocna")
 
 [node name="mesh-instance-3d" type="MeshInstance3D" parent="." unique_id=2065641013]
 transform = Transform3D(0.25, -2.1855694e-08, -2.1855696e-08, 2.1855694e-08, -1.0927847e-08, 0.25, -2.1855696e-08, -0.25, -1.0927845e-08, 0, 0.086714745, 1)
+visible = false
 mesh = ExtResource("1_vee4y")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5558")
 
@@ -18,3 +20,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w5558")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 enabled = false
 target_position = Vector3(0, -20, 0)
+
+[node name="nemo" parent="." unique_id=1790799958 instance=ExtResource("3_fvvhj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -0.093982935, 0)
