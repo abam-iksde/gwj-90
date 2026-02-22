@@ -60,7 +60,10 @@ func _ready() -> void:
 		GameSettings.save_settings()
 	)
 	
-	button_back.pressed.connect(back_requested.emit)
+	button_back.pressed.connect(func():
+		back_requested.emit()
+		Sounds.play_click()
+	)
 	
 	button_quit.pressed.connect(_on_quit_prompt)
 	button_quit_confirm_no.pressed.connect(_on_quit_cancel)
@@ -84,6 +87,7 @@ func _on_resize():
 
 
 func _on_quit_prompt():
+	Sounds.play_click()
 	quit_confirm.visible = true
 	slider_sensitivity.editable = false
 	slider_fov_fpp.editable = false
@@ -92,6 +96,7 @@ func _on_quit_prompt():
 
 
 func _on_quit_cancel():
+	Sounds.play_click()
 	quit_confirm.visible = false
 	slider_sensitivity.editable = true
 	slider_fov_fpp.editable = true
@@ -100,6 +105,7 @@ func _on_quit_cancel():
 
 
 func _on_quit_confirm():
+	Sounds.play_click()
 	button_quit_confirm_no.disabled = true
 	button_quit_confirm_yes.disabled = true
 	quit_requested.emit()

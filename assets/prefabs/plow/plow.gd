@@ -27,6 +27,14 @@ const TURN_SPEED = 2.0
 const CAMERA_MIN_ANGLE = -90.0
 const CAMERA_MAX_ANGLE = 30.0
 
+enum AudioState {
+	IDLE,
+	DRIVE,
+	REV,
+}
+
+var audio_state := AudioState.IDLE
+
 
 @onready var camera_target: Node3D = get_node('third-person-camera')
 @onready var camera: Camera3D = get_node('third-person-camera/camera')
@@ -72,10 +80,15 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	update_audio(delta)
+	
 	if not player_in:
 		return
 	
+	audio_state = AudioState.IDLE
+	
 	if Input.is_action_just_pressed(&'plow_enter_exit'):
+		Sounds.stop_engine_sounds()
 		var player := preload('res://assets/prefabs/player/player.tscn').instantiate() as Player
 		get_parent().add_child(player)
 		player.global_position = player_exit.global_position
@@ -98,6 +111,8 @@ func _physics_process(delta: float) -> void:
 	if input.y == 0.0:
 		update_fuel_bounds()
 		return
+	
+	audio_state = AudioState.DRIVE
 	
 	if input.y < 0.0:
 		fuel -= Constants.PLOW_DRIVE_FUEL_COST * delta * absf(input.y)
@@ -127,6 +142,7 @@ func _physics_process(delta: float) -> void:
 		or rotation_retrigger
 	):
 		if not clear_snow(input.y < 0.0, new_integer_position):
+			audio_state = AudioState.REV
 			GameState.request_tutorial('tall_snow')
 			return
 		last_integer_position = new_integer_position
@@ -192,6 +208,7 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 			emitter.emitting = true
 		if snow_particle_stop_tween:
 			snow_particle_stop_tween.kill()
+			snow_particle_stop_tween = null
 		snow_particle_stop_tween = create_tween()
 		snow_particle_stop_tween.tween_interval(0.25)
 		snow_particle_stop_tween.tween_callback(stop_emitting_particles)
@@ -243,5 +260,33 @@ func _on_death():
 
 
 func stop_emitting_particles():
+	snow_particle_stop_tween = null
 	for emitter in snow_particle_emitters:
 		emitter.emitting = false
+
+
+func update_audio(delta: float):
+	if snow_particle_stop_tween:
+		Sounds.snow_push.volume_db = minf(Sounds.snow_push.volume_db + delta * 40.0, 0.0)
+	else:
+		Sounds.snow_push.volume_db = maxf(Sounds.snow_push.volume_db - delta * 40.0, -40.0)
+	
+	if audio_state == AudioState.IDLE:
+		Sounds.engine_drive.volume_db = minf(Sounds.engine_drive.volume_db + delta * 40.0, -16.0)
+	else:
+		Sounds.engine_drive.volume_db = maxf(Sounds.engine_drive.volume_db - delta * 40.0, -30.0)
+	
+	if audio_state == AudioState.DRIVE:
+		Sounds.engine_idle.volume_db = minf(Sounds.engine_idle.volume_db + delta * 50.0, 0.0)
+	else:
+		Sounds.engine_idle.volume_db = maxf(Sounds.engine_idle.volume_db - delta * 50.0, -30.0)
+	
+	if audio_state == AudioState.REV:
+		Sounds.engine_rev.volume_db = minf(Sounds.engine_rev.volume_db + delta * 36.0, -20.0)
+	else:
+		Sounds.engine_rev.volume_db = maxf(Sounds.engine_rev.volume_db - delta * 36.0, -30.0)
+
+
+func _exit_tree() -> void:
+	Sounds.stop_engine_sounds()
+	Sounds.snow_push.volume_db = -40.0

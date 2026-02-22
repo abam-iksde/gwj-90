@@ -12,6 +12,16 @@
 [ext_resource type="AudioStream" uid="uid://cysm3io5jc0ek" path="res://assets/sounds/climb/floraphonic-foot-step-snow-13-189871.mp3" id="7_8h446"]
 [ext_resource type="AudioStream" uid="uid://crne5pttaa6r0" path="res://assets/sounds/fall/floraphonic-foot-step-snow-1-189869.mp3" id="8_8nfan"]
 [ext_resource type="AudioStream" uid="uid://dtubf6sshlsr2" path="res://assets/sounds/fall-obj/fall.wav" id="12_4v8f6"]
+[ext_resource type="AudioStream" uid="uid://bls1g5ovvn8ic" path="res://assets/sounds/engine/start.wav" id="13_2bceg"]
+[ext_resource type="AudioStream" uid="uid://ukpofltycoht" path="res://assets/sounds/engine/idle-loop.wav" id="14_bwgpg"]
+[ext_resource type="AudioStream" uid="uid://dqjwogqa42w5a" path="res://assets/sounds/engine/drive-loop.wav" id="15_xa507"]
+[ext_resource type="AudioStream" uid="uid://bk1evypmu0rqv" path="res://assets/sounds/engine/high-rpm.wav" id="16_imhf0"]
+[ext_resource type="AudioStream" uid="uid://b3rbf1lraw2di" path="res://assets/sounds/snow-push/snow-push.wav" id="17_bwgpg"]
+[ext_resource type="AudioStream" uid="uid://cksv53gbfjgng" path="res://assets/sounds/grunt/grunt1.wav" id="18_imhf0"]
+[ext_resource type="AudioStream" uid="uid://nxkq3lcjxtg2" path="res://assets/sounds/grunt/grunt3.wav" id="19_6hbvd"]
+[ext_resource type="AudioStream" uid="uid://db1tx6iplvg4s" path="res://assets/sounds/door/freesound_community-door-open-and-close-with-a-creak-102380.mp3" id="20_6hbvd"]
+[ext_resource type="AudioStream" uid="uid://r7dnm071r2ho" path="res://assets/sounds/map/paper.wav" id="21_fhsbn"]
+[ext_resource type="AudioStream" uid="uid://bxtyaljbook3t" path="res://assets/sounds/click/soundreality-pen-click-2-411631.mp3" id="22_gxle4"]
 
 [node name="sounds" type="Node" unique_id=646558253]
 script = ExtResource("1_drcgv")
@@ -63,3 +73,49 @@ stream = ExtResource("8_8nfan")
 
 [node name="fall-obj" type="AudioStreamPlayer" parent="." unique_id=87708775]
 stream = ExtResource("12_4v8f6")
+
+[node name="engine" type="Node" parent="." unique_id=917752035]
+
+[node name="start" type="AudioStreamPlayer" parent="engine" unique_id=1613944256]
+stream = ExtResource("13_2bceg")
+volume_db = -17.0
+
+[node name="idle-loop" type="AudioStreamPlayer" parent="engine" unique_id=1943495026]
+stream = ExtResource("14_bwgpg")
+
+[node name="drive-loop" type="AudioStreamPlayer" parent="engine" unique_id=1410873858]
+stream = ExtResource("15_xa507")
+
+[node name="high-rpm" type="AudioStreamPlayer" parent="engine" unique_id=586618079]
+stream = ExtResource("16_imhf0")
+
+[node name="snow-push" type="AudioStreamPlayer" parent="." unique_id=646216022]
+stream = ExtResource("17_bwgpg")
+volume_db = -40.0
+
+[node name="grunts" type="Node" parent="." unique_id=862349652]
+
+[node name="grunt" type="AudioStreamPlayer" parent="grunts" unique_id=1618383259]
+stream = ExtResource("18_imhf0")
+volume_db = -10.0
+
+[node name="grunt2" type="AudioStreamPlayer" parent="grunts" unique_id=112762420]
+stream = ExtResource("19_6hbvd")
+volume_db = -10.0
+
+[node name="grunt3" type="AudioStreamPlayer" parent="grunts" unique_id=1551723652]
+stream = ExtResource("17_bwgpg")
+volume_db = -10.0
+
+[node name="door-open" type="AudioStreamPlayer" parent="." unique_id=1680140810]
+process_mode = 3
+stream = ExtResource("20_6hbvd")
+
+[node name="map" type="AudioStreamPlayer" parent="." unique_id=1513888989]
+process_mode = 3
+stream = ExtResource("21_fhsbn")
+volume_db = -10.0
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=574849250]
+process_mode = 3
+stream = ExtResource("22_gxle4")

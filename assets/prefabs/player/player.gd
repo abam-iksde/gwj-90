@@ -70,6 +70,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			Sounds.play_fall_obj(fall_volume)
 		if _fall_velocity < -16.0:
+			Sounds.play_grunt()
 			GameState.game_data.player_health += (_fall_velocity + 16.0) * 4.0
 
 

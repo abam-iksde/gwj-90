@@ -60,16 +60,19 @@ func _on_resize():
 
 
 func _on_play_clicked():
+	Sounds.play_click()
 	ui.visible = false
 	play_with_tutorial_dialog.visible = true
 
 
 func _on_cancel_play_clicked():
+	Sounds.play_click()
 	ui.visible = true
 	play_with_tutorial_dialog.visible = false
 
 
 func _on_play_clicked_tutorial():
+	Sounds.play_click()
 	play_with_tutorial_dialog.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GameState.setup_game(true)
@@ -80,6 +83,7 @@ func _on_play_clicked_tutorial():
 
 
 func _on_play_clicked_no_tutorial():
+	Sounds.play_click()
 	play_with_tutorial_dialog.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GameState.setup_game(false)
@@ -90,6 +94,7 @@ func _on_play_clicked_no_tutorial():
 
 
 func _on_settings_clicked():
+	Sounds.play_click()
 	button_play.disabled = true
 	button_settings.disabled = true
 	settings_screen.visible = true

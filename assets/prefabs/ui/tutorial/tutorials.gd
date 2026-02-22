@@ -25,6 +25,7 @@ func _on_resize():
 
 
 func _on_button_ok_pressed():
+	Sounds.play_click()
 	visible = false
 	if unpause_at_end:
 		get_tree().paused = false

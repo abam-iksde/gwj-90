@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="7_lyxg1"]
 [ext_resource type="PackedScene" uid="uid://t0fp6r6jd0hy" path="res://assets/prefabs/ui/tutorial/play-with-tutorial.tscn" id="8_bpfhm"]
 [ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="8_r15ym"]
+[ext_resource type="AudioStream" uid="uid://b5qb71rrgnr45" path="res://assets/sounds/wind-loop/shut_up_ghost-gusty-winter-wind-loop-by-using-crossfades-215541.mp3" id="11_r15ym"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkyjh"]
 texture = ExtResource("7_7er6l")
@@ -140,3 +141,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="wind-loop" type="AudioStreamPlayer" parent="." unique_id=113835947]
+stream = ExtResource("11_r15ym")
+volume_db = -22.0
+autoplay = true
