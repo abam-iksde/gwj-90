@@ -15,6 +15,10 @@ uniform sampler2D texture_heightmap : source_color, filter_linear, repeat_disabl
 uniform sampler2D texture_ground : source_color, filter_linear_mipmap, repeat_disable;
 uniform sampler2D texture_rock : source_color, filter_linear_mipmap, repeat_disable;
 
+uniform sampler2D rock_normal : source_color, filter_linear_mipmap, repeat_disable;
+uniform sampler2D rock_roughness : source_color, filter_linear_mipmap, repeat_disable;
+uniform sampler2D displacement : source_color, filter_linear, repeat_disable;
+
 uniform float specular : hint_range(0.0, 1.0, 0.01);
 uniform float metallic : hint_range(0.0, 1.0, 0.01);
 
@@ -131,7 +135,7 @@ void vertex() {
 	
 	NORMAL = calculate_normal(vertex_world_position);
 	
-	UV = VERTEX.xz * uv1_scale.xy + uv1_offset.xy;
+	UV = vertex_world_position.xz * uv1_scale.xy + uv1_offset.xy;
 	rock_threshold = 0.15 + sin((vertex_world_position.x + vertex_world_position.z) * 0.6) * 0.01;
 	
 	if (NORMAL.y > 0.7) {
@@ -151,17 +155,22 @@ void fragment() {
 	vec4 albedo_tex = texture(texture_albedo, base_uv);
 	ALBEDO = vertex_color * albedo_tex.rgb;
 	
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	
 	if (vertex_height < 0.002) {
 		ALBEDO = mix(texture(texture_ground, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, ALBEDO, clamp(vertex_height, 0.0, 0.002) * 500.0);
 	} else if (vertex_height > rock_threshold) {
-		ALBEDO = mix(ALBEDO, texture(texture_rock, vec2(mod(base_uv.x, 1.0), mod(base_uv.y, 1.0))).rgb, lerp(0.0, rock_ratio, clamp((vertex_height - rock_threshold) * 50.0, 0.0, 1.0)));
+		float mix_ratio = lerp(0.0, rock_ratio, clamp((vertex_height - rock_threshold) * 50.0, 0.0, 1.0));
+		ALBEDO = mix(ALBEDO, texture(texture_rock, vec2(mod(base_uv.x / 2.0, 1.0), mod(base_uv.y / 2.0, 1.0))).rgb, mix_ratio);
+		float rock_roughness_here = dot(texture(rock_roughness, base_uv / 2.0), roughness_texture_channel);
+		roughness_tex = mix(roughness_tex, rock_roughness_here, mix_ratio);
+		NORMAL = NORMAL * mix(vec3(1.0, 1.0, 1.0), texture(rock_normal, base_uv / 2.0).rgb, mix_ratio);
 	}
 
 	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;
 	SPECULAR = specular;
 
-	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
-	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
 	ROUGHNESS = roughness_tex * roughness;
 }
