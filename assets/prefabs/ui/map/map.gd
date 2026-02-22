@@ -99,6 +99,8 @@ func request_tutorial():
 	tween.tween_callback(func():
 		if GameState.request_tutorial('map', false, false):
 			await GameState.tutorial_hidden
+			GameState.request_tutorial('map3', false, false)
+			await GameState.tutorial_hidden
 			GameState.request_tutorial('map2', false, false)
 	)
 

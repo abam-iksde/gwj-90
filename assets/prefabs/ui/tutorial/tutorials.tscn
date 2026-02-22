@@ -49,7 +49,7 @@ theme_override_font_sizes/font_size = 26
 text = "Welcome, operator!
 
 Walk with [W], [A], [S], [D].
-When on foot, can climb on snow and rocks
+When on foot, you can climb on snow and rocks
 regardless of how steep they are.
 You can jump with [Space] and interact with
 some objects using [F].
@@ -104,18 +104,37 @@ the map to navigate and find the way.
 The red needle points north."
 horizontal_alignment = 1
 
+[node name="map3" type="Label" parent="texture-rect/texts" unique_id=411677125]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_hvvs4")
+theme_override_font_sizes/font_size = 26
+text = "Be careful while using the map!
+Although the house locations are all accurate,
+some data about the roads might be outdated!"
+horizontal_alignment = 1
+
 [node name="map2" type="Label" parent="texture-rect/texts" unique_id=730603525]
 visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 152.0
+offset_top = 115.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_hvvs4")
 theme_override_font_sizes/font_size = 26
-text = "There is a site not too far away from here.
+text = "The sites can be recognized by a skull hanging
+over the entrance.
+
+There is a site in this village.
 
 You can go check it out!"
 horizontal_alignment = 1
@@ -259,6 +278,7 @@ indicator next to the compass."
 horizontal_alignment = 1
 
 [node name="tall_snow" type="Label" parent="texture-rect/texts" unique_id=447254678]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

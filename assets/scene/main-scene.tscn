@@ -572,6 +572,7 @@ script = ExtResource("13_kgtr4")
 
 [node name="ui-container" parent="." unique_id=1969353579 instance=ExtResource("9_xmbbe")]
 process_mode = 3
+visible = false
 
 [node name="cold" type="Node" parent="." unique_id=1174067703]
 script = ExtResource("11_67fty")
@@ -602,7 +603,6 @@ shape = ExtResource("18_h6xn6")
 
 [node name="tutorials" parent="." unique_id=841447284 instance=ExtResource("18_0ura5")]
 process_mode = 3
-visible = false
 
 [node name="proton-scatter" type="Node3D" parent="." unique_id=1979681617]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.53792, -0.11990571, 80.68091)
