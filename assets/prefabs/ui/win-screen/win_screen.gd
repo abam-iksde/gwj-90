@@ -11,7 +11,13 @@ func on_hide():
 
 
 func _ready():
-	(get_node('button-exit') as Button).pressed.connect(get_tree().quit)
+	(get_node('button-exit') as Button).pressed.connect(func():
+		var tween: Tween = get_node('../fade').fade_out()
+		tween.tween_callback(func():
+			get_tree().paused = false
+			get_tree().change_scene_to_file('res://assets/scene/main-menu.tscn')
+		)
+	)
 	(get_node('button-continue') as Button).pressed.connect(func():
 		Sounds.play_click()
 		get_tree().paused = false
