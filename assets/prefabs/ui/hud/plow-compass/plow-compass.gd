@@ -14,4 +14,4 @@ func _physics_process(_delta: float) -> void:
 	
 	var position_difference := GameState.player.global_position - GameState.plow.global_position
 	
-	foreground.rotation = atan2(-position_difference.x, position_difference.z) + camera.rotation.y - PI / 2.0
+	foreground.rotation = atan2(-position_difference.x, position_difference.z) + camera.rotation.y

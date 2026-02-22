@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cpv8xqk2bd5i1" path="res://assets/prefabs/ui/tutorial/play-with-tutorial.gd" id="1_5cujy"]
 [ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="1_ce34q"]
+[ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="3_hnevk"]
+[ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="4_qvfya"]
+[ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="5_31gvo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmicu"]
+texture = ExtResource("4_qvfya")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45upt"]
+texture = ExtResource("5_31gvo")
 
 [node name="play-with-tutorial" type="Control" unique_id=2119646052]
 layout_mode = 3
@@ -31,6 +40,7 @@ offset_right = 253.5
 offset_bottom = 55.37506
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_hnevk")
 theme_override_font_sizes/font_size = 26
 text = "Would you like to enable tutorial?
 
@@ -40,47 +50,68 @@ encounter them.
 Recommended for the first playthrough."
 horizontal_alignment = 1
 
-[node name="button-yes" type="Button" parent="texture-rect" unique_id=650513155]
+[node name="button-yes" type="Button" parent="texture-rect" unique_id=1575185157]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.5
-offset_top = 99.0
+anchor_bottom = 1.0
+offset_left = -186.5
+offset_top = -159.0
 offset_right = -31.5
-offset_bottom = 156.0
+offset_bottom = -90.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "YES"
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_hnevk")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_45upt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mmicu")
+text = "Yes"
 
-[node name="button-no" type="Button" parent="texture-rect" unique_id=1772278604]
+[node name="button-no" type="Button" parent="texture-rect" unique_id=1297573854]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = 31.5
-offset_top = 99.0
-offset_right = 128.5
-offset_bottom = 156.0
+offset_top = -159.0
+offset_right = 186.5
+offset_bottom = -90.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "NO"
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_hnevk")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_45upt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mmicu")
+text = "No"
 
-[node name="button-cancel" type="Button" parent="texture-rect" unique_id=1893066675]
+[node name="button-cancel" type="Button" parent="texture-rect" unique_id=1890570436]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 206.5
-offset_top = 174.0
-offset_right = 303.5
-offset_bottom = 231.0
+anchor_bottom = 1.0
+offset_left = -78.5
+offset_top = -73.0
+offset_right = 76.5
+offset_bottom = -4.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "CANCEL"
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_hnevk")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_45upt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mmicu")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mmicu")
+text = "Cancel"
