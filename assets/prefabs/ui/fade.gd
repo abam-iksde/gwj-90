@@ -3,7 +3,10 @@ extends ColorRect
 
 
 func _ready() -> void:
-	fade_in()
+	var tween := fade_in()
+	tween.tween_callback(func():
+		GameState.request_tutorial('controls')
+	)
 
 
 func fade_in() -> Tween:

@@ -46,6 +46,11 @@ func on_show(payload):
 		icon.spawn_rotation = house.global_rotation.y - PI
 		if not show_respawn_options:
 			icon.disable()
+	
+	if show_respawn_options:
+		request_tutorial_death()
+	else:
+		request_tutorial()
 
 
 func on_hide():
@@ -81,3 +86,23 @@ func _on_settings_exit():
 	visible = true
 	settings_screen.visible = false
 	settings_visible = false
+
+
+func request_tutorial():
+	var tween := create_tween()
+	tween.tween_interval(UiContainer.SLIDE_TIME - 0.03)
+	tween.tween_callback(func():
+		if GameState.request_tutorial('map', false, false):
+			await GameState.tutorial_hidden
+			GameState.request_tutorial('map2', false, false)
+	)
+
+
+func request_tutorial_death():
+	var tween := create_tween()
+	tween.tween_interval(UiContainer.SLIDE_TIME - 0.03)
+	tween.tween_callback(func():
+		if GameState.request_tutorial('death', false, false):
+			await GameState.tutorial_hidden
+			GameState.request_tutorial('death2', false, false)
+	)

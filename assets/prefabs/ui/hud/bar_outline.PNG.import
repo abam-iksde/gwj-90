@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://exrod4ft5ory"
-path="res://.godot/imported/thermometer_decoration.png-a8bcd1a4f87f06dedb840082cb25a610.ctex"
+uid="uid://cq8dw21yjdtw"
+path="res://.godot/imported/bar_outline.PNG-abf50319d74ef6b76e9b600b7d280d63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/thermometer/thermometer_decoration.png"
-dest_files=["res://.godot/imported/thermometer_decoration.png-a8bcd1a4f87f06dedb840082cb25a610.ctex"]
+source_file="res://assets/prefabs/ui/hud/bar_outline.PNG"
+dest_files=["res://.godot/imported/bar_outline.PNG-abf50319d74ef6b76e9b600b7d280d63.ctex"]
 
 [params]
 

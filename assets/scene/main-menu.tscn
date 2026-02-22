@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://beulo8yhiavap" path="res://assets/prefabs/environment/world-environment.gd" id="2_6iajy"]
 [ext_resource type="Material" uid="uid://b6eh2q818jies" path="res://assets/map/heightmap_material.tres" id="3_lyxg1"]
 [ext_resource type="MultiMesh" uid="uid://da8sh8kgh303n" path="res://assets/map/multimesh.res" id="4_bpfhm"]
-[ext_resource type="Script" uid="uid://daqkjhaqnxnoq" path="res://assets/scene/snow-layer.gd" id="5_tstt3"]
 [ext_resource type="PackedScene" uid="uid://c56u2q82b8est" path="res://assets/prefabs/ui/settings-menu/settings.tscn" id="7_lyxg1"]
+[ext_resource type="PackedScene" uid="uid://t0fp6r6jd0hy" path="res://assets/prefabs/ui/tutorial/play-with-tutorial.tscn" id="8_bpfhm"]
 
 [node name="main-menu" type="Node3D" unique_id=1613972091]
 script = ExtResource("1_6iajy")
@@ -28,7 +28,6 @@ material_override = ExtResource("3_lyxg1")
 cast_shadow = 0
 custom_aabb = AABB(-20000, -20000, -20000, 40000, 40000, 40000)
 multimesh = ExtResource("4_bpfhm")
-script = ExtResource("5_tstt3")
 
 [node name="camera-pivot" type="Node3D" parent="." unique_id=1830335599]
 transform = Transform3D(-0.692588, -0.13036619, 0.70945513, 0.01976936, 0.9797328, 0.19933054, -0.72106254, 0.15207939, -0.67597395, 414.732, 51.195305, 141.53172)
@@ -76,6 +75,9 @@ offset_bottom = 463.00003
 text = "EXIT"
 
 [node name="settings" parent="." unique_id=855291482 instance=ExtResource("7_lyxg1")]
+visible = false
+
+[node name="play-with-tutorial" parent="." unique_id=2119646052 instance=ExtResource("8_bpfhm")]
 visible = false
 
 [node name="fade" type="ColorRect" parent="." unique_id=426919855]

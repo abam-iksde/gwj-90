@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cn3mdi73rny2v"]
 
 [ext_resource type="Script" uid="uid://bs46mwe530n73" path="res://assets/prefabs/ui/hud/healthbar/health-bar.gd" id="1_74wh1"]
-[ext_resource type="Texture2D" uid="uid://cycnn58vclhx4" path="res://assets/prefabs/ui/hud/bar-fill.png" id="2_7wxna"]
-[ext_resource type="Texture2D" uid="uid://dh4lxbd074brl" path="res://assets/prefabs/ui/hud/bar-foreground.png" id="3_gqeg7"]
-[ext_resource type="Texture2D" uid="uid://3rtkpv0edfx2" path="res://assets/prefabs/ui/hud/healthbar/icon.png" id="4_3ftgf"]
+[ext_resource type="Texture2D" uid="uid://ipglnjrxnfde" path="res://assets/prefabs/ui/hud/bar_fill.png" id="2_74wh1"]
+[ext_resource type="Texture2D" uid="uid://cq8dw21yjdtw" path="res://assets/prefabs/ui/hud/bar_outline.PNG" id="3_7wxna"]
+[ext_resource type="Texture2D" uid="uid://dvn0tx84ejytm" path="res://assets/prefabs/ui/hud/healthbar/heart.PNG" id="4_74wh1"]
 
 [sub_resource type="Animation" id="Animation_74wh1"]
 length = 0.001
@@ -74,20 +74,25 @@ script = ExtResource("1_74wh1")
 
 [node name="texture-progress-bar" type="TextureProgressBar" parent="." unique_id=1932757604]
 layout_mode = 0
-offset_left = 168.645
-offset_right = 738.645
-offset_bottom = 190.0
+offset_left = 126.0
+offset_top = -72.34
+offset_right = 696.0
+offset_bottom = 183.66
+scale = Vector2(1.5, 1.5)
 step = 0.1
-value = 68.5
-texture_under = ExtResource("2_7wxna")
-texture_over = ExtResource("3_gqeg7")
-texture_progress = ExtResource("2_7wxna")
+value = 90.6
+texture_under = ExtResource("2_74wh1")
+texture_over = ExtResource("3_7wxna")
+texture_progress = ExtResource("2_74wh1")
 tint_under = Color(0.2686335, 1.8049032e-07, 7.219613e-08, 1)
 tint_progress = Color(0.82191056, 2.623126e-06, 7.70092e-07, 1)
 
-[node name="sprite-2d" type="Sprite2D" parent="." unique_id=1466835133]
+[node name="sprite-2d" type="Node2D" parent="." unique_id=1583256429]
 position = Vector2(95, 95)
-texture = ExtResource("4_3ftgf")
+
+[node name="sprite-2d" type="Sprite2D" parent="sprite-2d" unique_id=2108112678]
+scale = Vector2(0.73, 0.73)
+texture = ExtResource("4_74wh1")
 
 [node name="animation-player" type="AnimationPlayer" parent="." unique_id=524812677]
 process_mode = 1

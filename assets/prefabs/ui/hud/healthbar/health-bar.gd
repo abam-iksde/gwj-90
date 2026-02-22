@@ -1,12 +1,12 @@
 extends Control
 
 
-const MIN_PROGRESS = 2.2
-const MAX_PROGRESS = 97.7
+const MIN_PROGRESS = 7.7
+const MAX_PROGRESS = 90.6
 
 
 @onready var progress_bar: TextureProgressBar = get_node('texture-progress-bar')
-@onready var icon: Sprite2D = get_node('sprite-2d')
+@onready var icon: Node2D = get_node('sprite-2d')
 @onready var animation_player: AnimationPlayer = get_node('animation-player')
 
 

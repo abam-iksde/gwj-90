@@ -30,13 +30,26 @@ const CAMERA_MAX_ANGLE = 30.0
 
 @onready var camera_target: Node3D = get_node('third-person-camera')
 @onready var camera: Camera3D = get_node('third-person-camera/camera')
+@onready var player_exit: Node3D = get_node('player-exit')
+
+@onready var snow_particle_emitters = [
+	get_node('snow-particles'),
+	get_node('snow-particles2')
+]
 
 var last_integer_position := Vector2i.ZERO
 var rotation_diff := 0.0
 
-var player_in := false
+var player_in := false:
+	set(value):
+		player_in = value
+		GameState.request_tutorial('plow')
+	get():
+		return player_in
 
 var fuel := Constants.START_FUEL_IN_PLOW
+
+var snow_particle_stop_tween: Tween = null
 
 
 func _input(event: InputEvent) -> void:
@@ -65,11 +78,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed(&'plow_enter_exit'):
 		var player := preload('res://assets/prefabs/player/player.tscn').instantiate() as Player
 		get_parent().add_child(player)
-		player.global_position = global_position + Vector3(0.0, 1.5, 0.0)
+		player.global_position = player_exit.global_position
 		player.camera.rotation = camera_target.global_rotation
 		player_in = false
 	
 	if fuel <= 0.0:
+		GameState.request_tutorial('no_fuel')
 		return
 	
 	fuel -= delta * Constants.PLOW_IDLE_FUEL_COST
@@ -171,6 +185,17 @@ func clear_snow(front: bool, new_position: Vector2i) -> bool:
 		)
 	)
 	GameState.game_data.cleared_texture.update(GameState.game_data.cleared_image)
+	
+	if TriangleRasterizer.drawn_pixels:
+		for emitter in snow_particle_emitters:
+			emitter.emitting = true
+		if snow_particle_stop_tween:
+			snow_particle_stop_tween.kill()
+		snow_particle_stop_tween = create_tween()
+		snow_particle_stop_tween.tween_interval(0.25)
+		snow_particle_stop_tween.tween_callback(stop_emitting_particles)
+	TriangleRasterizer.drawn_pixels = false
+	
 	return succeeded
 
 
@@ -214,3 +239,8 @@ func _on_death():
 	tween.tween_callback(func():
 		GameState.ui.show_modal(UiContainer.Modal.MAP, { &'show_respawn_options': true })
 	)
+
+
+func stop_emitting_particles():
+	for emitter in snow_particle_emitters:
+		emitter.emitting = false

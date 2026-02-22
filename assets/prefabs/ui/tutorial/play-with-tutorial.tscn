@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://t0fp6r6jd0hy"]
+
+[ext_resource type="Script" uid="uid://cpv8xqk2bd5i1" path="res://assets/prefabs/ui/tutorial/play-with-tutorial.gd" id="1_5cujy"]
+[ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="1_ce34q"]
+
+[node name="play-with-tutorial" type="Control" unique_id=2119646052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5cujy")
+
+[node name="texture-rect" type="TextureRect" parent="." unique_id=614101734]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ce34q")
+
+[node name="label" type="Label" parent="texture-rect" unique_id=1965315234]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.5
+offset_top = -175.625
+offset_right = 253.5
+offset_bottom = 55.37506
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Would you like to enable tutorial?
+
+If you enable the tutorial certain
+mechanics will be explained as you
+encounter them.
+Recommended for the first playthrough."
+horizontal_alignment = 1
+
+[node name="button-yes" type="Button" parent="texture-rect" unique_id=650513155]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = 99.0
+offset_right = -31.5
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YES"
+
+[node name="button-no" type="Button" parent="texture-rect" unique_id=1772278604]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 31.5
+offset_top = 99.0
+offset_right = 128.5
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NO"
+
+[node name="button-cancel" type="Button" parent="texture-rect" unique_id=1893066675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 206.5
+offset_top = 174.0
+offset_right = 303.5
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CANCEL"

@@ -11,10 +11,13 @@ extends Node3D
 
 @onready var settings_screen: SettingsScreen = get_node('settings')
 
+@onready var play_with_tutorial_dialog: PlayWithTutorialDialog = get_node('play-with-tutorial')
+
 var time := 0.0
 
 
 func _ready() -> void:
+	_fade_in()
 	settings_screen.visible = false
 	_on_resize()
 	get_viewport().size_changed.connect(_on_resize)
@@ -28,6 +31,12 @@ func _ready() -> void:
 		settings_screen.visible = false
 	)
 	
+	play_with_tutorial_dialog.button_cancel.pressed.connect(_on_cancel_play_clicked)
+	play_with_tutorial_dialog.button_yes.pressed.connect(_on_play_clicked_tutorial)
+	play_with_tutorial_dialog.button_no.pressed.connect(_on_play_clicked_no_tutorial)
+	
+	_update_camera_rotation()
+	
 	if OS.get_name() == 'Web':
 		button_exit.visible = false
 	else:
@@ -36,6 +45,10 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	time += delta
+	_update_camera_rotation()
+
+
+func _update_camera_rotation():
 	camera.rotation.x = sin(time * 1.12 + PI) * 0.015
 	camera.rotation.y = sin(time * 0.95 + PI / 2.0) * 0.015
 	camera.rotation.z = sin(time * 1.04 + PI * 1.5) * 0.015
@@ -47,8 +60,29 @@ func _on_resize():
 
 
 func _on_play_clicked():
+	ui.visible = false
+	play_with_tutorial_dialog.visible = true
+
+
+func _on_cancel_play_clicked():
+	ui.visible = true
+	play_with_tutorial_dialog.visible = false
+
+
+func _on_play_clicked_tutorial():
+	play_with_tutorial_dialog.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	GameState.setup_game()
+	GameState.setup_game(true)
+	var tween = _fade_out()
+	tween.tween_callback(func():
+		get_tree().change_scene_to_file('res://assets/scene/main-scene.tscn')
+	)
+
+
+func _on_play_clicked_no_tutorial():
+	play_with_tutorial_dialog.visible = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	GameState.setup_game(false)
 	var tween = _fade_out()
 	tween.tween_callback(func():
 		get_tree().change_scene_to_file('res://assets/scene/main-scene.tscn')
@@ -65,4 +99,11 @@ func _fade_out():
 	ui.visible = false
 	var tween = create_tween()
 	tween.tween_property(fade, 'color', Color(0.0, 0.0, 0.0, 1.0), 1.0)
+	return tween
+
+
+func _fade_in():
+	fade.color = Color(0.0, 0.0, 0.0, 1.0)
+	var tween = create_tween()
+	tween.tween_property(fade, 'color', Color(0.0, 0.0, 0.0, 0.0), 1.0)
 	return tween

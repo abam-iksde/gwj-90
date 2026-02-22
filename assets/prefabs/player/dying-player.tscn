@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2oupiqnxbaw"]
 
-[ext_resource type="Script" path="res://assets/prefabs/player/dying-player.gd" id="1_sjvdm"]
+[ext_resource type="Script" uid="uid://bxi3fvboic7uy" path="res://assets/prefabs/player/dying-player.gd" id="1_sjvdm"]
 [ext_resource type="Script" uid="uid://bfkc2g5sswkw" path="res://assets/prefabs/player/camera.gd" id="2_laxmo"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_ch7n1"]

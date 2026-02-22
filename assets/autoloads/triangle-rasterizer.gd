@@ -2,6 +2,9 @@ class_name TriangleRasterizer
 extends Object
 
 
+static var drawn_pixels := false
+
+
 static func draw_triangle(
 	image: Image,
 	a: Vector2i,
@@ -112,6 +115,8 @@ static func draw_span(
 	while x < x2:
 		if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height():
 			if pixel_predicate.call(x, y):
+				if image.get_pixel(x, y).r < 0.5:
+					drawn_pixels = true
 				image.set_pixel(x, y, color)
 			else:
 				succeeded = false

@@ -17,6 +17,7 @@ func on_show(_payload):
 	get_tree().paused = true
 	GameState.mouse_capture.unfocus_mouse()
 	update_values()
+	request_tutorial()
 
 
 func on_hide():
@@ -56,3 +57,13 @@ func update_values():
 	
 	GameState.game_data.player_food = food_value
 	GameState.game_data.player_fuel = fuel_value
+
+
+func request_tutorial():
+	var tween := create_tween()
+	tween.tween_interval(UiContainer.SLIDE_TIME - 0.03)
+	tween.tween_callback(func():
+		if GameState.request_tutorial('site', false, false):
+			await GameState.tutorial_hidden
+			GameState.request_tutorial('site2', false, false)
+	)

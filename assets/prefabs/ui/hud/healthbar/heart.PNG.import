@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7w3a1fkambnd"
-path="res://.godot/imported/hm-lvl-01-nah.png-c5f501a20a017b40f68583da96b7cad1.ctex"
+uid="uid://dvn0tx84ejytm"
+path="res://.godot/imported/heart.PNG-bc625f167c6eb6ba946269334cae2404.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/thermometer/hm-lvl-01-nah.png"
-dest_files=["res://.godot/imported/hm-lvl-01-nah.png-c5f501a20a017b40f68583da96b7cad1.ctex"]
+source_file="res://assets/prefabs/ui/hud/healthbar/heart.PNG"
+dest_files=["res://.godot/imported/heart.PNG-bc625f167c6eb6ba946269334cae2404.ctex"]
 
 [params]
 

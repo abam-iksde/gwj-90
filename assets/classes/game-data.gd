@@ -15,6 +15,10 @@ var player_food := 10
 var player_fuel := 0.0
 
 
+var tutorials_enabled := false
+var shown_tutorials = []
+
+
 func _init(start_image: Image):
 	cleared_image = Image.create_empty(Constants.MAP_SIZE, Constants.MAP_SIZE, false, Image.FORMAT_R8)
 	cleared_image.copy_from(start_image)

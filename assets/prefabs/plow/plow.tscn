@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://waag536qasuc" path="res://assets/meshes/snowplow/snow-plow-01.glb" id="2_il2fi"]
 [ext_resource type="PackedScene" uid="uid://xynnpml34lh" path="res://assets/prefabs/camera/third-person-camera.tscn" id="3_p6dha"]
 [ext_resource type="Script" uid="uid://ckvud5d86vusw" path="res://assets/prefabs/plow/get-in-trigger.gd" id="4_oarl2"]
+[ext_resource type="PackedScene" uid="uid://burb8lammmw1u" path="res://assets/prefabs/snow-particles/snow_particles.tscn" id="5_demj8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rlwr1"]
-size = Vector3(2, 2.3260498, 3.8528519)
+size = Vector3(2, 2.3260498, 3.7934914)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p6dha"]
-size = Vector3(1.65, 1, 1.271)
+size = Vector3(1.7405274, 1, 1.4641132)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oarl2"]
 size = Vector3(0.04875487, 1.4442139, 1.271)
@@ -18,7 +19,10 @@ size = Vector3(0.04875487, 1.4442139, 1.271)
 size = Vector3(2.7001953, 1.2139893, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_il2fi"]
-size = Vector3(2.1865234, 2.9165673, 2.4208984)
+size = Vector3(2.1865234, 2.689607, 2.4208984)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_at1yr"]
+size = Vector3(1, 1.2120361, 1.1217041)
 
 [node name="plow" type="CharacterBody3D" unique_id=85693202]
 axis_lock_linear_y = true
@@ -27,15 +31,15 @@ axis_lock_angular_z = true
 script = ExtResource("1_g5xdi")
 
 [node name="collision-shape-3d" type="CollisionShape3D" parent="." unique_id=1848423304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1630249, 0.41884995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1630249, 0.3891697)
 shape = SubResource("BoxShape3D_rlwr1")
 
 [node name="collision-shape-3d2" type="CollisionShape3D" parent="." unique_id=1726888358]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3676988, 2.5950408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045263708, 0.3676988, 2.6915975)
 shape = SubResource("BoxShape3D_p6dha")
 
 [node name="collision-shape-3d3" type="CollisionShape3D" parent="." unique_id=1633695550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8006226, 0.5898057, 2.5950408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91202295, 0.5898057, 2.5950408)
 shape = SubResource("BoxShape3D_oarl2")
 
 [node name="collision-shape-3d4" type="CollisionShape3D" parent="." unique_id=1432087843]
@@ -59,5 +63,18 @@ collision_mask = 2
 script = ExtResource("4_oarl2")
 
 [node name="collision-shape-3d" type="CollisionShape3D" parent="get-in-trigger" unique_id=499912605]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9584644, 0.5374298)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8449842, 0.5374298)
 shape = SubResource("BoxShape3D_il2fi")
+
+[node name="collision-shape-3d2" type="CollisionShape3D" parent="get-in-trigger" unique_id=1834733451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04316011, 1.5541722, 1.7970765)
+shape = SubResource("BoxShape3D_at1yr")
+
+[node name="snow-particles" parent="." unique_id=76497313 instance=ExtResource("5_demj8")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -0.8967753, 0.8113742, -2.3085117)
+
+[node name="snow-particles2" parent="." unique_id=409754954 instance=ExtResource("5_demj8")]
+transform = Transform3D(0.86602545, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.86602545, 0.897, 0.811, -2.309)
+
+[node name="player-exit" type="Node3D" parent="." unique_id=1612381687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0.8676989, 2.7985272)

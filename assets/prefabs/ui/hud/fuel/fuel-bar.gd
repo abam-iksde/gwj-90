@@ -1,8 +1,8 @@
 extends Control
 
 
-const MIN_PROGRESS = 2.2
-const MAX_PROGRESS = 97.7
+const MIN_PROGRESS = 7.7
+const MAX_PROGRESS = 90.6
 
 
 @onready var progress_bar: TextureProgressBar = get_node('texture-progress-bar')

@@ -62,18 +62,18 @@ offset_bottom = 40.0
 script = ExtResource("6_c4xkt")
 scale_factor = 0.55
 
-[node name="health-bar" parent="hud-top-left" unique_id=1227568305 instance=ExtResource("7_24qhq")]
-layout_mode = 0
-
 [node name="fuel-bar" parent="hud-top-left" unique_id=545237264 instance=ExtResource("8_t852v")]
 layout_mode = 0
-offset_top = 177.0
-offset_bottom = 177.0
+offset_top = 197.0
+offset_bottom = 197.0
 
 [node name="food-number" parent="hud-top-left" unique_id=115170565 instance=ExtResource("9_ufjas")]
 layout_mode = 0
-offset_top = 354.0
-offset_bottom = 354.0
+offset_top = 394.0
+offset_bottom = 394.0
+
+[node name="health-bar" parent="hud-top-left" unique_id=1227568305 instance=ExtResource("7_24qhq")]
+layout_mode = 0
 
 [node name="hud-top-right" type="Control" parent="." unique_id=2057303010]
 layout_mode = 1

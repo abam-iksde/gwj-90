@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://dd6bveslvtahm"]
+
+[ext_resource type="Script" uid="uid://dlecoyx1fn07v" path="res://assets/prefabs/ui/tutorial/tutorials.gd" id="1_3crmq"]
+[ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="1_a66d6"]
+
+[node name="tutorials" type="ColorRect" unique_id=841447284]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+script = ExtResource("1_3crmq")
+
+[node name="texture-rect" type="TextureRect" parent="." unique_id=866425352]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_a66d6")
+
+[node name="texts" type="Control" parent="texture-rect" unique_id=2134055666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="controls" type="Label" parent="texture-rect/texts" unique_id=1809043385]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Welcome, operator!
+
+Walk with [W], [A], [S], [D].
+When on foot, can climb on snow and rocks
+regardless of how steep they are.
+You can jump with [Space] and interact with
+some objects using [F].
+
+Try interacting with the plow in front of you!"
+horizontal_alignment = 1
+
+[node name="plow" type="Label" parent="texture-rect/texts" unique_id=1234434036]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Once inside the plow, you can drive using
+[W], [A], [S], [D]. By driving, you can
+remove the snow as long as it's not taller than
+the plow.
+
+Both on foot and while driving the plow,
+you can press [TAB] to bring up the map.
+
+Try doing that now!"
+horizontal_alignment = 1
+
+[node name="map" type="Label" parent="texture-rect/texts" unique_id=2121137741]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.58
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "This is the map of the area.
+You are currently in the village in the north-west.
+Your goal is to clear the path between this
+village and the village in the south-east of snow.
+The house icons on the map represent sites
+where you can replenish food and fuel.
+Your position is not marked on the map. Use
+the compass in the bottom left corner and
+cross-reference the landmarks you see with
+the map to navigate and find the way."
+horizontal_alignment = 1
+
+[node name="map2" type="Label" parent="texture-rect/texts" unique_id=730603525]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "There is a site not too far away from here.
+
+You can go check it out!"
+horizontal_alignment = 1
+
+[node name="site" type="Label" parent="texture-rect/texts" unique_id=178284711]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.58
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "You are now inside the house.
+
+Here, you can decide how you want to
+organize your inventory.
+Sliding the supply slider to the left means you
+will take more fuel, and sliding it to the right
+makes you take more food.
+You can also rest here, by setting how much
+time you want to stay and clicking \"Rest\".
+Resting at least 1 hour restores your health fully."
+horizontal_alignment = 1
+
+[node name="site2" type="Label" parent="texture-rect/texts" unique_id=62232469]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "When in the field, your health slowly runs out
+due to exposure to the cold. You can restore
+your health with food by pressing [R].
+The plow requires fuel to run and will be
+forced to stop when it runs out, so be sure
+to manage your resources wisely!
+In the top left corner you can see your health,
+the fuel and the food you're carying.
+When in the plow, the fuel in the gas tank is
+displayed in the top right corner of the screen."
+horizontal_alignment = 1
+
+[node name="death" type="Label" parent="texture-rect/texts" unique_id=1441875535]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Well, unfortunately our operator wasn't
+a lucky one.
+
+Another will need to pick up where he left off
+and get the job done. And since we only have
+one plow, they'll need to retrieve it first.
+
+Select a house where the next operator's journey
+should start and click \"Dispatch\" to continue."
+horizontal_alignment = 1
+
+[node name="death2" type="Label" parent="texture-rect/texts" unique_id=1703078134]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "When walking, the indicator next to
+the compass points in the direction of the plow.
+
+It's up to you, however, to select the house
+nearest to the plow based on what the previous
+operator saw before his untimely demise."
+horizontal_alignment = 1
+
+[node name="night" type="Label" parent="texture-rect/texts" unique_id=701434629]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "It's getting dark.
+
+The thermometer in the bottom left corner
+of the screen indicates the current temperature.
+During the night it's colder than during the day.
+
+When the temperature is lower, your health
+depletes at a higher rate.
+It might be a good idea to find a place to rest
+during nighttime."
+horizontal_alignment = 1
+
+[node name="no_fuel" type="Label" parent="texture-rect/texts" unique_id=196428874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_bottom = -5.4200134
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Oh no, the plow is out of fuel!
+
+You'll need to get out and walk.
+
+You can get some fuel at the houses 
+marked on the map. Once you have it, you can
+find the way back to the plow using the
+indicator next to the compass."
+horizontal_alignment = 1
+
+[node name="button-ok" type="Button" parent="texture-rect" unique_id=1801917]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.5
+offset_top = -80.965
+offset_right = 48.5
+offset_bottom = -23.964996
+grow_horizontal = 2
+grow_vertical = 0
+text = "OK"

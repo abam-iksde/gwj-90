@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cycnn58vclhx4"
-path="res://.godot/imported/bar-fill.png-41deb157801959f317643e4aff57fc73.ctex"
+uid="uid://dtajghvnxfr64"
+path="res://.godot/imported/tank.PNG-222cf0ec7a492b41cc8cc6e54ed621dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/hud/bar-fill.png"
-dest_files=["res://.godot/imported/bar-fill.png-41deb157801959f317643e4aff57fc73.ctex"]
+source_file="res://assets/prefabs/ui/hud/fuel/tank.PNG"
+dest_files=["res://.godot/imported/tank.PNG-222cf0ec7a492b41cc8cc6e54ed621dd.ctex"]
 
 [params]
 

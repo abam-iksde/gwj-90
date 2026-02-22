@@ -38,6 +38,8 @@ func _physics_process(delta: float) -> void:
 		return
 	if not get_tree().paused:
 		GameState.game_data.time += delta / Constants.HOUR
+		if GameState.game_data.time < 3.0 or GameState.game_data.time > 20.0:
+			GameState.request_tutorial('night')
 	GameState.game_data.time = fposmod(GameState.game_data.time, 24.0)
 	_update()
 
