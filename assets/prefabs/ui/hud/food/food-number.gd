@@ -18,4 +18,4 @@ func update() -> void:
 	if last_food == GameState.game_data.player_food:
 		return
 	last_food = GameState.game_data.player_food
-	label.text = 'X' + str(last_food)
+	label.text = str(last_food)

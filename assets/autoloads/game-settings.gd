@@ -7,6 +7,8 @@ static var MOUSE_SENSITIVITY := 0.2
 static var ON_FOOT_FOV := 90.0
 static var PLOW_FOV := 90.0
 
+static var VOLUME = 0.0
+
 
 const _SETTINGS_PATH = 'user://settings.txt'
 
@@ -16,6 +18,7 @@ static func load_settings():
 	MOUSE_SENSITIVITY = config_file.get_value('settings', 'mouse_sensitivity', MOUSE_SENSITIVITY)
 	ON_FOOT_FOV = config_file.get_value('settings', 'fpp_fov', ON_FOOT_FOV)
 	PLOW_FOV = config_file.get_value('settings', 'tpp_fov', PLOW_FOV)
+	VOLUME = config_file.get_value('settings', 'volume', VOLUME)
 
 
 static func save_settings():
@@ -23,4 +26,5 @@ static func save_settings():
 	config_file.set_value('settings', 'mouse_sensitivity', MOUSE_SENSITIVITY)
 	config_file.set_value('settings', 'fpp_fov', ON_FOOT_FOV)
 	config_file.set_value('settings', 'tpp_fov', PLOW_FOV)
+	config_file.set_value('settings', 'volume', VOLUME)
 	config_file.save(_SETTINGS_PATH)

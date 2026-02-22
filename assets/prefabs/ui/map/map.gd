@@ -21,6 +21,7 @@ func _ready() -> void:
 
 
 func on_show(payload):
+	Sounds.play_map()
 	var show_respawn_options = payload[&'show_respawn_options']
 	get_tree().paused = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -54,16 +55,19 @@ func on_show(payload):
 
 
 func on_hide():
+	Sounds.play_map()
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _on_exit_clicked():
+	Sounds.play_click()
 	GameState.ui.hide_modal()
 	get_tree().paused = false
 
 
 func _on_player_spawn_clicked():
+	Sounds.play_click()
 	var player := preload('res://assets/prefabs/player/player.tscn').instantiate()
 	GameState.scene_root.add_child(player)
 	player.global_position = icon_container.selected_house.spawn_position
@@ -77,6 +81,7 @@ func _on_player_spawn_clicked():
 
 
 func _on_settings_enter():
+	Sounds.play_click()
 	visible = false
 	settings_screen.visible = true
 	settings_visible = true
