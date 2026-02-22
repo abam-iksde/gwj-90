@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://btb6rqhhi27mx" path="res://addons/proton_scatter/icons/remove.svg" id="4_bfbdy"]
 
 [node name="CachePanel" type="PanelContainer" unique_id=916483531]
-custom_minimum_size = Vector2(0, 180)
+custom_minimum_size = Vector2(0, 225)
 offset_right = 161.0
 offset_bottom = 66.0
 size_flags_horizontal = 3

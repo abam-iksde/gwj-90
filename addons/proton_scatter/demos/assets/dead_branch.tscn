@@ -5,5 +5,5 @@
 
 [node name="dead_branch" unique_id=1012179831 instance=ExtResource("1_5foyv")]
 
-[node name="DeadBranch" parent="." index="0" unique_id=1304700142]
+[node name="DeadBranch" parent="." index="0" unique_id=1507211543]
 surface_material_override/0 = ExtResource("2_tldro")

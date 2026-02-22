@@ -28,6 +28,4 @@ func _ready() -> void:
 	material = material_override.duplicate()
 	material_override = material
 
-	ResourceSaver.save(multimesh, 'user://multimesh.res')
-
 	material.set_shader_parameter(&'dig_texture', GameState.game_data.cleared_texture)
