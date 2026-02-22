@@ -483,7 +483,7 @@ offset_bottom = 40.0
 script = SubResource("GDScript_45682")
 
 [node name="player" parent="." unique_id=1483526067 instance=ExtResource("7_m6igg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.80426, -2.3841858e-07, 80.04347)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.739403, -2.3841858e-07, 83.90237)
 
 [node name="win-trigger" type="Area3D" parent="." unique_id=1917973811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 905.0587, 0, 257.1965)
