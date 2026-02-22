@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bwvuqfbqyt46j" path="res://assets/prefabs/ui/grabber.png" id="4_fe6hu"]
 [ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="4_woswi"]
 [ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="5_c74nh"]
-[ext_resource type="Texture2D" uid="uid://c57lnb2o1obx6" path="res://assets/prefabs/ui/house-interior/background_inside.PNG" id="6_c74nh"]
+[ext_resource type="Texture2D" uid="uid://b2a1fdpks2m5u" path="res://assets/prefabs/ui/house-interior/background_inside.PNG" id="6_c74nh"]
 [ext_resource type="Texture2D" uid="uid://24oobllqo364" path="res://assets/prefabs/ui/settings-menu/background.png" id="7_00wu1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxfnu"]
@@ -76,10 +76,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -90.5
-offset_top = 146.91998
-offset_right = 90.5
-offset_bottom = 176.91998
+offset_left = -91.0
+offset_top = 214.15997
+offset_right = 90.0
+offset_bottom = 244.15997
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_he44l")
@@ -94,10 +94,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.5
-offset_top = 176.15997
-offset_right = 233.5
-offset_bottom = 215.15997
+offset_left = -234.0
+offset_top = 243.39996
+offset_right = 233.0
+offset_bottom = 282.39996
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_icons/grabber = ExtResource("4_fe6hu")
@@ -117,10 +117,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.5
-offset_top = 98.70502
-offset_right = 233.5
-offset_bottom = 137.70416
+offset_left = -234.0
+offset_top = 165.945
+offset_right = 233.0
+offset_bottom = 204.94415
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_icons/grabber = ExtResource("4_fe6hu")
@@ -134,10 +134,10 @@ value = 5.0
 
 [node name="label-fuel" type="Label" parent="." unique_id=1434048960]
 layout_mode = 0
-offset_left = 725.0
-offset_top = 552.0
-offset_right = 794.0
-offset_bottom = 575.0
+offset_left = 724.5
+offset_top = 619.24
+offset_right = 793.5
+offset_bottom = 642.24
 theme_override_fonts/font = ExtResource("3_he44l")
 theme_override_font_sizes/font_size = 18
 text = "5L gas"
@@ -145,10 +145,10 @@ horizontal_alignment = 2
 
 [node name="label-food" type="Label" parent="." unique_id=121223434]
 layout_mode = 0
-offset_left = 327.0
-offset_top = 552.0
-offset_right = 439.0
-offset_bottom = 575.0
+offset_left = 326.5
+offset_top = 619.24
+offset_right = 438.5
+offset_bottom = 642.24
 theme_override_fonts/font = ExtResource("3_he44l")
 theme_override_font_sizes/font_size = 18
 text = "10 meals"
@@ -161,9 +161,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -77.0
-offset_top = -193.0
+offset_top = -132.48499
 offset_right = 78.0
-offset_bottom = -124.0
+offset_bottom = -63.484985
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_he44l")
@@ -182,10 +182,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -77.0
-offset_top = -124.0
-offset_right = 78.0
-offset_bottom = -55.0
+offset_left = 335.0
+offset_top = -110.0
+offset_right = 490.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_he44l")
@@ -204,10 +204,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -330.625
-offset_top = -401.795
-offset_right = 330.625
-offset_bottom = 69.70517
+offset_left = -363.687
+offset_top = -397.765
+offset_right = 363.688
+offset_bottom = 120.88501
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_c74nh")
@@ -220,10 +220,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -90.5
-offset_top = 75.76001
-offset_right = 90.5
-offset_bottom = 105.760315
+offset_left = -91.0
+offset_top = 143.0
+offset_right = 90.0
+offset_bottom = 173.0003
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_he44l")
@@ -233,10 +233,10 @@ horizontal_alignment = 1
 
 [node name="label-rest" type="Label" parent="." unique_id=1839017964]
 layout_mode = 0
-offset_left = 692.0
-offset_top = 629.0
-offset_right = 794.0
-offset_bottom = 652.0
+offset_left = 691.5
+offset_top = 696.24
+offset_right = 793.5
+offset_bottom = 719.24
 theme_override_fonts/font = ExtResource("3_he44l")
 theme_override_font_sizes/font_size = 18
 text = "1 hour"

@@ -5,9 +5,9 @@ extends Node3D
 @onready var ui: Control = get_node('ui')
 @onready var fade: ColorRect = get_node('fade')
 
-@onready var button_play: Button = get_node('ui/button-play')
-@onready var button_settings: Button = get_node('ui/button-settings')
-@onready var button_exit: Button = get_node('ui/button-exit')
+@onready var button_play: Button = get_node('ui/buttons/button-play')
+@onready var button_settings: Button = get_node('ui/buttons/button-settings')
+@onready var button_exit: Button = get_node('ui/buttons/button-exit')
 
 @onready var settings_screen: SettingsScreen = get_node('settings')
 
