@@ -572,7 +572,6 @@ script = ExtResource("13_kgtr4")
 
 [node name="ui-container" parent="." unique_id=1969353579 instance=ExtResource("9_xmbbe")]
 process_mode = 3
-visible = false
 
 [node name="cold" type="Node" parent="." unique_id=1174067703]
 script = ExtResource("11_67fty")

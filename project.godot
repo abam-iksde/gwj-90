@@ -27,7 +27,7 @@ naming/script_name_casing=3
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gwj_countdown/plugin.cfg", "res://addons/material_generator/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/gwj_countdown/plugin.cfg", "res://addons/material_generator/plugin.cfg", "res://addons/minimize_html_build/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
 
 [filesystem]
 
