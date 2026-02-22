@@ -86,6 +86,8 @@ func _physics_process(delta: float) -> void:
 	if not player_in:
 		return
 	
+	update_fuel_bounds()
+	
 	audio_state = AudioState.IDLE
 	
 	if Input.is_action_just_pressed(&'plow_enter_exit'):
@@ -111,7 +113,6 @@ func _physics_process(delta: float) -> void:
 	)
 	
 	if input.y == 0.0:
-		update_fuel_bounds()
 		return
 	
 	audio_state = AudioState.DRIVE
@@ -120,8 +121,6 @@ func _physics_process(delta: float) -> void:
 		fuel -= Constants.PLOW_DRIVE_FUEL_COST * delta * absf(input.y)
 	else:
 		fuel -= Constants.PLOW_DRIVE_FUEL_COST * delta * absf(input.y) * (DRIVE_SPEED_BACK / DRIVE_SPEED)
-	
-	update_fuel_bounds()
 	
 	rotation_diff += -input.x * delta * TURN_SPEED
 	rotate(Vector3.UP, -input.x * delta * TURN_SPEED)

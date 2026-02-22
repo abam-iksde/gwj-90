@@ -44,10 +44,11 @@ theme_override_fonts/font = ExtResource("3_hnevk")
 theme_override_font_sizes/font_size = 26
 text = "Would you like to enable tutorial?
 
-If you enable the tutorial certain
+If you enable the tutorial, certain
 mechanics will be explained as you
 encounter them.
-Recommended for the first playthrough."
+This option is recommended for
+the first playthrough."
 horizontal_alignment = 1
 
 [node name="button-yes" type="Button" parent="texture-rect" unique_id=1575185157]

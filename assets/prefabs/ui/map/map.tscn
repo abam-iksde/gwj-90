@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bclk04h1pisd7" path="res://assets/prefabs/ui/house-interior/interior-background.png" id="1_4ukn5"]
 [ext_resource type="Script" uid="uid://bqiayxbb33856" path="res://assets/prefabs/ui/map/map.gd" id="2_amyam"]
-[ext_resource type="Texture2D" uid="uid://b37iwnul8yqc6" path="res://assets/prefabs/ui/map/map.png" id="2_uv4k6"]
+[ext_resource type="Texture2D" uid="uid://c73t2f2ugujqd" path="res://assets/prefabs/ui/map/map.PNG" id="3_4hmja"]
 [ext_resource type="Script" uid="uid://c61rucbvvalql" path="res://assets/prefabs/ui/map/icon-container.gd" id="3_uv4k6"]
 [ext_resource type="Script" uid="uid://dy1gbro3cso46" path="res://assets/prefabs/ui/map/input-handler.gd" id="5_hf3yc"]
 [ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="6_pe0ep"]
@@ -35,7 +35,7 @@ offset_right = 258.0
 offset_bottom = 375.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_uv4k6")
+texture = ExtResource("3_4hmja")
 
 [node name="icons" type="Control" parent="." unique_id=1595892065]
 anchors_preset = 0

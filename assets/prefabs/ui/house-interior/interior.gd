@@ -85,7 +85,7 @@ func update_values():
 	var food_value := roundi(slider_supply.value / 10.0 * Constants.MAX_FOOD_IN_INVENTORY)
 	var fuel_value := roundf((10.0 - slider_supply.value) / 10.0 * Constants.MAX_FUEL_IN_INVENTORY)
 	label_food.text = str(food_value) + ' meals'
-	label_fuel.text = str(int(fuel_value / 10.0)) + 'L gas'
+	label_fuel.text = str(int(fuel_value / 10.0 * 2.0)) + 'L gas'
 	
 	var sleep_int := int(slider_sleep_time.value)
 	if sleep_int == 1:
