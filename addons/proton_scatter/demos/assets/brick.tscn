@@ -14,7 +14,7 @@ size = Vector3(0.4, 0.4, 0.4)
 
 [node name="brick" unique_id=859254678 instance=ExtResource("1_bkmk2")]
 
-[node name="Cube" parent="." index="0" unique_id=1016708179]
+[node name="Cube" parent="." index="0" unique_id=842703121]
 material_override = SubResource("StandardMaterial3D_nwvh2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2024569965]

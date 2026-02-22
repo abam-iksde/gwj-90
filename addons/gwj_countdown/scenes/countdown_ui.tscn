@@ -52,7 +52,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = SubResource("SystemFont_jun1l")
-text = "16 Hours 40 Minutes "
+text = "1 Hour 32 Minutes "
 flat = true
 alignment = 0
 
@@ -94,7 +94,7 @@ horizontal_alignment = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
-text = "16 : 40 : 13 "
+text = "01 : 32 : 18 "
 
 [node name="HSeparator" type="HSeparator" parent="ConfirmationDialog/VBoxContainer" unique_id=611802125]
 layout_mode = 2

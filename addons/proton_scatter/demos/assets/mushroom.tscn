@@ -8,5 +8,5 @@ albedo_texture = ExtResource("2_ofsik")
 
 [node name="mushrooms" unique_id=484475462 instance=ExtResource("1_spmys")]
 
-[node name="Sphere_001" parent="." index="0" unique_id=785246992]
+[node name="Sphere_001" parent="." index="0" unique_id=2008102587]
 material_override = SubResource("StandardMaterial3D_i5aqh")

@@ -5,5 +5,5 @@
 
 [node name="small_rock" unique_id=55688007 instance=ExtResource("1_e2qk6")]
 
-[node name="SmallRock" parent="." index="0" unique_id=1625413519]
+[node name="SmallRock" parent="." index="0" unique_id=1819607979]
 surface_material_override/0 = ExtResource("2_clsfy")

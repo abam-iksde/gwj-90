@@ -14,10 +14,10 @@ height = 0.489166
 
 [node name="pine_tree" unique_id=647495865 instance=ExtResource("1_hw1e5")]
 
-[node name="Trunk" parent="." index="0" unique_id=1386898300]
+[node name="Trunk" parent="." index="0" unique_id=681816398]
 surface_material_override/0 = ExtResource("2_cgtpc")
 
-[node name="Leaves" parent="." index="1" unique_id=114853683]
+[node name="Leaves" parent="." index="1" unique_id=792739493]
 surface_material_override/0 = ExtResource("2_xnytt")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=719065784]
