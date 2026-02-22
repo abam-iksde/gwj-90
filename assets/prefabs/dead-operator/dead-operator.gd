@@ -16,5 +16,5 @@ func update_position() -> void:
 		raycast_position = raycast.get_collision_point()
 	var ground_height := GroundUtil.get_ground_height_at_position(global_position)
 	if ground_height <= Plow.MAX_SNOW_HEIGHT:
-		ground_height = -700.0
+		ground_height = 0.0
 	global_position.y = maxf(raycast_position.y, ground_height)

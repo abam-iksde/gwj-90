@@ -22,4 +22,4 @@ enabled = false
 target_position = Vector3(0, -20, 0)
 
 [node name="nemo" parent="." unique_id=1790799958 instance=ExtResource("3_fvvhj")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -0.093982935, 0)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -0.045306027, 0)
