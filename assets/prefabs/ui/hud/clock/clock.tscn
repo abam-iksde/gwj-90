@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c8ry2lxk4cgfq"]
+
+[ext_resource type="Script" uid="uid://c8o1xtsaej8wf" path="res://assets/prefabs/ui/hud/clock/clock.gd" id="1_mcjmh"]
+[ext_resource type="Texture2D" uid="uid://dse8kaysshvey" path="res://assets/prefabs/ui/hud/clock/clock.PNG" id="2_vtr0g"]
+[ext_resource type="Texture2D" uid="uid://b557qpx26uqbp" path="res://assets/prefabs/ui/hud/plow-compass/IMG_2312.PNG" id="3_4nux2"]
+
+[node name="clock" type="Node2D" unique_id=1223300336]
+process_mode = 3
+script = ExtResource("1_mcjmh")
+
+[node name="sprite-2d" type="Sprite2D" parent="." unique_id=131215728]
+position = Vector2(0, -1)
+texture = ExtResource("2_vtr0g")
+
+[node name="head" type="Sprite2D" parent="." unique_id=1060430081]
+texture = ExtResource("3_4nux2")

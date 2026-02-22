@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcrhx5al7qsbx"
-path="res://.godot/imported/cog.png-4d3b11e6ec0b40aeb2dc9e46b76851ad.ctex"
+uid="uid://c57lnb2o1obx6"
+path="res://.godot/imported/background_inside.PNG-5cb7525b75ac0aeaf473e04a56042c07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prefabs/ui/settings-menu/cog.png"
-dest_files=["res://.godot/imported/cog.png-4d3b11e6ec0b40aeb2dc9e46b76851ad.ctex"]
+source_file="res://assets/prefabs/ui/house-interior/background_inside.PNG"
+dest_files=["res://.godot/imported/background_inside.PNG-5cb7525b75ac0aeaf473e04a56042c07.ctex"]
 
 [params]
 

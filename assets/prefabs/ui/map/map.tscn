@@ -5,7 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://b37iwnul8yqc6" path="res://assets/prefabs/ui/map/map.png" id="2_uv4k6"]
 [ext_resource type="Script" uid="uid://c61rucbvvalql" path="res://assets/prefabs/ui/map/icon-container.gd" id="3_uv4k6"]
 [ext_resource type="Script" uid="uid://dy1gbro3cso46" path="res://assets/prefabs/ui/map/input-handler.gd" id="5_hf3yc"]
-[ext_resource type="Texture2D" uid="uid://dcrhx5al7qsbx" path="res://assets/prefabs/ui/settings-menu/cog.png" id="6_tbp5u"]
+[ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="6_pe0ep"]
+[ext_resource type="Texture2D" uid="uid://ca3nco8ckhkof" path="res://assets/prefabs/ui/settings-menu/gear.PNG" id="7_4hmja"]
+[ext_resource type="Texture2D" uid="uid://epnftl406kub" path="res://assets/prefabs/ui/button.PNG" id="8_4hmja"]
+[ext_resource type="Texture2D" uid="uid://dq18n1dfxp6fk" path="res://assets/prefabs/ui/buttonPressed.PNG" id="9_bhjup"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l04yx"]
+texture = ExtResource("8_4hmja")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ob1g8"]
+texture = ExtResource("9_bhjup")
 
 [node name="map" type="TextureRect" unique_id=595115752]
 offset_right = 40.0
@@ -36,32 +45,18 @@ offset_right = 818.0
 offset_bottom = 800.0
 script = ExtResource("3_uv4k6")
 
-[node name="button-close" type="Button" parent="." unique_id=916308809]
-layout_mode = 0
-offset_left = 883.0
-offset_top = 702.0
-offset_right = 1033.0
-offset_bottom = 783.0
-text = "CLOSE"
-
-[node name="button-respawn" type="Button" parent="." unique_id=56999067]
-layout_mode = 0
-offset_left = 883.0
-offset_top = 702.0
-offset_right = 1033.0
-offset_bottom = 783.0
-text = "DISPATCH"
-
 [node name="input-handler" type="Node" parent="." unique_id=1921312900]
 process_mode = 3
 script = ExtResource("5_hf3yc")
 
 [node name="death-info-label" type="Label" parent="." unique_id=170545517]
 layout_mode = 0
-offset_left = 854.0
-offset_top = 532.0
-offset_right = 1072.0
-offset_bottom = 633.0
+offset_left = 838.0
+offset_top = 568.0
+offset_right = 1092.0
+offset_bottom = 669.0
+theme_override_fonts/font = ExtResource("6_pe0ep")
+theme_override_font_sizes/font_size = 19
 text = "The operator froze to death.
 
 Select a starting location for
@@ -70,11 +65,55 @@ horizontal_alignment = 1
 
 [node name="button-settings" type="TextureButton" parent="." unique_id=1791877921]
 layout_mode = 0
-offset_left = 1020.0
-offset_top = 20.0
-offset_right = 1100.0
-offset_bottom = 100.0
-texture_normal = ExtResource("6_tbp5u")
-texture_pressed = ExtResource("6_tbp5u")
-texture_hover = ExtResource("6_tbp5u")
-texture_focused = ExtResource("6_tbp5u")
+offset_left = 995.0
+offset_top = 18.0
+offset_right = 1251.0
+offset_bottom = 274.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_4hmja")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="button-close" type="Button" parent="." unique_id=944528036]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 321.0
+offset_top = -138.0
+offset_right = 476.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_pe0ep")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ob1g8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/focus = SubResource("StyleBoxTexture_l04yx")
+text = "Close"
+
+[node name="button-respawn" type="Button" parent="." unique_id=1388141071]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 321.0
+offset_top = -138.0
+offset_right = 476.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_pe0ep")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ob1g8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l04yx")
+theme_override_styles/focus = SubResource("StyleBoxTexture_l04yx")
+text = "Dispatch"

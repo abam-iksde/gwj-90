@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cr8s33c781o8m" path="res://assets/prefabs/ui/hud/food/food-number.gd" id="1_4t3un"]
 [ext_resource type="Texture2D" uid="uid://ididkqljyp60" path="res://assets/prefabs/ui/hud/food/beans.PNG" id="2_4t3un"]
+[ext_resource type="FontFile" uid="uid://pxyyp27fs88" path="res://assets/fonts/BowlerHand-BoldDemo.otf" id="3_js3v1"]
 
 [node name="food-number" type="Control" unique_id=115170565]
 layout_mode = 3
@@ -15,9 +16,11 @@ texture = ExtResource("2_4t3un")
 
 [node name="label" type="Label" parent="." unique_id=1309999583]
 layout_mode = 0
-offset_left = 186.0
-offset_top = 21.0
-offset_right = 372.0
-offset_bottom = 196.0
+offset_left = 183.0
+offset_top = 45.0
+offset_right = 405.0
+offset_bottom = 220.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_js3v1")
 theme_override_font_sizes/font_size = 110
 text = "X 5"

@@ -127,6 +127,7 @@ func _physics_process(delta: float) -> void:
 		or rotation_retrigger
 	):
 		if not clear_snow(input.y < 0.0, new_integer_position):
+			GameState.request_tutorial('tall_snow')
 			return
 		last_integer_position = new_integer_position
 	
